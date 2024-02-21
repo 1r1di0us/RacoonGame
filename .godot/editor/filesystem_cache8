@@ -1,0 +1,16 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1708495718
+icon.svg::CompressedTexture2D::4702264628225413000::1708480639::1708480654::1::::<><>::
+Player.gd::GDScript::-1::1708492361::0::1::::<>Area2D<>::
+Player.tscn::PackedScene::7993686956271483107::1708492361::0::1::::<><>::uid://bgovxbkv4oer7::::res://art/playerGrey_walk1.png<>res://Player.gd<>uid://bxhp8a606uct0::::res://art/playerGrey_walk2.png
+::res://addons/::1708494178
+::res://addons/godot-git-plugin/::1708494171
+git_plugin.gdextension::GDExtension::-1::1702859748::0::1::::<><>::
+plugin.cfg::TextFile::-1::1702859748::0::1::::<><>::
+THIRDPARTY.md::TextFile::-1::1702859748::0::1::::<><>::
+::res://addons/godot-git-plugin/linux/::1708494171
+::res://addons/godot-git-plugin/macos/::1708494171
+::res://addons/godot-git-plugin/win64/::1708495712
+::res://art/::1708482288
+playerGrey_walk1.png::CompressedTexture2D::2837771233150888018::1698070663::1708482288::1::::<><>::
+playerGrey_walk2.png::CompressedTexture2D::4016184466803660823::1698070663::1708482288::1::::<><>::
