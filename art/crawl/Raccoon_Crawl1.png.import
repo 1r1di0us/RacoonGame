@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxhp8a606uct0"
-path="res://.godot/imported/playerGrey_walk2.png-34d2d916366100182d08037c51884043.ctex"
+uid="uid://bu0bb43mculji"
+path="res://.godot/imported/Raccoon_Crawl1.png-b2b48517a4205da09749e2bfdc301818.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/playerGrey_walk2.png"
-dest_files=["res://.godot/imported/playerGrey_walk2.png-34d2d916366100182d08037c51884043.ctex"]
+source_file="res://art/crawl/Raccoon_Crawl1.png"
+dest_files=["res://.godot/imported/Raccoon_Crawl1.png-b2b48517a4205da09749e2bfdc301818.ctex"]
 
 [params]
 

@@ -1,2 +1,4 @@
 res://Player.tscn
 res://Player.gd
+res://level_1.tscn
+res://terrain_rect.tscn

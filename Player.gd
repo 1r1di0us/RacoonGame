@@ -1,34 +1,42 @@
-extends Area2D
+extends CharacterBody2D
 
-@export var speed = 400 # How fast the player will move (pixels/sec).
-var screen_size # Size of the game window.
-signal hit
-signal leftstop
-signal rightstop
+@export var SPEED = 300.0
+@export var JUMP_VELOCITY = -400.0
+var state = 0 #0 = normal, 1 = crouched
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	screen_size = get_viewport_rect().size
+# Get the gravity from the project settings to be synced with RigidBody nodes.
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	var velocity = Vector2.ZERO # The player's movement vector.
-	if Input.is_action_pressed("move_right"):
-		velocity.x += 1
-	if Input.is_action_pressed("move_left"):
-		velocity.x -= 1
+func _physics_process(delta):
 	
-	position += velocity * delta
-	position = position.clamp(Vector2.ZERO, screen_size)
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction = Input.get_axis("move_left", "move_right") # direction = -1, 0, or 1, I think
+	if direction:
+		velocity.x = direction * SPEED
+		$PlayerSprite.flip_h = (-direction + 1) / 2 #flip sprite in the correct direction
+	else: #reduce velocity by SPEED(300) every frame until velocity is 0
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+	if is_on_floor():
+		if Input.is_action_just_pressed("jump"):
+			velocity.y = JUMP_VELOCITY
+			$PlayerSprite.animation = "jump"
+		elif Input.is_action_pressed("crouch"):
+			if velocity.x == 0:
+				$PlayerSprite.animation = "crouch"
+			else:
+				$PlayerSprite.animation = "crawl"
+		else:
+			if velocity.x == 0:
+				$PlayerSprite.animation = "idle"
+			else:
+				$PlayerSprite.animation = "run"
+	else: # not on floor
+		# add gravity
+		velocity.y += gravity * delta
+		if $PlayerSprite.animation == "jump" and $PlayerSprite.frame == 5:
+			$PlayerSprite.animation = "freefall"
 	
-	if velocity.x != 0:
-		$AnimatedSprite2D.animation = "walk"
-		$AnimatedSprite2D.flip_h = velocity.x < 0
-
-
-func _on_body_entered(body):
-	hide() # Player disappears after being hit.
-	hit.emit()
-	# Must be deferred as we can't change physics properties on a physics callback.
-	$CollisionShape2D.set_deferred("disabled", true)
+	$PlayerSprite.play()
+	move_and_slide()
