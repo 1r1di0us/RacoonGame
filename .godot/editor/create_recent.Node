@@ -1,5 +1,7 @@
-MeshInstance2D
+Sprite2D
+AnimationPlayer
 CollisionShape2D
+MeshInstance2D
 StaticBody2D
 AnimatedSprite2D
 CharacterBody2D
