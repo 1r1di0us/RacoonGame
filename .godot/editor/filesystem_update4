@@ -1,4 +1,3 @@
-res://scripts/start_screen.gd
 res://ui/start_screen.tscn
 res://player/Player.tscn
 res://ui/pause_screen.tscn

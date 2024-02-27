@@ -71,7 +71,7 @@ text = "UNTITLED RACCOON GAME"
 
 [node name="HoverSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_iarji")
-volume_db = -8.0
+volume_db = -9.0
 
 [connection signal="mouse_entered" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
