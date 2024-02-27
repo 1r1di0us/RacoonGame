@@ -44,8 +44,8 @@ func _physics_process(delta):
 		#$PlayerCollision.shape.extents = Vector2(37, 48)
 		#$PlayerCollision.transform.position = Vector2(37, 48)
 		velocity.y += gravity * delta
-		if $PlayerSprite.animation == "jump" and $PlayerSprite.frame == 5:
-			$PlayerSprite.animation = "freefall"
+		#if $PlayerSprite.animation == "jump" and $PlayerSprite.frame == 5:
+			#$PlayerSprite.animation = "freefall"
 	
 	$PlayerSprite.play()
 	move_and_slide()

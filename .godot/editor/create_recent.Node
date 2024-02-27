@@ -1,3 +1,10 @@
+CollisionPolygon2D
+AnimationTree
+Sprite2D
+AnimatedSprite2D
+AnimationPlayer
+CollisionShape2D
+CharacterBody2D
 Label
 Button
 CanvasLayer

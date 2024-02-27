@@ -49,11 +49,13 @@ layout_mode = 2
 [node name="StartButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 shortcut = SubResource("Shortcut_1en2q")
+shortcut_in_tooltip = false
 text = "START"
 
 [node name="ExitButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 shortcut = SubResource("Shortcut_a22dd")
+shortcut_in_tooltip = false
 text = "EXIT"
 
 [node name="Title" type="Label" parent="."]
