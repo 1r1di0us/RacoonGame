@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://mwl5glcd7hyj"]
+
+[ext_resource type="AudioStream" uid="uid://yx8x1dipwbhy" path="res://music/Bunnymajs - Split Persona.mp3" id="1_f82f8"]
+[ext_resource type="AudioStream" uid="uid://2hldg547shad" path="res://music/Bunnymajs - Objects of Epic Proportion.mp3" id="2_dcs07"]
+[ext_resource type="AudioStream" uid="uid://cxkdy8y07yop5" path="res://music/Bunnymajs - Again, but with feeling.mp3" id="3_wr3cq"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_0kb47"]
+streams_count = 3
+stream_0/stream = ExtResource("1_f82f8")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_dcs07")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("3_wr3cq")
+stream_2/weight = 1.0
+
+[node name="BackgroundMusic" type="AudioStreamPlayer"]
+stream = SubResource("AudioStreamRandomizer_0kb47")
+volume_db = -10.0
+autoplay = true

@@ -1,115 +1,129 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1708997122
-icon.svg::CompressedTexture2D::4702264628225413000::1708539388::1708987099::1::::<><>::
-README.md::TextFile::-1::1708539388::0::1::::<><>::
-::res://addons/::1708311698
-::res://addons/godot-git-plugin/::1708311698
-git_plugin.gdextension::GDExtension::-1::1708310599::0::1::::<><>::
-plugin.cfg::TextFile::-1::1708310599::0::1::::<><>::
-THIRDPARTY.md::TextFile::-1::1708310599::0::1::::<><>::
-::res://addons/godot-git-plugin/linux/::1708310599
-::res://addons/godot-git-plugin/macos/::1708310599
-::res://addons/godot-git-plugin/win64/::1708310599
-::res://art/::1708996423
-::res://art/Raccoon Assets/::1708996416
-::res://art/Raccoon Assets/NPC Raccoon/::1708996389
-::res://art/Raccoon Assets/Protagonist Raccoon/::1708996416
-::res://art/Raccoon Assets/Protagonist Raccoon/Climb/::1708996389
-::res://art/Raccoon Assets/Protagonist Raccoon/Crawl/::1708996416
-::res://art/Raccoon Assets/Protagonist Raccoon/Crawl/Draft #1/::1708996432
-Raccoon_Crawl1.png::CompressedTexture2D::8489485661036638606::1708658314::1708996432::1::::<><>::
-Raccoon_Crawl2.png::CompressedTexture2D::3380731677166816718::1708658314::1708996432::1::::<><>::
-Raccoon_Crawl3.png::CompressedTexture2D::5197224365911614003::1708658314::1708996432::1::::<><>::
-Raccoon_Crawl4.png::CompressedTexture2D::2933256954497403407::1708658314::1708996432::1::::<><>::
-Raccoon_Crawl5.png::CompressedTexture2D::5721831948431408286::1708658314::1708996432::1::::<><>::
-Raccoon_Crawl-Sheet.png::CompressedTexture2D::2941743006697325980::1708658292::1708996432::1::::<><>::
-::res://art/Raccoon Assets/Protagonist Raccoon/Crawl/Draft #2/::1708996432
-Raccoon_Crawl_Edited1.png::CompressedTexture2D::365944214581862264::1708898429::1708996432::1::::<><>::
-Raccoon_Crawl_Edited2.png::CompressedTexture2D::6847984407766430112::1708898429::1708996432::1::::<><>::
-Raccoon_Crawl_Edited3.png::CompressedTexture2D::799847887737987065::1708898429::1708996431::1::::<><>::
-Raccoon_Crawl_Edited4.png::CompressedTexture2D::6793268343989884684::1708898429::1708996431::1::::<><>::
-Raccoon_Crawl_Edited5.png::CompressedTexture2D::2871477780235860986::1708898429::1708996431::1::::<><>::
-Raccoon_Crawl_Edited-Sheet.png::CompressedTexture2D::8844974501358174786::1708898468::1708996432::1::::<><>::
-::res://art/Raccoon Assets/Protagonist Raccoon/Idle/::1708996416
-::res://art/Raccoon Assets/Protagonist Raccoon/Idle/Draft #1/::1708996432
-Raccoon_Idle1.jpg::CompressedTexture2D::5368656363734247540::1708551735::1708996431::1::::<><>::
-Raccoon_Idle1.png::CompressedTexture2D::4768499687679524603::1708570559::1708996431::1::::<><>::
-Raccoon_Idle2.jpg::CompressedTexture2D::3420915325374499595::1708551735::1708996431::1::::<><>::
-Raccoon_Idle2.png::CompressedTexture2D::8414362322446415449::1708570559::1708996431::1::::<><>::
-Raccoon_Idle3.jpg::CompressedTexture2D::753105362197849761::1708551735::1708996431::1::::<><>::
-Raccoon_Idle3.png::CompressedTexture2D::8930387028651101704::1708570559::1708996432::1::::<><>::
-Raccoon_Idle4.jpg::CompressedTexture2D::4738882294987431347::1708551735::1708996432::1::::<><>::
-Raccoon_Idle4.png::CompressedTexture2D::9217472344535904519::1708570559::1708996432::1::::<><>::
-Raccoon_Idle-Sheet.png::CompressedTexture2D::7120135090734821184::1708550917::1708996432::1::::<><>::
-::res://art/Raccoon Assets/Protagonist Raccoon/Idle/Draft #2/::1708996432
-Raccoon_Idle_Edited1.png::CompressedTexture2D::2178700756935113761::1708898552::1708996432::1::::<><>::
-Raccoon_Idle_Edited2.png::CompressedTexture2D::8611210225990601351::1708898552::1708996432::1::::<><>::
-Raccoon_Idle_Edited3.png::CompressedTexture2D::5945507276563011854::1708898552::1708996432::1::::<><>::
-Raccoon_Idle_Edited4.png::CompressedTexture2D::2585333007642834782::1708898552::1708996432::1::::<><>::
-Raccoon_Idle_Edited-Sheet.png::CompressedTexture2D::1744563068953757985::1708898566::1708996432::1::::<><>::
-::res://art/Raccoon Assets/Protagonist Raccoon/Jump/::1708996416
-::res://art/Raccoon Assets/Protagonist Raccoon/Jump/Draft #1/::1708996432
-Raccoon_Jump1.png::CompressedTexture2D::528448379799536618::1708652664::1708996432::1::::<><>::
-Raccoon_Jump2.png::CompressedTexture2D::3572825126331949250::1708652664::1708996432::1::::<><>::
-Raccoon_Jump3.png::CompressedTexture2D::7829378662183119381::1708652664::1708996432::1::::<><>::
-Raccoon_Jump4.png::CompressedTexture2D::1198332250529358967::1708652664::1708996432::1::::<><>::
-Raccoon_Jump5.png::CompressedTexture2D::1249132156938982::1708652664::1708996432::1::::<><>::
-Raccoon_Jump6.png::CompressedTexture2D::7432357733737825540::1708652664::1708996432::1::::<><>::
-Raccoon_Jump-Sheet.png::CompressedTexture2D::3226003258519585541::1708652641::1708996432::1::::<><>::
-::res://art/Raccoon Assets/Protagonist Raccoon/Jump/Draft #2/::1708996432
-Raccoon_Jump_Edited1.png::CompressedTexture2D::6660089663506379795::1708898643::1708996432::1::::<><>::
-Raccoon_Jump_Edited2.png::CompressedTexture2D::5422526148792108190::1708898643::1708996431::1::::<><>::
-Raccoon_Jump_Edited3.png::CompressedTexture2D::6921103306556292118::1708898643::1708996431::1::::<><>::
-Raccoon_Jump_Edited4.png::CompressedTexture2D::2752925872005731510::1708898643::1708996431::1::::<><>::
-Raccoon_Jump_Edited5.png::CompressedTexture2D::8851253055128906644::1708898643::1708996430::1::::<><>::
-Raccoon_Jump_Edited6.png::CompressedTexture2D::8629416331242535530::1708898643::1708996430::1::::<><>::
-Raccoon_Jump_Edited-Sheet.png::CompressedTexture2D::4569298826783331701::1708898657::1708996431::1::::<><>::
-::res://art/Raccoon Assets/Protagonist Raccoon/Run/::1708996416
-::res://art/Raccoon Assets/Protagonist Raccoon/Run/Draft #1/::1708996431
-Raccoon_Run1.png::CompressedTexture2D::8494063966187148369::1708646256::1708996430::1::::<><>::
-Raccoon_Run2.png::CompressedTexture2D::6258027056904248126::1708646256::1708996430::1::::<><>::
-Raccoon_Run3.png::CompressedTexture2D::3350512288425218415::1708646256::1708996430::1::::<><>::
-Raccoon_Run4.png::CompressedTexture2D::6020414162899460341::1708646256::1708996430::1::::<><>::
-Raccoon_Run5.png::CompressedTexture2D::4527977632696799151::1708646256::1708996430::1::::<><>::
-Raccoon_Run6.png::CompressedTexture2D::4292608188740916750::1708646256::1708996430::1::::<><>::
-Raccoon_Run-Sheet.png::CompressedTexture2D::7249941608665013719::1708646246::1708996431::1::::<><>::
-::res://art/Raccoon Assets/Protagonist Raccoon/Run/Draft #2/::1708996432
-Raccoon_Run_Edited1.png::CompressedTexture2D::8139562533287064619::1708898726::1708996430::1::::<><>::
-Raccoon_Run_Edited2.png::CompressedTexture2D::2546798793569035476::1708898726::1708996430::1::::<><>::
-Raccoon_Run_Edited3.png::CompressedTexture2D::4253043236311255469::1708898726::1708996430::1::::<><>::
-Raccoon_Run_Edited4.png::CompressedTexture2D::3257770305817530471::1708898726::1708996430::1::::<><>::
-Raccoon_Run_Edited5.png::CompressedTexture2D::6040374230952367711::1708898726::1708996431::1::::<><>::
-Raccoon_Run_Edited6.png::CompressedTexture2D::6396137682023480234::1708898726::1708996431::1::::<><>::
-Raccoon_Run_Edited-Sheet.png::CompressedTexture2D::7367310984743088299::1708898741::1708996432::1::::<><>::
-::res://art/Raccoon Assets/Protagonist Raccoon/Walk/::1708996416
-::res://art/Raccoon Assets/Protagonist Raccoon/Walk/Draft #1/::1708996431
-Raccoon_Walk1.png::CompressedTexture2D::2959389047201124346::1708658644::1708996431::1::::<><>::
-Raccoon_Walk2.png::CompressedTexture2D::515355825438953086::1708658644::1708996431::1::::<><>::
-Raccoon_Walk3.png::CompressedTexture2D::5889327065784966695::1708658644::1708996431::1::::<><>::
-Raccoon_Walk4.png::CompressedTexture2D::3581383693929864546::1708658644::1708996431::1::::<><>::
-Raccoon_Walk5.png::CompressedTexture2D::5118600734638390731::1708658644::1708996431::1::::<><>::
-Raccoon_Walk6.png::CompressedTexture2D::4769382875139874458::1708658644::1708996431::1::::<><>::
-Raccoon_Walk-Sheet.png::CompressedTexture2D::3729920444003938919::1708658635::1708996431::1::::<><>::
-::res://art/Raccoon Assets/Protagonist Raccoon/Walk/Draft #2/::1708996431
-Raccoon_Walk_Edited1.png::CompressedTexture2D::4186221565661491528::1708898803::1708996431::1::::<><>::
-Raccoon_Walk_Edited2.png::CompressedTexture2D::4785716945217471915::1708898803::1708996431::1::::<><>::
-Raccoon_Walk_Edited3.png::CompressedTexture2D::7481367575241282017::1708898803::1708996431::1::::<><>::
-Raccoon_Walk_Edited4.png::CompressedTexture2D::3832519468465438929::1708898803::1708996431::1::::<><>::
-Raccoon_Walk_Edited5.png::CompressedTexture2D::4975829238007235897::1708898803::1708996431::1::::<><>::
-Raccoon_Walk_Edited6.png::CompressedTexture2D::7441654068283959187::1708898803::1708996431::1::::<><>::
-Raccoon_Walk_Edited-Sheet.png::CompressedTexture2D::7404307794834052102::1708898818::1708996431::1::::<><>::
-::res://levels/::1708996093
-level_1.tscn::PackedScene::5686174023838697970::1708996093::0::1::::<><>::uid://dl5g4d4ep1cgp::::res://player/Player.tscn<>uid://c5n3bedy7lusb::::res://ui/ui_screen.tscn<>uid://q2bmtnx1jfuu::::res://levels/terrain_rect.tscn
-terrain_rect.tscn::PackedScene::1178842863193987160::1708986508::0::1::::<><>::
-::res://player/::1708996093
-Player.tscn::PackedScene::7993686956271483107::1708996093::0::1::::<><>::res://scripts/Player.gd<>uid://mlsgmjxsodwc::::res://art/crawl/Raccoon_Crawl_Edited1.png<>uid://buvffv4cssiyl::::res://art/crawl/Raccoon_Crawl_Edited2.png<>uid://bv4vr1ai6nktg::::res://art/crawl/Raccoon_Crawl_Edited3.png<>uid://dtvojf34vk8w8::::res://art/crawl/Raccoon_Crawl_Edited4.png<>uid://e1gfsnsoo5sv::::res://art/crawl/Raccoon_Crawl_Edited5.png<>uid://dyjccm6blbh1m::::res://art/jump/Raccoon_Jump_Edited6.png<>uid://clqci0ibudud0::::res://art/idle/Raccoon_Idle_Edited1.png<>uid://0r58woqgwt28::::res://art/idle/Raccoon_Idle_Edited2.png<>uid://boq8cojhfdyho::::res://art/idle/Raccoon_Idle_Edited3.png<>uid://btr88bbec6gtn::::res://art/idle/Raccoon_Idle_Edited4.png<>uid://dprpfu5fueih7::::res://art/jump/Raccoon_Jump_Edited1.png<>uid://2jryci68ss2w::::res://art/jump/Raccoon_Jump_Edited2.png<>uid://c27u3kbgxgxqe::::res://art/jump/Raccoon_Jump_Edited3.png<>uid://htjv140hh8df::::res://art/jump/Raccoon_Jump_Edited4.png<>uid://bulik7wvh4lke::::res://art/jump/Raccoon_Jump_Edited5.png<>uid://dav5ypmlssqn::::res://art/run/Raccoon_Run_Edited1.png<>uid://kskew2ftihj5::::res://art/run/Raccoon_Run_Edited2.png<>uid://ogr83746jew::::res://art/run/Raccoon_Run_Edited3.png<>uid://clmudsm35gjaj::::res://art/run/Raccoon_Run_Edited4.png<>uid://c1xcp1fe0oapf::::res://art/run/Raccoon_Run_Edited5.png<>uid://bvehbpv5vd5hf::::res://art/run/Raccoon_Run_Edited6.png<>uid://bervh7r5bni1l::::res://art/walk/Raccoon_Walk_Edited1.png<>uid://diq380aook2dx::::res://art/walk/Raccoon_Walk_Edited2.png<>uid://bg0mhf8ycuutf::::res://art/walk/Raccoon_Walk_Edited3.png<>uid://liw026rh4j8w::::res://art/walk/Raccoon_Walk_Edited4.png<>uid://bg63ew2ch217::::res://art/walk/Raccoon_Walk_Edited5.png<>uid://d2vvsyqsa7fpt::::res://art/walk/Raccoon_Walk_Edited6.png<>uid://dsr2ib8jgw60i::::res://art/walk/Raccoon_Walk_Edited-Sheet.png<>uid://b8met2a36apgi::::res://art/run/Raccoon_Run_Edited-Sheet.png<>uid://cjadchw6ewvvc::::res://art/jump/Raccoon_Jump_Edited-Sheet.png<>uid://caajrwwrlg726::::res://art/idle/Raccoon_Idle_Edited-Sheet.png<>uid://dlh511xllsjkx::::res://art/crawl/Raccoon_Crawl_Edited-Sheet.png
-::res://scripts/::1708995488
-game_manager.gd::GDScript::-1::1708995488::0::1::::<>Node<>::
-pause_screen.gd::GDScript::-1::1708995259::0::1::::<>CanvasLayer<>::
-Player.gd::GDScript::-1::1708984984::0::1::::<>CharacterBody2D<>::
-start_screen.gd::GDScript::-1::1708995301::0::1::::<>CanvasLayer<>::
-::res://ui/::1708996093
-pause_screen.tscn::PackedScene::55814684855051019::1708996093::0::1::::<><>::res://scripts/pause_screen.gd<>uid://b02a2u15epnu7::::res://ui/ui_theme.tres
-start_screen.tscn::PackedScene::2532752504061319112::1708996093::0::1::::<><>::uid://b02a2u15epnu7::::res://ui/ui_theme.tres<>res://scripts/start_screen.gd
-ui_screen.tscn::PackedScene::6907045664782799437::1708996093::0::1::::<><>::uid://b02a2u15epnu7::::res://ui/ui_theme.tres
-ui_theme.tres::Theme::4196929282439887860::1708995994::0::1::::<><>::
+::res://::1709066880
+AudioManager.tscn::PackedScene::888404227212377605::1709066778::0::1::::<><>::uid://yx8x1dipwbhy::::res://music/Bunnymajs - Split Persona.mp3<>uid://2hldg547shad::::res://music/Bunnymajs - Objects of Epic Proportion.mp3<>uid://cxkdy8y07yop5::::res://music/Bunnymajs - Again, but with feeling.mp3
+icon.svg::CompressedTexture2D::4702264628225413000::1709007543::1709007543::1::::<><>::
+README.md::TextFile::-1::1709007543::0::1::::<><>::
+::res://addons/::1709007543
+::res://addons/godot-git-plugin/::1709007543
+git_plugin.gdextension::GDExtension::-1::1709007543::0::1::::<><>::
+plugin.cfg::TextFile::-1::1709007543::0::1::::<><>::
+THIRDPARTY.md::TextFile::-1::1709007543::0::1::::<><>::
+::res://addons/godot-git-plugin/linux/::1709007543
+::res://addons/godot-git-plugin/macos/::1709007543
+::res://addons/godot-git-plugin/win64/::1709066876
+::res://art/::1709007543
+::res://art/Raccoon Assets/::1709007543
+::res://art/Raccoon Assets/Protagonist Raccoon/::1709007543
+::res://art/Raccoon Assets/Protagonist Raccoon/Crawl/::1709007543
+::res://art/Raccoon Assets/Protagonist Raccoon/Crawl/Draft #1/::1709043278
+Raccoon_Crawl1.png::CompressedTexture2D::8489485661036638606::1709007543::1709043278::1::::<><>::
+Raccoon_Crawl2.png::CompressedTexture2D::3380731677166816718::1709007543::1709043278::1::::<><>::
+Raccoon_Crawl3.png::CompressedTexture2D::5197224365911614003::1709007543::1709043278::1::::<><>::
+Raccoon_Crawl4.png::CompressedTexture2D::2933256954497403407::1709007543::1709043278::1::::<><>::
+Raccoon_Crawl5.png::CompressedTexture2D::5721831948431408286::1709007543::1709043278::1::::<><>::
+Raccoon_Crawl-Sheet.png::CompressedTexture2D::2941743006697325980::1709007543::1709043278::1::::<><>::
+::res://art/Raccoon Assets/Protagonist Raccoon/Crawl/Draft #2/::1709043278
+Raccoon_Crawl_Edited1.png::CompressedTexture2D::365944214581862264::1709007543::1709043278::1::::<><>::
+Raccoon_Crawl_Edited2.png::CompressedTexture2D::6847984407766430112::1709007543::1709043278::1::::<><>::
+Raccoon_Crawl_Edited3.png::CompressedTexture2D::799847887737987065::1709007543::1709043278::1::::<><>::
+Raccoon_Crawl_Edited4.png::CompressedTexture2D::6793268343989884684::1709007543::1709043278::1::::<><>::
+Raccoon_Crawl_Edited5.png::CompressedTexture2D::2871477780235860986::1709007543::1709043278::1::::<><>::
+Raccoon_Crawl_Edited-Sheet.png::CompressedTexture2D::8844974501358174786::1709007543::1709043278::1::::<><>::
+::res://art/Raccoon Assets/Protagonist Raccoon/Idle/::1709007543
+::res://art/Raccoon Assets/Protagonist Raccoon/Idle/Draft #1/::1709043278
+Raccoon_Idle1.jpg::CompressedTexture2D::5368656363734247540::1709007543::1709043278::1::::<><>::
+Raccoon_Idle1.png::CompressedTexture2D::4768499687679524603::1709007543::1709043278::1::::<><>::
+Raccoon_Idle2.jpg::CompressedTexture2D::3420915325374499595::1709007543::1709043278::1::::<><>::
+Raccoon_Idle2.png::CompressedTexture2D::8414362322446415449::1709007543::1709043278::1::::<><>::
+Raccoon_Idle3.jpg::CompressedTexture2D::753105362197849761::1709007543::1709043278::1::::<><>::
+Raccoon_Idle3.png::CompressedTexture2D::8930387028651101704::1709007543::1709043278::1::::<><>::
+Raccoon_Idle4.jpg::CompressedTexture2D::4738882294987431347::1709007543::1709043278::1::::<><>::
+Raccoon_Idle4.png::CompressedTexture2D::9217472344535904519::1709007543::1709043278::1::::<><>::
+Raccoon_Idle-Sheet.png::CompressedTexture2D::7120135090734821184::1709007543::1709043278::1::::<><>::
+::res://art/Raccoon Assets/Protagonist Raccoon/Idle/Draft #2/::1709043278
+Raccoon_Idle_Edited1.png::CompressedTexture2D::2178700756935113761::1709007543::1709043278::1::::<><>::
+Raccoon_Idle_Edited2.png::CompressedTexture2D::8611210225990601351::1709007543::1709043278::1::::<><>::
+Raccoon_Idle_Edited3.png::CompressedTexture2D::5945507276563011854::1709007543::1709043278::1::::<><>::
+Raccoon_Idle_Edited4.png::CompressedTexture2D::2585333007642834782::1709007543::1709043278::1::::<><>::
+Raccoon_Idle_Edited-Sheet.png::CompressedTexture2D::1744563068953757985::1709007543::1709043278::1::::<><>::
+::res://art/Raccoon Assets/Protagonist Raccoon/Jump/::1709007543
+::res://art/Raccoon Assets/Protagonist Raccoon/Jump/Draft #1/::1709043278
+Raccoon_Jump1.png::CompressedTexture2D::528448379799536618::1709007543::1709043278::1::::<><>::
+Raccoon_Jump2.png::CompressedTexture2D::3572825126331949250::1709007543::1709043278::1::::<><>::
+Raccoon_Jump3.png::CompressedTexture2D::7829378662183119381::1709007543::1709043278::1::::<><>::
+Raccoon_Jump4.png::CompressedTexture2D::1198332250529358967::1709007543::1709043278::1::::<><>::
+Raccoon_Jump5.png::CompressedTexture2D::1249132156938982::1709007543::1709043278::1::::<><>::
+Raccoon_Jump6.png::CompressedTexture2D::7432357733737825540::1709007543::1709043278::1::::<><>::
+Raccoon_Jump-Sheet.png::CompressedTexture2D::3226003258519585541::1709007543::1709043278::1::::<><>::
+::res://art/Raccoon Assets/Protagonist Raccoon/Jump/Draft #2/::1709043278
+Raccoon_Jump_Edited1.png::CompressedTexture2D::6660089663506379795::1709007543::1709043278::1::::<><>::
+Raccoon_Jump_Edited2.png::CompressedTexture2D::5422526148792108190::1709007543::1709043278::1::::<><>::
+Raccoon_Jump_Edited3.png::CompressedTexture2D::6921103306556292118::1709007543::1709043278::1::::<><>::
+Raccoon_Jump_Edited4.png::CompressedTexture2D::2752925872005731510::1709007543::1709043278::1::::<><>::
+Raccoon_Jump_Edited5.png::CompressedTexture2D::8851253055128906644::1709007543::1709043278::1::::<><>::
+Raccoon_Jump_Edited6.png::CompressedTexture2D::8629416331242535530::1709007543::1709043278::1::::<><>::
+Raccoon_Jump_Edited-Sheet.png::CompressedTexture2D::4569298826783331701::1709007543::1709043278::1::::<><>::
+::res://art/Raccoon Assets/Protagonist Raccoon/Run/::1709007543
+::res://art/Raccoon Assets/Protagonist Raccoon/Run/Draft #1/::1709043278
+Raccoon_Run1.png::CompressedTexture2D::8494063966187148369::1709007543::1709043278::1::::<><>::
+Raccoon_Run2.png::CompressedTexture2D::6258027056904248126::1709007543::1709043278::1::::<><>::
+Raccoon_Run3.png::CompressedTexture2D::3350512288425218415::1709007543::1709043277::1::::<><>::
+Raccoon_Run4.png::CompressedTexture2D::6020414162899460341::1709007543::1709043277::1::::<><>::
+Raccoon_Run5.png::CompressedTexture2D::4527977632696799151::1709007543::1709043277::1::::<><>::
+Raccoon_Run6.png::CompressedTexture2D::4292608188740916750::1709007543::1709043277::1::::<><>::
+Raccoon_Run-Sheet.png::CompressedTexture2D::7249941608665013719::1709007543::1709043278::1::::<><>::
+::res://art/Raccoon Assets/Protagonist Raccoon/Run/Draft #2/::1709043278
+Raccoon_Run_Edited1.png::CompressedTexture2D::8139562533287064619::1709007543::1709043277::1::::<><>::
+Raccoon_Run_Edited2.png::CompressedTexture2D::2546798793569035476::1709007543::1709043277::1::::<><>::
+Raccoon_Run_Edited3.png::CompressedTexture2D::4253043236311255469::1709007543::1709043277::1::::<><>::
+Raccoon_Run_Edited4.png::CompressedTexture2D::3257770305817530471::1709007543::1709043277::1::::<><>::
+Raccoon_Run_Edited5.png::CompressedTexture2D::6040374230952367711::1709007543::1709043278::1::::<><>::
+Raccoon_Run_Edited6.png::CompressedTexture2D::6396137682023480234::1709007543::1709043278::1::::<><>::
+Raccoon_Run_Edited-Sheet.png::CompressedTexture2D::7367310984743088299::1709007543::1709043278::1::::<><>::
+::res://art/Raccoon Assets/Protagonist Raccoon/Walk/::1709007543
+::res://art/Raccoon Assets/Protagonist Raccoon/Walk/Draft #1/::1709043278
+Raccoon_Walk1.png::CompressedTexture2D::2959389047201124346::1709007543::1709043278::1::::<><>::
+Raccoon_Walk2.png::CompressedTexture2D::515355825438953086::1709007543::1709043278::1::::<><>::
+Raccoon_Walk3.png::CompressedTexture2D::5889327065784966695::1709007543::1709043278::1::::<><>::
+Raccoon_Walk4.png::CompressedTexture2D::3581383693929864546::1709007543::1709043278::1::::<><>::
+Raccoon_Walk5.png::CompressedTexture2D::5118600734638390731::1709007543::1709043278::1::::<><>::
+Raccoon_Walk6.png::CompressedTexture2D::4769382875139874458::1709007543::1709043278::1::::<><>::
+Raccoon_Walk-Sheet.png::CompressedTexture2D::3729920444003938919::1709007543::1709043278::1::::<><>::
+::res://art/Raccoon Assets/Protagonist Raccoon/Walk/Draft #2/::1709043278
+Raccoon_Walk_Edited1.png::CompressedTexture2D::4186221565661491528::1709007543::1709043278::1::::<><>::
+Raccoon_Walk_Edited2.png::CompressedTexture2D::4785716945217471915::1709007543::1709043278::1::::<><>::
+Raccoon_Walk_Edited3.png::CompressedTexture2D::7481367575241282017::1709007543::1709043278::1::::<><>::
+Raccoon_Walk_Edited4.png::CompressedTexture2D::3832519468465438929::1709007543::1709043278::1::::<><>::
+Raccoon_Walk_Edited5.png::CompressedTexture2D::4975829238007235897::1709007543::1709043278::1::::<><>::
+Raccoon_Walk_Edited6.png::CompressedTexture2D::7441654068283959187::1709007543::1709043278::1::::<><>::
+Raccoon_Walk_Edited-Sheet.png::CompressedTexture2D::7404307794834052102::1709007543::1709043278::1::::<><>::
+::res://levels/::1709007543
+level_1.tscn::PackedScene::5686174023838697970::1709007543::0::1::::<><>::uid://dl5g4d4ep1cgp::::res://player/Player.tscn<>uid://c5n3bedy7lusb::::res://ui/ui_screen.tscn<>uid://q2bmtnx1jfuu::::res://levels/terrain_rect.tscn
+terrain_rect.tscn::PackedScene::1178842863193987160::1709007543::0::1::::<><>::
+::res://music/::1709047924
+Bunnymajs - Again, but with feeling.mp3::AudioStreamMP3::6408055330159030708::1709045020::1709045039::1::::<><>::
+Bunnymajs - BLIPPBLIPP.mp3::AudioStreamMP3::6069973554895266340::1709045020::1709045039::1::::<><>::
+Bunnymajs - Dreams.mp3::AudioStreamMP3::5478441372088734855::1709045020::1709045039::1::::<><>::
+Bunnymajs - Fate of the Divine.mp3::AudioStreamMP3::5373708831418692146::1709045020::1709045039::1::::<><>::
+Bunnymajs - Forget.mp3::AudioStreamMP3::2992437962471679683::1709046526::1709046674::1::::<><>::
+Bunnymajs - Free Falling From Space.mp3::AudioStreamMP3::1014256301622743696::1709045020::1709045039::1::::<><>::
+Bunnymajs - French.mp3::AudioStreamMP3::2249171248205683085::1709045020::1709045039::1::::<><>::
+Bunnymajs - I Wish...mp3::AudioStreamMP3::6794300057532967710::1709045020::1709045039::1::::<><>::
+Bunnymajs - Not too Far, Not too Late.mp3::AudioStreamMP3::5411412703364372383::1709045020::1709045039::1::::<><>::
+Bunnymajs - Objects of Epic Proportion.mp3::AudioStreamMP3::1910223029652777551::1709047717::1709047924::1::::<><>::
+Bunnymajs - Split Persona.mp3::AudioStreamMP3::1734059040303169514::1709045020::1709045039::1::::<><>::
+Bunnymajs - Summer nights and Hearts of Gold.mp3::AudioStreamMP3::7527301707187553269::1709045020::1709045039::1::::<><>::
+::res://player/::1709066778
+Player.tscn::PackedScene::7993686956271483107::1709066778::0::1::::<><>::res://scripts/Player.gd<>uid://ddqx4q7cpom6y::::res://art/Raccoon Assets/Protagonist Raccoon/Walk/Draft #2/Raccoon_Walk_Edited-Sheet.png<>uid://dc71shc54sgsp::::res://art/Raccoon Assets/Protagonist Raccoon/Run/Draft #2/Raccoon_Run_Edited-Sheet.png<>uid://fhjbvgy1cwk3::::res://art/Raccoon Assets/Protagonist Raccoon/Crawl/Draft #2/Raccoon_Crawl_Edited1.png<>uid://b6dnxi2vynukj::::res://art/Raccoon Assets/Protagonist Raccoon/Jump/Draft #2/Raccoon_Jump_Edited-Sheet.png<>uid://y4cx05cg3wy0::::res://art/Raccoon Assets/Protagonist Raccoon/Idle/Draft #2/Raccoon_Idle_Edited-Sheet.png<>uid://dyato5cemyy8a::::res://art/Raccoon Assets/Protagonist Raccoon/Crawl/Draft #2/Raccoon_Crawl_Edited-Sheet.png
+::res://scripts/::1709066776
+game_manager.gd::GDScript::-1::1709007543::0::1::::<>Node<>::
+pause_screen.gd::GDScript::-1::1709007543::0::1::::<>CanvasLayer<>::
+Player.gd::GDScript::-1::1709007543::0::1::::<>CharacterBody2D<>::
+start_screen.gd::GDScript::-1::1709066776::0::1::::<>CanvasLayer<>::
+::res://sfx/::1709063661
+select.mp3::AudioStreamMP3::5197811887087382291::1709063661::1709063661::1::::<><>::
+::res://ui/::1709066778
+pause_screen.tscn::PackedScene::55814684855051019::1709066778::0::1::::<><>::res://scripts/pause_screen.gd<>uid://b02a2u15epnu7::::res://ui/ui_theme.tres
+start_screen.tscn::PackedScene::2532752504061319112::1709066778::0::1::::<><>::uid://b02a2u15epnu7::::res://ui/ui_theme.tres<>res://scripts/start_screen.gd<>uid://cgb4g46784e7l::::res://sfx/select.mp3
+ui_screen.tscn::PackedScene::6907045664782799437::1709066778::0::1::::<><>::uid://b02a2u15epnu7::::res://ui/ui_theme.tres
+ui_theme.tres::Theme::4196929282439887860::1709007543::0::1::::<><>::

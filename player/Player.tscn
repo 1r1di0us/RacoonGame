@@ -438,3 +438,5 @@ position = Vector2(2, -80)
 texture = ExtResource("6_pv25s")
 hframes = 5
 frame = 1
+
+[node name="SoundJump" type="AudioStreamPlayer" parent="."]
