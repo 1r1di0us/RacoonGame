@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5n3bedy7lusb"]
+
+[ext_resource type="Theme" uid="uid://b02a2u15epnu7" path="res://ui/ui_theme.tres" id="2_qfcyb"]
+
+[sub_resource type="GDScript" id="GDScript_bvqy0"]
+script/source = "extends CanvasLayer
+
+func _on_pause_button_pressed():
+	GameManager.pause_game()
+"
+
+[sub_resource type="InputEventAction" id="InputEventAction_umm2v"]
+action = &"pause_game"
+
+[sub_resource type="Shortcut" id="Shortcut_6f1m4"]
+events = [SubResource("InputEventAction_umm2v")]
+
+[node name="UIScreen" type="CanvasLayer"]
+script = SubResource("GDScript_bvqy0")
+
+[node name="PauseButton" type="Button" parent="."]
+offset_left = 20.0
+offset_top = -72.0
+offset_right = 138.0
+offset_bottom = -15.0
+theme = ExtResource("2_qfcyb")
+shortcut = SubResource("Shortcut_6f1m4")
+text = "PAUSE"
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -24.5
+offset_right = 24.5
+offset_bottom = 23.0
+grow_horizontal = 2
+theme = ExtResource("2_qfcyb")
+text = "DEMO"
+
+[connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]

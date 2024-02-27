@@ -1,4 +1,5 @@
-res://Player.tscn
-res://Player.gd
-res://level_1.tscn
-res://terrain_rect.tscn
+res://player/Player.tscn
+res://levels/level_1.tscn
+res://ui/start_screen.tscn
+res://ui/pause_screen.tscn
+res://ui/ui_screen.tscn

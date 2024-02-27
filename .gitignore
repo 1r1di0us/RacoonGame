@@ -9,6 +9,9 @@ export_presets.cfg
 # Mono-specific ignores
 .mono/
 data_*/
-.godot/editor/filesystem_cache8
 *.cfg
 *.cache
+.DS_Store
+.godot/
+*.translation
+/.godot
