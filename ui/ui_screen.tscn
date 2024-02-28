@@ -25,6 +25,7 @@ offset_right = 138.0
 offset_bottom = -15.0
 theme = ExtResource("2_qfcyb")
 shortcut = SubResource("Shortcut_6f1m4")
+shortcut_in_tooltip = false
 text = "PAUSE"
 
 [node name="Label" type="Label" parent="."]
