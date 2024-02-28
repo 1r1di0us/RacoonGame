@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bcc5cfv0o0imi"]
+[gd_scene load_steps=7 format=3 uid="uid://bcc5cfv0o0imi"]
 
 [ext_resource type="Theme" uid="uid://b02a2u15epnu7" path="res://ui/ui_theme.tres" id="1_4a4vq"]
 [ext_resource type="Script" path="res://scripts/start_screen.gd" id="1_kumlx"]
-[ext_resource type="AudioStream" uid="uid://cgb4g46784e7l" path="res://sfx/select.mp3" id="3_iarji"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_ot0gh"]
 action = &"confirm"
@@ -69,12 +68,7 @@ grow_horizontal = 2
 theme = ExtResource("1_4a4vq")
 text = "UNTITLED RACCOON GAME"
 
-[node name="HoverSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_iarji")
-volume_db = -9.0
-
 [connection signal="mouse_entered" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="mouse_entered" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
-[connection signal="ready" from="HoverSound" to="." method="_on_hover_sound_ready"]

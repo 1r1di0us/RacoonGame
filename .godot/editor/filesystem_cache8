@@ -1,8 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1709068008
-AudioManager.tscn::PackedScene::888404227212377605::1709067418::0::1::::<><>::uid://yx8x1dipwbhy::::res://music/Bunnymajs - Split Persona.mp3<>uid://2hldg547shad::::res://music/Bunnymajs - Objects of Epic Proportion.mp3<>uid://cxkdy8y07yop5::::res://music/Bunnymajs - Again, but with feeling.mp3
+::res://::1709129871
+AudioManager.tscn::PackedScene::888404227212377605::1709130040::0::1::::<><>::res://AudioManager.gd<>uid://yx8x1dipwbhy::::res://music/Bunnymajs - Split Persona.mp3<>uid://2hldg547shad::::res://music/Bunnymajs - Objects of Epic Proportion.mp3<>uid://cxkdy8y07yop5::::res://music/Bunnymajs - Again, but with feeling.mp3
 icon.svg::CompressedTexture2D::4702264628225413000::1709007543::1709007543::1::::<><>::
 README.md::TextFile::-1::1709007543::0::1::::<><>::
+AudioManager.gd::GDScript::-1::1709129742::0::1::::<>Node<>::
+UISoundManager.tscn::PackedScene::8084181370647017364::1709129871::0::1::::<><>::res://AudioManager.gd<>uid://cxkdy8y07yop5::::res://music/Bunnymajs - Again, but with feeling.mp3<>uid://2hldg547shad::::res://music/Bunnymajs - Objects of Epic Proportion.mp3<>uid://yx8x1dipwbhy::::res://music/Bunnymajs - Split Persona.mp3
 ::res://addons/::1709067871
 ::res://addons/godot-git-plugin/::1709067871
 git_plugin.gdextension::GDExtension::-1::1709007543::0::1::::<><>::
@@ -10,7 +12,7 @@ plugin.cfg::TextFile::-1::1709007543::0::1::::<><>::
 THIRDPARTY.md::TextFile::-1::1709007543::0::1::::<><>::
 ::res://addons/godot-git-plugin/linux/::1709067871
 ::res://addons/godot-git-plugin/macos/::1709067871
-::res://addons/godot-git-plugin/win64/::1709068005
+::res://addons/godot-git-plugin/win64/::1709098875
 ::res://art/::1709067871
 ::res://art/Raccoon Assets/::1709067871
 ::res://art/Raccoon Assets/Protagonist Raccoon/::1709067871
@@ -113,8 +115,8 @@ Bunnymajs - Not too Far, Not too Late.mp3::AudioStreamMP3::5411412703364372383::
 Bunnymajs - Objects of Epic Proportion.mp3::AudioStreamMP3::1910223029652777551::1709047717::1709047924::1::::<><>::
 Bunnymajs - Split Persona.mp3::AudioStreamMP3::1734059040303169514::1709045020::1709045039::1::::<><>::
 Bunnymajs - Summer nights and Hearts of Gold.mp3::AudioStreamMP3::7527301707187553269::1709045020::1709045039::1::::<><>::
-::res://player/::1709067872
-Player.tscn::PackedScene::7993686956271483107::1709067418::0::1::::<><>::res://scripts/Player.gd<>uid://ddqx4q7cpom6y::::res://art/Raccoon Assets/Protagonist Raccoon/Walk/Draft #2/Raccoon_Walk_Edited-Sheet.png<>uid://dc71shc54sgsp::::res://art/Raccoon Assets/Protagonist Raccoon/Run/Draft #2/Raccoon_Run_Edited-Sheet.png<>uid://fhjbvgy1cwk3::::res://art/Raccoon Assets/Protagonist Raccoon/Crawl/Draft #2/Raccoon_Crawl_Edited1.png<>uid://b6dnxi2vynukj::::res://art/Raccoon Assets/Protagonist Raccoon/Jump/Draft #2/Raccoon_Jump_Edited-Sheet.png<>uid://y4cx05cg3wy0::::res://art/Raccoon Assets/Protagonist Raccoon/Idle/Draft #2/Raccoon_Idle_Edited-Sheet.png<>uid://dyato5cemyy8a::::res://art/Raccoon Assets/Protagonist Raccoon/Crawl/Draft #2/Raccoon_Crawl_Edited-Sheet.png
+::res://player/::1709129788
+Player.tscn::PackedScene::7993686956271483107::1709129788::0::1::::<><>::res://scripts/Player.gd<>uid://ddqx4q7cpom6y::::res://art/Raccoon Assets/Protagonist Raccoon/Walk/Draft #2/Raccoon_Walk_Edited-Sheet.png<>uid://dc71shc54sgsp::::res://art/Raccoon Assets/Protagonist Raccoon/Run/Draft #2/Raccoon_Run_Edited-Sheet.png<>uid://fhjbvgy1cwk3::::res://art/Raccoon Assets/Protagonist Raccoon/Crawl/Draft #2/Raccoon_Crawl_Edited1.png<>uid://b6dnxi2vynukj::::res://art/Raccoon Assets/Protagonist Raccoon/Jump/Draft #2/Raccoon_Jump_Edited-Sheet.png<>uid://y4cx05cg3wy0::::res://art/Raccoon Assets/Protagonist Raccoon/Idle/Draft #2/Raccoon_Idle_Edited-Sheet.png<>uid://dyato5cemyy8a::::res://art/Raccoon Assets/Protagonist Raccoon/Crawl/Draft #2/Raccoon_Crawl_Edited-Sheet.png
 ::res://scripts/::1709067872
 game_manager.gd::GDScript::-1::1709007543::0::1::::<>Node<>::
 pause_screen.gd::GDScript::-1::1709007543::0::1::::<>CanvasLayer<>::
@@ -122,8 +124,8 @@ Player.gd::GDScript::-1::1709007543::0::1::::<>CharacterBody2D<>::
 start_screen.gd::GDScript::-1::1709067247::0::1::::<>CanvasLayer<>::
 ::res://sfx/::1709067872
 select.mp3::AudioStreamMP3::5197811887087382291::1709063661::1709063661::1::::<><>::
-::res://ui/::1709067872
-pause_screen.tscn::PackedScene::55814684855051019::1709067418::0::1::::<><>::res://scripts/pause_screen.gd<>uid://b02a2u15epnu7::::res://ui/ui_theme.tres
-start_screen.tscn::PackedScene::2532752504061319112::1709067418::0::1::::<><>::uid://b02a2u15epnu7::::res://ui/ui_theme.tres<>res://scripts/start_screen.gd<>uid://cgb4g46784e7l::::res://sfx/select.mp3
-ui_screen.tscn::PackedScene::6907045664782799437::1709067418::0::1::::<><>::uid://b02a2u15epnu7::::res://ui/ui_theme.tres
+::res://ui/::1709129788
+pause_screen.tscn::PackedScene::55814684855051019::1709129788::0::1::::<><>::res://scripts/pause_screen.gd<>uid://b02a2u15epnu7::::res://ui/ui_theme.tres
+start_screen.tscn::PackedScene::2532752504061319112::1709129788::0::1::::<><>::uid://b02a2u15epnu7::::res://ui/ui_theme.tres<>res://scripts/start_screen.gd<>uid://cgb4g46784e7l::::res://sfx/select.mp3
+ui_screen.tscn::PackedScene::6907045664782799437::1709129788::0::1::::<><>::uid://b02a2u15epnu7::::res://ui/ui_theme.tres
 ui_theme.tres::Theme::4196929282439887860::1709007543::0::1::::<><>::

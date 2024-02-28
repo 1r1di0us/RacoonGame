@@ -3,3 +3,6 @@ res://player/Player.tscn
 res://ui/pause_screen.tscn
 res://ui/ui_screen.tscn
 res://AudioManager.tscn
+res://AudioManager.gd
+res://scripts/start_screen.gd
+res://scripts/AudioManager.gd
