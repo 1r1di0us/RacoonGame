@@ -7,6 +7,8 @@ var can_jump = true
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 @export var gravity = 1500
 
+# Sounds
+@onready var jump_sound: AudioStreamPlayer = $JumpSound
 
 func _physics_process(delta):
 	
@@ -26,6 +28,7 @@ func _physics_process(delta):
 			velocity.y = JUMP_VELOCITY
 			$PlayerCollision.shape.extents = Vector2(37, 48)
 			$PlayerSprite.animation = "jump"
+			jump_sound.play() #Play Jump Sound
 		elif Input.is_action_pressed("crouch"):
 			$PlayerCollision.shape.extents = Vector2(42, 24)
 			if velocity.x == 0:

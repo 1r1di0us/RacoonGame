@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d3i7n7xnxjlhj"
+path="res://.godot/imported/Bunnymajs - Dilapidated Dream.mp3-48474f2a07c97cfeb4a0bae50f2fc409.mp3str"
+
+[deps]
+
+source_file="res://music/Bunnymajs - Dilapidated Dream.mp3"
+dest_files=["res://.godot/imported/Bunnymajs - Dilapidated Dream.mp3-48474f2a07c97cfeb4a0bae50f2fc409.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

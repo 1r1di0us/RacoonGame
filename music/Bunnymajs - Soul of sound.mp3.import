@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dxke0r4aoylsl"
+path="res://.godot/imported/Bunnymajs - Soul of sound.mp3-e92647aa312048f9f5c7cefc112b759f.mp3str"
+
+[deps]
+
+source_file="res://music/Bunnymajs - Soul of sound.mp3"
+dest_files=["res://.godot/imported/Bunnymajs - Soul of sound.mp3-e92647aa312048f9f5c7cefc112b759f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
