@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://mwl5glcd7hyj"]
+
+[ext_resource type="Script" path="res://scripts/AudioManager.gd" id="1_7gyvn"]
+[ext_resource type="AudioStream" uid="uid://yx8x1dipwbhy" path="res://music/Bunnymajs - Split Persona.mp3" id="1_f82f8"]
+[ext_resource type="AudioStream" uid="uid://2hldg547shad" path="res://music/Bunnymajs - Objects of Epic Proportion.mp3" id="2_dcs07"]
+[ext_resource type="AudioStream" uid="uid://cxkdy8y07yop5" path="res://music/Bunnymajs - Again, but with feeling.mp3" id="3_wr3cq"]
+[ext_resource type="AudioStream" uid="uid://cgb4g46784e7l" path="res://sfx/select.mp3" id="5_0sq3x"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_yme72"]
+streams_count = 3
+stream_0/stream = ExtResource("3_wr3cq")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_dcs07")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("1_f82f8")
+stream_2/weight = 1.0
+
+[node name="Node" type="Node"]
+process_mode = 3
+script = ExtResource("1_7gyvn")
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_yme72")
+volume_db = -10.0
+autoplay = true
+
+[node name="HoverSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_0sq3x")
+volume_db = -9.0

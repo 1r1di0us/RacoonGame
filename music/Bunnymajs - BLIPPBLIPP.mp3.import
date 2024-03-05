@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://csqltvyttoyjs"
+path="res://.godot/imported/Bunnymajs - BLIPPBLIPP.mp3-f2f32244a5052b18cb995bd4f6b46f43.mp3str"
+
+[deps]
+
+source_file="res://music/Bunnymajs - BLIPPBLIPP.mp3"
+dest_files=["res://.godot/imported/Bunnymajs - BLIPPBLIPP.mp3-f2f32244a5052b18cb995bd4f6b46f43.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
