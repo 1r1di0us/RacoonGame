@@ -10,6 +10,9 @@ const FRICTION = 500
 
 @onready var animationPlayer = $AnimationPlayer
 
+#TODO: get AudioStreamPlayer on racoon.tscn and make jump sound work
+#@onready var jump_sound: AudioStreamPlayer = $JumpSound
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -26,6 +29,7 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("jump"):
 			velocity.y = JUMP_VELOCITY
 			animationPlayer.play("jump")
+			#jump_sound.play() #Play Jump Sound
 		elif Input.is_action_pressed("crouch"):
 			if velocity.x == 0:
 				animationPlayer.play("crouch")
