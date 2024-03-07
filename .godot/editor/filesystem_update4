@@ -1,7 +1,0 @@
-res://player/raccoon.tscn
-res://levels/level_1.tscn
-res://ui/start_screen.tscn
-res://player/Player.tscn
-res://ui/pause_screen.tscn
-res://ui/ui_screen.tscn
-res://levels/terrain_rect.tscn

@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://dl5g4d4ep1cgp"]
+[gd_scene load_steps=45 format=3 uid="uid://dl5g4d4ep1cgp"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_ydlyu"]
 [ext_resource type="Texture2D" uid="uid://ddqx4q7cpom6y" path="res://art/Raccoon Assets/Protagonist Raccoon/Walk/Draft #2/Raccoon_Walk_Edited-Sheet.png" id="2_e3by6"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b6dnxi2vynukj" path="res://art/Raccoon Assets/Protagonist Raccoon/Jump/Draft #2/Raccoon_Jump_Edited-Sheet.png" id="4_mrlmc"]
 [ext_resource type="Texture2D" uid="uid://y4cx05cg3wy0" path="res://art/Raccoon Assets/Protagonist Raccoon/Idle/Draft #2/Raccoon_Idle_Edited-Sheet.png" id="5_b4qoh"]
 [ext_resource type="Texture2D" uid="uid://dyato5cemyy8a" path="res://art/Raccoon Assets/Protagonist Raccoon/Crawl/Draft #2/Raccoon_Crawl_Edited-Sheet.png" id="6_pv25s"]
+[ext_resource type="AudioStream" uid="uid://dcgm8ljqvrudh" path="res://sfx/whoosh sound effect.mp3" id="8_5wx0d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_27rm1"]
 atlas = ExtResource("6_pv25s")
@@ -438,3 +439,12 @@ position = Vector2(2, -80)
 texture = ExtResource("6_pv25s")
 hframes = 5
 frame = 1
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_5wx0d")
+pitch_scale = 1.33
+
+[node name="WhooshSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_5wx0d")
+volume_db = -5.0
+pitch_scale = 1.79

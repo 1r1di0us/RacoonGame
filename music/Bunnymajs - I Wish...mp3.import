@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c32henpsc316y"
+path="res://.godot/imported/Bunnymajs - I Wish...mp3-35c99c255f6bc4c9f3e071f3358a291e.mp3str"
+
+[deps]
+
+source_file="res://music/Bunnymajs - I Wish...mp3"
+dest_files=["res://.godot/imported/Bunnymajs - I Wish...mp3-35c99c255f6bc4c9f3e071f3358a291e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

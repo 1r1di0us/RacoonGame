@@ -70,5 +70,7 @@ grow_horizontal = 2
 theme = ExtResource("1_4a4vq")
 text = "UNTITLED RACCOON GAME"
 
+[connection signal="mouse_entered" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

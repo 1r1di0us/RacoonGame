@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjdlgafmpn6al"
+path="res://.godot/imported/Bunnymajs - Not too Far, Not too Late.mp3-793e276882742a01a8f96ccb26190a62.mp3str"
+
+[deps]
+
+source_file="res://music/Bunnymajs - Not too Far, Not too Late.mp3"
+dest_files=["res://.godot/imported/Bunnymajs - Not too Far, Not too Late.mp3-793e276882742a01a8f96ccb26190a62.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
