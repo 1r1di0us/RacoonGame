@@ -19,9 +19,9 @@ position = Vector2(570, 450)
 scale = Vector2(1.2, 1.2)
 
 [node name="TerrainRect2" parent="." instance=ExtResource("2_kgt41")]
-position = Vector2(-81, 384)
+position = Vector2(-4, 392)
 rotation = 1.5708
 
 [node name="TerrainRect3" parent="." instance=ExtResource("2_kgt41")]
-position = Vector2(1222, 423)
+position = Vector2(1192, 423)
 rotation = -1.5708
