@@ -32,41 +32,41 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("jump"):
 			velocity.y = JUMP_VELOCITY
 			animationPlayer.play("jump")
-			$AnimatedSprite2D.position.y = -27
+			$AnimatedSprite2D.position.y = $AnimatedSprite2D.scale.y * -45
 			if !facing:
-				$AnimatedSprite2D.position.x = -36
+				$AnimatedSprite2D.position.x = $AnimatedSprite2D.scale.x * -60
 			else:
-				$AnimatedSprite2D.position.x = 36
+				$AnimatedSprite2D.position.x = $AnimatedSprite2D.scale.x * 60
 			#jump_sound.play() #Play Jump Sound
 		elif Input.is_action_pressed("crouch"):
-			$AnimatedSprite2D.position.y = 15
+			$AnimatedSprite2D.position.y = $AnimatedSprite2D.scale.y * 25
 			if velocity.x == 0:
 				animationPlayer.play("crouch")
 				if !facing:
-					$AnimatedSprite2D.position.x = -33
+					$AnimatedSprite2D.position.x = $AnimatedSprite2D.scale.x * -55
 				else:
-					$AnimatedSprite2D.position.x = 33
+					$AnimatedSprite2D.position.x = $AnimatedSprite2D.scale.x * 55
 			else:
 				animationPlayer.play("crawl")
 				if !facing:
-					$AnimatedSprite2D.position.x = -36
+					$AnimatedSprite2D.position.x = $AnimatedSprite2D.scale.x * -60
 				else:
-					$AnimatedSprite2D.position.x = 36
+					$AnimatedSprite2D.position.x = $AnimatedSprite2D.scale.x * 60
 		else:
 			if velocity.x == 0:
 				animationPlayer.play("idle")
-				$AnimatedSprite2D.position.y = 0
+				$AnimatedSprite2D.position.y = $AnimatedSprite2D.scale.y * 0 #consistency is key
 				if !facing:
-					$AnimatedSprite2D.position.x = -24
+					$AnimatedSprite2D.position.x = $AnimatedSprite2D.scale.x * -40
 				else:
-					$AnimatedSprite2D.position.x = 24
+					$AnimatedSprite2D.position.x = $AnimatedSprite2D.scale.x * 40
 			else:
 				animationPlayer.play("run")
-				$AnimatedSprite2D.position.y = 0
+				$AnimatedSprite2D.position.y = $AnimatedSprite2D.scale.y * 0
 				if !facing:
-					$AnimatedSprite2D.position.x = -30
+					$AnimatedSprite2D.position.x = $AnimatedSprite2D.scale.x * -50
 				else:
-					$AnimatedSprite2D.position.x = 30
+					$AnimatedSprite2D.position.x = $AnimatedSprite2D.scale.x * 50
 	#how to use walk animation:
 	#animationPlayer.play("walk)
 	#$AnimatedSprite2D.position.y = -3
@@ -77,9 +77,9 @@ func _physics_process(delta):
 	else: # not on floor
 		velocity.y += gravity * delta
 		if !facing:
-			$AnimatedSprite2D.position.x = -36
+			$AnimatedSprite2D.position.x = $AnimatedSprite2D.scale.x * -60
 		else:
-			$AnimatedSprite2D.position.x = 36
+			$AnimatedSprite2D.position.x = $AnimatedSprite2D.scale.x * 60
 	move_and_slide()
 	
 	#var input_vector = Vector2.ZERO
