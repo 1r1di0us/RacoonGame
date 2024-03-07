@@ -1,8 +1,7 @@
 extends CharacterBody2D
 
-
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const SPEED = 400.0
+const JUMP_VELOCITY = -520.0
 
 const ACCELERATION = 500
 const MAX_SPEED = 80
@@ -11,6 +10,7 @@ const FRICTION = 500
 @onready var animationPlayer = $AnimationPlayer
 
 var facing = false
+var stored_jump = false
 
 #TODO: get AudioStreamPlayer on racoon.tscn and make jump sound work
 #@onready var jump_sound: AudioStreamPlayer = $JumpSound
@@ -29,7 +29,16 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	$AnimatedSprite2D.flip_h = facing
 	if is_on_floor():
-		if Input.is_action_just_pressed("jump"):
+		if Input.is_action_pressed("jump") && stored_jump: #pressing and holding jump again while falling 
+			stored_jump = false
+			velocity.y = JUMP_VELOCITY
+			animationPlayer.play("jump")
+			$AnimatedSprite2D.position.y = $AnimatedSprite2D.scale.y * -45
+			if !facing:
+				$AnimatedSprite2D.position.x = $AnimatedSprite2D.scale.x * -60
+			else:
+				$AnimatedSprite2D.position.x = $AnimatedSprite2D.scale.x * 60
+		elif Input.is_action_just_pressed("jump") && !Input.is_action_pressed("crouch"): #can't jump while crouching
 			velocity.y = JUMP_VELOCITY
 			animationPlayer.play("jump")
 			$AnimatedSprite2D.position.y = $AnimatedSprite2D.scale.y * -45
@@ -80,6 +89,10 @@ func _physics_process(delta):
 			$AnimatedSprite2D.position.x = $AnimatedSprite2D.scale.x * -60
 		else:
 			$AnimatedSprite2D.position.x = $AnimatedSprite2D.scale.x * 60
+		if Input.is_action_just_released("jump") && velocity.y < 0:
+			velocity.y = 0
+		if Input.is_action_just_pressed("jump"): #pressing jump again mid-air. will only jump if you hold it
+			stored_jump = true
 	move_and_slide()
 	
 	#var input_vector = Vector2.ZERO
