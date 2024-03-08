@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://c1qok2g7135af"]
+[gd_scene load_steps=50 format=3 uid="uid://blyuc0wj5nyy4"]
 
 [ext_resource type="Texture2D" uid="uid://dyato5cemyy8a" path="res://art/Raccoon Assets/Protagonist Raccoon/Crawl/Draft #2/Raccoon_Crawl_Edited-Sheet.png" id="1_fgivg"]
 [ext_resource type="Script" path="res://scripts/raccoon.gd" id="1_nso0o"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b6dnxi2vynukj" path="res://art/Raccoon Assets/Protagonist Raccoon/Jump/Draft #2/Raccoon_Jump_Edited-Sheet.png" id="4_bk6om"]
 [ext_resource type="Texture2D" uid="uid://dc71shc54sgsp" path="res://art/Raccoon Assets/Protagonist Raccoon/Run/Draft #2/Raccoon_Run_Edited-Sheet.png" id="5_b14wm"]
 [ext_resource type="Texture2D" uid="uid://ddqx4q7cpom6y" path="res://art/Raccoon Assets/Protagonist Raccoon/Walk/Draft #2/Raccoon_Walk_Edited-Sheet.png" id="6_ums2s"]
+[ext_resource type="AudioStream" uid="uid://dcgm8ljqvrudh" path="res://sfx/whoosh sound effect.mp3" id="8_v2btb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1hxyy"]
 atlas = ExtResource("1_fgivg")
@@ -359,10 +360,10 @@ tracks/2/path = NodePath("CollisionShape2D:shape:size")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(242, 141), Vector2(241.25, 141), Vector2(221.5, 139.5), Vector2(220.75, 130), Vector2(222, 141), Vector2(222, 141)]
+"values": [Vector2(242, 142.5), Vector2(241.25, 141), Vector2(221.5, 141), Vector2(220, 132), Vector2(222, 142.5)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -371,10 +372,10 @@ tracks/3/path = NodePath("CollisionShape2D:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(50, -72), Vector2(50.625, -71), Vector2(60.75, -71.25), Vector2(61.375, -66), Vector2(60, -72), Vector2(61, -70)]
+"values": [Vector2(50, -71.25), Vector2(50.625, -71), Vector2(60.75, -70.5), Vector2(61, -66), Vector2(60, -71.25)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -621,7 +622,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(221, 222), Vector2(260, 222), Vector2(294, 211), Vector2(237, 221.062), Vector2(240, 189.25), Vector2(227, 210.625)]
+"values": [Vector2(219.5, 223), Vector2(260, 224), Vector2(291, 204), Vector2(226.5, 213), Vector2(229, 182), Vector2(215.5, 203)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -633,7 +634,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(61, -115), Vector2(40, -114), Vector2(35, -109), Vector2(62, -114), Vector2(61, -98), Vector2(68, -107)]
+"values": [Vector2(60.25, -111.5), Vector2(40, -112), Vector2(35.5, -103), Vector2(56.75, -106.5), Vector2(55.5, -92), Vector2(62.25, -101.5)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -740,3 +741,12 @@ shape = SubResource("RectangleShape2D_pqqmg")
 libraries = {
 "": SubResource("AnimationLibrary_7mnnp")
 }
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_v2btb")
+pitch_scale = 1.33
+
+[node name="WhooshSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_v2btb")
+volume_db = -5.0
+pitch_scale = 1.79

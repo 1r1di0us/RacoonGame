@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmqr4dkr3nnk6"]
+
+[ext_resource type="PackedScene" uid="uid://c2tjcdjaltnwf" path="res://levels/default_level.tscn" id="1_sfuhb"]
+
+[node name="Level_2" instance=ExtResource("1_sfuhb")]
+
+[node name="Raccoon" parent="." index="0"]
+position = Vector2(823, 379)
+
+[node name="UIScreen" parent="." index="1"]
+text = "level 2"
+
+[node name="Exit_zone" parent="." index="3"]
+position = Vector2(121, 392)
+target_level_path = "res://levels/level_3.tscn"

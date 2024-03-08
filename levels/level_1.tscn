@@ -1,33 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://cnaopqpryp8l7"]
+[gd_scene load_steps=2 format=3 uid="uid://cv2nwb5h4c1nb"]
 
-[ext_resource type="PackedScene" uid="uid://dl5g4d4ep1cgp" path="res://player/Player.tscn" id="1_jepyr"]
-[ext_resource type="PackedScene" uid="uid://c5n3bedy7lusb" path="res://ui/ui_screen.tscn" id="1_nlygs"]
-[ext_resource type="PackedScene" uid="uid://c1qok2g7135af" path="res://player/raccoon.tscn" id="2_f86ie"]
-[ext_resource type="PackedScene" uid="uid://q2bmtnx1jfuu" path="res://levels/terrain_rect.tscn" id="2_kgt41"]
+[ext_resource type="PackedScene" uid="uid://c2tjcdjaltnwf" path="res://levels/default_level.tscn" id="1_u0jcp"]
 
-[node name="Level1" type="Node2D"]
-process_mode = 1
+[node name="Level_1" instance=ExtResource("1_u0jcp")]
 
-[node name="UIScreen" parent="." instance=ExtResource("1_nlygs")]
+[node name="UIScreen" parent="." index="1"]
+text = "level 1"
 
-[node name="Raccoon" parent="." instance=ExtResource("2_f86ie")]
-z_index = 1
-position = Vector2(523, 336)
-scale = Vector2(0.5, 0.5)
-
-[node name="Player" parent="." instance=ExtResource("1_jepyr")]
-visible = false
-z_index = 1
-position = Vector2(567, 300)
-
-[node name="TerrainRect" parent="." instance=ExtResource("2_kgt41")]
-position = Vector2(570, 450)
-scale = Vector2(1.2, 1.2)
-
-[node name="TerrainRect2" parent="." instance=ExtResource("2_kgt41")]
-position = Vector2(-81, 384)
-rotation = 1.5708
-
-[node name="TerrainRect3" parent="." instance=ExtResource("2_kgt41")]
-position = Vector2(1222, 423)
-rotation = -1.5708
+[node name="Exit_zone" parent="." index="3"]
+target_level_path = "res://levels/level_2.tscn"
