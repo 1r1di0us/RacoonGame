@@ -1,16 +1,25 @@
 extends Node
 #currently preloads level 1 from the start screen
 #change to load main menu later
-var level_1 = preload("res://levels/level_1.tscn")
+#var level_1 = preload("res://levels/level_1.tscn")
 var pause_screen = preload("res://ui/pause_screen.tscn")
 var start_screen = preload("res://ui/start_screen.tscn")
+
+#flags for level completion- only saved per game instance
+var level_flags = [true, false, false]
+
+func setLevelDone(i):
+	level_flags[i-1] = true
+
+func isLevelDone(i):
+	return level_flags[i-1];
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
 func start_game():
-	transition_to_scene(level_1.resource_path)
+	transition_to_scene("res://levels/level_1_cutscene.tscn")
 
 func exit_game():
 	get_tree().quit()

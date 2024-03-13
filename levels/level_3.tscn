@@ -11,4 +11,4 @@ position = Vector2(253, 381)
 text = "level 3"
 
 [node name="Exit_zone" parent="." index="3"]
-target_level_path = "res://ui/start_screen.tscn"
+target_level_path = "res://ui/credits.tscn"

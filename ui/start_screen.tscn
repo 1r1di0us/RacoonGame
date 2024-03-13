@@ -52,6 +52,10 @@ shortcut = SubResource("Shortcut_1en2q")
 shortcut_in_tooltip = false
 text = "START"
 
+[node name="LevelSelectButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "LEVEL SELECT"
+
 [node name="ExitButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 shortcut = SubResource("Shortcut_a22dd")
@@ -73,5 +77,6 @@ horizontal_alignment = 1
 
 [connection signal="mouse_entered" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/LevelSelectButton" to="." method="_on_level_select_button_pressed"]
 [connection signal="mouse_entered" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

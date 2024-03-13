@@ -12,4 +12,4 @@ text = "level 2"
 
 [node name="Exit_zone" parent="." index="3"]
 position = Vector2(121, 392)
-target_level_path = "res://levels/level_3.tscn"
+target_level_path = "res://levels/level_3_cutscene.tscn"

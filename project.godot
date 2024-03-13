@@ -21,6 +21,10 @@ GameManager="*res://scripts/game_manager.gd"
 AudioManager="*res://AudioManager.tscn"
 LevelTransitions="*res://ui/level_transitions.tscn"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [editor]
 
 version_control/plugin_name="GitPlugin"
