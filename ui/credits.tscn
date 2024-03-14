@@ -6,5 +6,8 @@
 target_level_path = "res://ui/start_screen.tscn"
 play_enter_animation = false
 
+[node name="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" index="0"]
+text = "done"
+
 [node name="Label" parent="." index="2"]
 text = "Credits"
