@@ -75,7 +75,7 @@ func _physics_process(delta):
 				else:
 					animationPlayer.play("run")
 				
-				if prev_facing != facing: # we want to flip
+				if prev_facing != facing: # we want to flip mid animation
 					var temp = animationPlayer.current_animation_position
 					if facing:
 						animationPlayer.play("run_flip")
