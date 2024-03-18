@@ -4,6 +4,7 @@ extends Node
 #var level_1 = preload("res://levels/level_1.tscn")
 var pause_screen = preload("res://ui/pause_screen.tscn")
 var start_screen = preload("res://ui/start_screen.tscn")
+var game_over_screen = preload("res://ui/game_over_screen.tscn")
 
 #flags for level completion- only saved per game instance
 var level_flags = [true, false, false]
@@ -29,12 +30,17 @@ func main_menu():
 		get_tree().paused = false
 	transition_to_scene(start_screen.resource_path)
 
-func pause_game():
+func pause_game(type):
 	if get_tree().paused == false:
 		#game is not paused, so pause it and show the pause screen
+		
 		get_tree().paused = true
-		var pause_screen_instance = pause_screen.instantiate()
-		get_tree().get_root().add_child(pause_screen_instance)
+		var screen_type
+		if (type == 0):
+			screen_type = pause_screen.instantiate()
+		else: #type == 1
+			screen_type = game_over_screen.instantiate()
+		get_tree().get_root().add_child(screen_type)
 	else:
 		#game is paused, so unpause it and hide the pause screen
 		#$PauseScreen.hide()

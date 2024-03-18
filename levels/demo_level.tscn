@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cnaopqpryp8l7"]
 
 [ext_resource type="PackedScene" uid="uid://c5n3bedy7lusb" path="res://ui/ui_screen.tscn" id="1_my6j0"]
-[ext_resource type="PackedScene" uid="uid://blyuc0wj5nyy4" path="res://player/raccoon.tscn" id="2_k443v"]
+[ext_resource type="PackedScene" uid="uid://c1qok2g7135af" path="res://player/raccoon.tscn" id="2_k443v"]
 [ext_resource type="PackedScene" uid="uid://q2bmtnx1jfuu" path="res://level_assets/terrain_rect.tscn" id="3_r8i1c"]
 
 [node name="Level1" type="Node2D"]
@@ -11,8 +11,7 @@ process_mode = 1
 
 [node name="Raccoon" parent="." instance=ExtResource("2_k443v")]
 z_index = 1
-position = Vector2(178, 598)
-scale = Vector2(0.5, 0.5)
+position = Vector2(182, 530)
 
 [node name="Camera2D" type="Camera2D" parent="Raccoon"]
 limit_left = 0

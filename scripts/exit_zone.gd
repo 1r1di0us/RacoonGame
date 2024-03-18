@@ -1,4 +1,4 @@
-extends Area2D
+extends player_detect_zone
 
 @export_file("*.tscn") var target_level_path = ""
 @export() var play_exit_animation = true
