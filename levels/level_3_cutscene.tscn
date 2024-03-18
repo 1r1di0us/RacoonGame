@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0fp5iw0yp2ti"]
+
+[ext_resource type="PackedScene" uid="uid://cx37s3en6c2qj" path="res://ui/cutscene.tscn" id="1_2oj4e"]
+
+[node name="LevelThreeCutscene" instance=ExtResource("1_2oj4e")]
+target_level_path = "res://levels/level_3.tscn"
+
+[node name="Label" parent="." index="2"]
+text = "Level 3 cutscene"

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://puunqa1fs0ql"]
+
+[ext_resource type="PackedScene" uid="uid://bfad8b5ndhqgm" path="res://level_assets/player_detect_zone.tscn" id="1_2lk7j"]
+
+[node name="out_of_bounds" instance=ExtResource("1_2lk7j")]
+
+[node name="ColorRect" parent="." index="1"]
+color = Color(0.85098, 0.192157, 0.294118, 0.4)
