@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://c1qok2g7135af"]
+[gd_scene load_steps=80 format=3 uid="uid://c1qok2g7135af"]
 
 [ext_resource type="Texture2D" uid="uid://dyato5cemyy8a" path="res://art/Raccoon Assets/Protagonist Raccoon/Crawl/Draft #2/Raccoon_Crawl_Edited-Sheet.png" id="1_fgivg"]
 [ext_resource type="Script" path="res://scripts/raccoon.gd" id="1_nso0o"]
@@ -28,6 +28,9 @@
 [ext_resource type="Script" path="res://player/States/Jump.gd" id="20_lx7k6"]
 [ext_resource type="Script" path="res://player/States/Roll.gd" id="27_tx8y4"]
 [ext_resource type="Script" path="res://player/States/High_Jump.gd" id="28_kf40v"]
+[ext_resource type="Script" path="res://player/States/Tuck.gd" id="29_463kt"]
+[ext_resource type="Script" path="res://player/States/Launch.gd" id="29_yaxwu"]
+[ext_resource type="Script" path="res://player/States/Freeball.gd" id="30_w2pdj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1hxyy"]
 atlas = ExtResource("1_fgivg")
@@ -225,6 +228,20 @@ animations = [{
 }],
 "loop": true,
 "name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_44sq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_p7nk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_pm3qs")
+}],
+"loop": true,
+"name": &"launch",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1131,6 +1148,160 @@ tracks/5/keys = {
 "values": [Vector2(54, -93), Vector2(54, -93), Vector2(54, -93), Vector2(54, -93), Vector2(54, -93), Vector2(54, -93)]
 }
 
+[sub_resource type="Animation" id="Animation_6r32t"]
+resource_name = "roll"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [&"roll", &"roll", &"roll", &"roll", &"roll", &"roll"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [3, 4, 5, 0, 1, 2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, false, false, false, false, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-24, -54), Vector2(-24, -54), Vector2(-24, -54), Vector2(-36, -60), Vector2(-24, -60), Vector2(-12, -54)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-18, -60), Vector2(-18, -60), Vector2(-18, -60), Vector2(-18, -60), Vector2(-18, -60), Vector2(-18, -60)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:shape:size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200)]
+}
+
+[sub_resource type="Animation" id="Animation_n54kl"]
+resource_name = "roll_flip"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [&"roll", &"roll", &"roll", &"roll", &"roll", &"roll"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, true, true, true, true, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(36, -60), Vector2(24, -60), Vector2(12, -54), Vector2(24, -54), Vector2(24, -54), Vector2(24, -54)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(18, -60), Vector2(18, -60), Vector2(18, -60), Vector2(18, -60), Vector2(18, -60), Vector2(18, -60)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:shape:size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200)]
+}
+
 [sub_resource type="Animation" id="Animation_roait"]
 resource_name = "run"
 length = 0.6
@@ -1338,10 +1509,9 @@ tracks/3/keys = {
 "values": [Vector2(0, -63)]
 }
 
-[sub_resource type="Animation" id="Animation_6r32t"]
-resource_name = "roll"
-length = 0.6
-loop_mode = 1
+[sub_resource type="Animation" id="Animation_iagby"]
+resource_name = "launch"
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1349,10 +1519,10 @@ tracks/0/path = NodePath("AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [&"roll", &"roll", &"roll", &"roll", &"roll", &"roll"]
+"values": [&"launch", &"launch", &"launch"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1361,10 +1531,10 @@ tracks/1/path = NodePath("AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5]
+"values": [0, 1, 2]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -1373,10 +1543,10 @@ tracks/2/path = NodePath("AnimatedSprite2D:flip_h")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [false, false, false, false, false, false]
+"values": [false, false, false]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1385,10 +1555,10 @@ tracks/3/path = NodePath("AnimatedSprite2D:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(-36, -60), Vector2(-24, -60), Vector2(-12, -54), Vector2(-24, -54), Vector2(-24, -54), Vector2(-24, -54)]
+"values": [Vector2(-36, -60), Vector2(-24, -60), Vector2(-12, -54)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -1397,10 +1567,10 @@ tracks/4/path = NodePath("CollisionShape2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(-18, -60), Vector2(-18, -60), Vector2(-18, -60), Vector2(-18, -60), Vector2(-18, -60), Vector2(-18, -60)]
+"values": [Vector2(-18, -60), Vector2(-18, -60), Vector2(-18, -60)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -1409,16 +1579,15 @@ tracks/5/path = NodePath("CollisionShape2D:shape:size")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200)]
+"values": [Vector2(220, 200), Vector2(220, 200), Vector2(220, 200)]
 }
 
-[sub_resource type="Animation" id="Animation_n54kl"]
-resource_name = "roll_flip"
-length = 0.6
-loop_mode = 1
+[sub_resource type="Animation" id="Animation_723tx"]
+resource_name = "launch_flip"
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1426,10 +1595,10 @@ tracks/0/path = NodePath("AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [&"roll", &"roll", &"roll", &"roll", &"roll", &"roll"]
+"values": [&"launch", &"launch", &"launch"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1438,10 +1607,10 @@ tracks/1/path = NodePath("AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5]
+"values": [0, 1, 2]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -1450,10 +1619,10 @@ tracks/2/path = NodePath("AnimatedSprite2D:flip_h")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [true, true, true, true, true, true]
+"values": [true, true, true]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1462,10 +1631,10 @@ tracks/3/path = NodePath("AnimatedSprite2D:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(36, -60), Vector2(24, -60), Vector2(12, -54), Vector2(24, -54), Vector2(24, -54), Vector2(24, -54)]
+"values": [Vector2(36, -60), Vector2(24, -60), Vector2(12, -54)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -1474,10 +1643,10 @@ tracks/4/path = NodePath("CollisionShape2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(18, -60), Vector2(18, -60), Vector2(18, -60), Vector2(18, -60), Vector2(18, -60), Vector2(18, -60)]
+"values": [Vector2(18, -60), Vector2(18, -60), Vector2(18, -60)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -1486,10 +1655,10 @@ tracks/5/path = NodePath("CollisionShape2D:shape:size")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200)]
+"values": [Vector2(220, 200), Vector2(220, 200), Vector2(220, 200)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7mnnp"]
@@ -1505,6 +1674,8 @@ _data = {
 "idle_flip": SubResource("Animation_1t6u5"),
 "jump": SubResource("Animation_cd6s1"),
 "jump_flip": SubResource("Animation_80204"),
+"launch": SubResource("Animation_iagby"),
+"launch_flip": SubResource("Animation_723tx"),
 "roll": SubResource("Animation_6r32t"),
 "roll_flip": SubResource("Animation_n54kl"),
 "run": SubResource("Animation_roait"),
@@ -1567,3 +1738,12 @@ script = ExtResource("27_tx8y4")
 
 [node name="High_Jump" type="Node" parent="StateMachine"]
 script = ExtResource("28_kf40v")
+
+[node name="Launch" type="Node" parent="StateMachine"]
+script = ExtResource("29_yaxwu")
+
+[node name="Freeball" type="Node" parent="StateMachine"]
+script = ExtResource("30_w2pdj")
+
+[node name="Tuck" type="Node" parent="StateMachine"]
+script = ExtResource("29_463kt")

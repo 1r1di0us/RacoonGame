@@ -46,7 +46,7 @@ texture = ExtResource("5_wk6b1")
 centered = false
 
 [node name="Raccoon" parent="." index="2"]
-position = Vector2(150, 565)
+position = Vector2(150, 579)
 
 [node name="Camera2D" parent="Raccoon" index="6"]
 limit_left = 0

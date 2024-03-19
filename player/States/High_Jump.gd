@@ -15,6 +15,8 @@ func physics_update(delta: float):
 				finished.emit("Idle")
 	elif animationPlayer.current_animation_position >= 0.6:
 		finished.emit("Freefall")
+	elif Input.is_action_just_pressed("jump"):
+		finished.emit("Tuck")
 
 	if raccoon.prev_facing != raccoon.facing: # we want to flip in the middle of the state
 		var temp = animationPlayer.current_animation_position
@@ -33,8 +35,9 @@ func physics_update(delta: float):
 
 func enter(msg: Dictionary = {}):
 	raccoon.jump_sound.play() #Play Jump Sound
+	#y velocity determined by previous state
 	
-	if raccoon.locked_dir == -1:
+	if raccoon.facing == 1:
 		animationPlayer.play("jump_flip")
 	else:
 		animationPlayer.play("jump")

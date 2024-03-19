@@ -13,23 +13,27 @@ func physics_update(delta: float):
 		
 		if Input.is_action_just_released("jump"):
 			raccoon.velocity.x = (-raccoon.facing*2 + 1) * raccoon.LAUNCH_SPEED
-			finished.emit("Roll")
+			finished.emit("Launch")
+			raccoon.locked_facing = raccoon.facing
+			launch_ready = 0
 	else:
-		if not raccoon.is_on_floor:
+		if not raccoon.is_on_floor():
 			finished.emit("Freefall")
 		elif Input.is_action_just_pressed("jump") && not Input.is_action_pressed("crouch"):
 			finished.emit("Jump")
 		elif Input.is_action_just_pressed("jump") && Input.is_action_pressed("crouch"):
 			charge_timer = 0.5;
-		elif Input.is_action_pressed("jump") && Input.is_action_pressed("crouch"):
-			charge_timer -= delta
+		elif Input.is_action_pressed("jump") && charge_timer > 0:
+			charge_timer -= delta # decrement timer
 			if charge_timer <= 0:
 				charge_timer = 0
 				#finished.emit("Ready") #when we get a ready animation
 				launch_ready = 1
-		elif not Input.is_action_pressed("crouch"):
+		elif Input.is_action_just_released("jump") && charge_timer > 0:
+			charge_timer = 0
+		elif not Input.is_action_pressed("crouch") && charge_timer <= 0:
 			finished.emit("Idle")
-		elif not raccoon.direction == 0:
+		elif not raccoon.direction == 0 && charge_timer <= 0:
 			finished.emit("Crawl")
 			
 	raccoon.velocity.y += raccoon.gravity * delta
@@ -43,4 +47,5 @@ func enter(msg: Dictionary = {}):
 		animationPlayer.play("crouch")
 
 func exit():
-	pass
+	charge_timer = 0
+	launch_ready = 0
