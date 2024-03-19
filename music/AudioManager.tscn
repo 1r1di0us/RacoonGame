@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://mwl5glcd7hyj"]
+[gd_scene load_steps=9 format=3 uid="uid://mwl5glcd7hyj"]
 
 [ext_resource type="Script" path="res://scripts/AudioManager.gd" id="1_7gyvn"]
 [ext_resource type="AudioStream" uid="uid://yx8x1dipwbhy" path="res://music/Bunnymajs - Split Persona.mp3" id="1_f82f8"]
 [ext_resource type="AudioStream" uid="uid://2hldg547shad" path="res://music/Bunnymajs - Objects of Epic Proportion.mp3" id="2_dcs07"]
 [ext_resource type="AudioStream" uid="uid://cxkdy8y07yop5" path="res://music/Bunnymajs - Again, but with feeling.mp3" id="3_wr3cq"]
-[ext_resource type="AudioStream" uid="uid://cgb4g46784e7l" path="res://sfx/select.mp3" id="5_0sq3x"]
+[ext_resource type="AudioStream" uid="uid://2jshm37ci5ph" path="res://sfx/ui (96).wav" id="5_8d4tf"]
+[ext_resource type="AudioStream" uid="uid://b23plw333fw28" path="res://sfx/sfx_sounds_pause5_in.wav" id="6_7ebod"]
+[ext_resource type="AudioStream" uid="uid://dt7xdgila4ujj" path="res://sfx/sfx_sounds_button14.wav" id="6_i52ys"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_yme72"]
 streams_count = 3
@@ -22,7 +24,16 @@ script = ExtResource("1_7gyvn")
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_yme72")
 volume_db = -10.0
+autoplay = true
 
 [node name="HoverSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_0sq3x")
+stream = ExtResource("5_8d4tf")
+volume_db = -9.0
+
+[node name="SelectSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_7ebod")
+volume_db = -12.0
+
+[node name="SelectSoundNext" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_i52ys")
 volume_db = -9.0

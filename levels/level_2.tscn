@@ -4,12 +4,12 @@
 
 [node name="Level_2" instance=ExtResource("1_sfuhb")]
 
-[node name="Raccoon" parent="." index="0"]
+[node name="Raccoon" parent="." index="1"]
 position = Vector2(823, 379)
 
-[node name="UIScreen" parent="." index="1"]
+[node name="UIScreen" parent="." index="2"]
 text = "level 2"
 
-[node name="Exit_zone" parent="." index="3"]
+[node name="Exit_zone" parent="." index="4"]
 position = Vector2(121, 392)
 target_level_path = "res://levels/level_3_cutscene.tscn"

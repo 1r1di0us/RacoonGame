@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://c2tjcdjaltnwf"]
 
 [ext_resource type="Texture2D" uid="uid://c1qwtoub75jt3" path="res://art/Landscape - Level Assets/Background/Level 1/Forest_Background_Fog.png" id="1_mjeb1"]
-[ext_resource type="PackedScene" uid="uid://blyuc0wj5nyy4" path="res://player/raccoon.tscn" id="1_ovwk0"]
+[ext_resource type="PackedScene" uid="uid://c1qok2g7135af" path="res://player/raccoon.tscn" id="1_ovwk0"]
 [ext_resource type="Texture2D" uid="uid://b2x5lnfh4sf0e" path="res://art/Landscape - Level Assets/Background/Level 1/Forest_Background_Trees2.png" id="2_jybhy"]
 [ext_resource type="PackedScene" uid="uid://c5n3bedy7lusb" path="res://ui/ui_screen.tscn" id="2_uux8a"]
 [ext_resource type="PackedScene" uid="uid://q2bmtnx1jfuu" path="res://level_assets/terrain_rect.tscn" id="3_d08jn"]
