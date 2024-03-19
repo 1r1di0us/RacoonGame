@@ -2,7 +2,7 @@ extends Node
 class_name StateMachine
 
 ## Interface for a generic state machine. Initializes states and delegates engine callbacks (_process, _physics_process, _unhandled_input) to the active state node. Intended to be as reusable as possible.
-
+# Has been changed a bit for Raccoon purposes
 
 # Emitted when transitioning to a new state
 signal state_changed(current_state)
@@ -21,10 +21,6 @@ var states_stack = []
 # The current active state. At the start of the game, we begin at the initial state
 @onready var current_state: State = get_node(initial_state)
 
-# Store where we are facing so we can flip things mid animation
-var facing = 0
-var prev_facing = 0
-
 func _ready():
 	await owner.ready
 	for child in get_children():
@@ -35,7 +31,8 @@ func _ready():
 		child.connect("finished", Callable(self, "_change_state"))
 	states_stack.push_front(current_state)
 	current_state = states_stack[0]
-	current_state.enter({0:facing, 1:prev_facing})
+	current_state.enter()
+	states_map = {"Idle": $Idle, "Run": $Run, "Crouch": $Crouch, "Crawl": $Crawl, "Jump": $Jump, "Freefall": $Freefall, "Roll": $Roll, "High_Jump": $High_Jump}
 
 # The state machine subscribes to node callbacks and delegates them to the current state
 
@@ -62,6 +59,7 @@ func _change_state(target_state_name, msg: Dictionary = {}) -> void:
 		return
 #	print("current state: " + str(current_state))
 	current_state.exit()
+	
 	if str(states_map[target_state_name]) == PREVIOUS:
 		states_stack.pop_front()
 	else:

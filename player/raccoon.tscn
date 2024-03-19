@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://c1qok2g7135af"]
+[gd_scene load_steps=75 format=3 uid="uid://c1qok2g7135af"]
 
 [ext_resource type="Texture2D" uid="uid://dyato5cemyy8a" path="res://art/Raccoon Assets/Protagonist Raccoon/Crawl/Draft #2/Raccoon_Crawl_Edited-Sheet.png" id="1_fgivg"]
 [ext_resource type="Script" path="res://scripts/raccoon.gd" id="1_nso0o"]
@@ -13,8 +13,21 @@
 [ext_resource type="Texture2D" uid="uid://ceuoht14nnagu" path="res://art/Raccoon Assets/Protagonist Raccoon/Idle/Draft #3/Raccoon_Idle_Draft3 (Frame 3).png" id="8_6ll1n"]
 [ext_resource type="AudioStream" uid="uid://dcgm8ljqvrudh" path="res://sfx/whoosh sound effect.mp3" id="8_v2btb"]
 [ext_resource type="Texture2D" uid="uid://dj3jt68cgfs7l" path="res://art/Raccoon Assets/Protagonist Raccoon/Idle/Draft #3/Raccoon_Idle_Draft3 (Frame 4).png" id="9_5smny"]
+[ext_resource type="Texture2D" uid="uid://cele3ncq7kasd" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll1.png" id="11_44sq5"]
+[ext_resource type="Texture2D" uid="uid://cajxlef1xoqcj" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll2.png" id="12_p7nk8"]
+[ext_resource type="Texture2D" uid="uid://cj4fwbrfgq2px" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll3.png" id="13_pm3qs"]
 [ext_resource type="Script" path="res://player/States/StateMachine.gd" id="14_66lkj"]
+[ext_resource type="Texture2D" uid="uid://ceicgyhtqk5as" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll4.png" id="14_hm5sl"]
 [ext_resource type="Script" path="res://player/States/Idle.gd" id="15_0bv0f"]
+[ext_resource type="Texture2D" uid="uid://c41hkkkuuqwxq" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll5.png" id="15_pjntl"]
+[ext_resource type="Script" path="res://player/States/Run.gd" id="16_1avld"]
+[ext_resource type="Texture2D" uid="uid://b5xtq7so20lbw" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll6.png" id="16_nusdx"]
+[ext_resource type="Script" path="res://player/States/Crouch.gd" id="17_fisyi"]
+[ext_resource type="Script" path="res://player/States/Crawl.gd" id="18_jo6b5"]
+[ext_resource type="Script" path="res://player/States/Freefall.gd" id="19_0yqig"]
+[ext_resource type="Script" path="res://player/States/Jump.gd" id="20_lx7k6"]
+[ext_resource type="Script" path="res://player/States/Roll.gd" id="27_tx8y4"]
+[ext_resource type="Script" path="res://player/States/High_Jump.gd" id="28_kf40v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1hxyy"]
 atlas = ExtResource("1_fgivg")
@@ -212,6 +225,29 @@ animations = [{
 }],
 "loop": true,
 "name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_44sq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_p7nk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_pm3qs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_hm5sl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_pjntl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_nusdx")
+}],
+"loop": true,
+"name": &"roll",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1302,6 +1338,160 @@ tracks/3/keys = {
 "values": [Vector2(0, -63)]
 }
 
+[sub_resource type="Animation" id="Animation_6r32t"]
+resource_name = "roll"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [&"roll", &"roll", &"roll", &"roll", &"roll", &"roll"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, false, false, false, false, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-36, -60), Vector2(-24, -60), Vector2(-12, -54), Vector2(-24, -54), Vector2(-24, -54), Vector2(-24, -54)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-18, -60), Vector2(-18, -60), Vector2(-18, -60), Vector2(-18, -60), Vector2(-18, -60), Vector2(-18, -60)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:shape:size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200)]
+}
+
+[sub_resource type="Animation" id="Animation_n54kl"]
+resource_name = "roll_flip"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [&"roll", &"roll", &"roll", &"roll", &"roll", &"roll"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, true, true, true, true, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(36, -60), Vector2(24, -60), Vector2(12, -54), Vector2(24, -54), Vector2(24, -54), Vector2(24, -54)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(18, -60), Vector2(18, -60), Vector2(18, -60), Vector2(18, -60), Vector2(18, -60), Vector2(18, -60)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:shape:size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7mnnp"]
 _data = {
 "RESET": SubResource("Animation_lxm5c"),
@@ -1315,6 +1505,8 @@ _data = {
 "idle_flip": SubResource("Animation_1t6u5"),
 "jump": SubResource("Animation_cd6s1"),
 "jump_flip": SubResource("Animation_80204"),
+"roll": SubResource("Animation_6r32t"),
+"roll_flip": SubResource("Animation_n54kl"),
 "run": SubResource("Animation_roait"),
 "run_flip": SubResource("Animation_o4j48"),
 "walk": SubResource("Animation_mbwvt")
@@ -1354,3 +1546,24 @@ initial_state = NodePath("Idle")
 
 [node name="Idle" type="Node" parent="StateMachine"]
 script = ExtResource("15_0bv0f")
+
+[node name="Run" type="Node" parent="StateMachine"]
+script = ExtResource("16_1avld")
+
+[node name="Crouch" type="Node" parent="StateMachine"]
+script = ExtResource("17_fisyi")
+
+[node name="Crawl" type="Node" parent="StateMachine"]
+script = ExtResource("18_jo6b5")
+
+[node name="Freefall" type="Node" parent="StateMachine"]
+script = ExtResource("19_0yqig")
+
+[node name="Jump" type="Node" parent="StateMachine"]
+script = ExtResource("20_lx7k6")
+
+[node name="Roll" type="Node" parent="StateMachine"]
+script = ExtResource("27_tx8y4")
+
+[node name="High_Jump" type="Node" parent="StateMachine"]
+script = ExtResource("28_kf40v")
