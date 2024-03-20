@@ -30,7 +30,7 @@ func physics_update(delta: float):
 	
 	raccoon.velocity.y += raccoon.gravity * delta
 	# Can't Push anymore but air is less resistant
-	raccoon.velocity.x += raccoon.velocity.x * 0.5 * delta
+	raccoon.velocity.x -= raccoon.velocity.x * 0.5 * delta
 
 func enter(msg: Dictionary = {}):
 	if raccoon.facing == 1:
