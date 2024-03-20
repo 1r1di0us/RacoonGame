@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://na1qhdt50f61"]
+
+[ext_resource type="Texture2D" uid="uid://bf7q4rrpwv5dd" path="res://art/tileTest2.png" id="1_wsb48"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bdjv0"]
+texture = ExtResource("1_wsb48")
+texture_region_size = Vector2i(32, 32)
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_gkyvk"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 2
+sources/0 = SubResource("TileSetAtlasSource_bdjv0")
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_gkyvk")
+format = 2
