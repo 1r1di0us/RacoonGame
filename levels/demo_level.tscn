@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnaopqpryp8l7"]
+
+[ext_resource type="PackedScene" uid="uid://c5n3bedy7lusb" path="res://ui/ui_screen.tscn" id="1_my6j0"]
+[ext_resource type="PackedScene" uid="uid://c1qok2g7135af" path="res://player/raccoon.tscn" id="2_k443v"]
+[ext_resource type="PackedScene" uid="uid://q2bmtnx1jfuu" path="res://level_assets/terrain_rect.tscn" id="3_r8i1c"]
+
+[node name="Level1" type="Node2D"]
+process_mode = 1
+
+[node name="UIScreen" parent="." instance=ExtResource("1_my6j0")]
+
+[node name="Raccoon" parent="." instance=ExtResource("2_k443v")]
+z_index = 1
+position = Vector2(182, 530)
+
+[node name="Camera2D" type="Camera2D" parent="Raccoon"]
+limit_left = 0
+limit_bottom = 700
+editor_draw_limits = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(0, 0, -1, 164, 764, 162, 763, 262, -2, 266, -4, 598, 773, 598, 773, 473, 876, 475, 878, 597, 1065, 598, 1068, 345, 2333, 349, 2340, 257, 2427, 255, 2431, -110, 2536, -108, 2536, 456, 1170, 453, 1165, 700, -105, 705, -105, -3)
+
+[node name="TerrainRect2" parent="." instance=ExtResource("3_r8i1c")]
+position = Vector2(1657, 217)

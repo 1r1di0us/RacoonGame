@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 GameManager="*res://scripts/game_manager.gd"
 AudioManager="*res://music/AudioManager.tscn"
+LevelTransitions="*res://ui/level_transitions.tscn"
+
+[display]
+
+window/stretch/mode="viewport"
 
 [editor]
 

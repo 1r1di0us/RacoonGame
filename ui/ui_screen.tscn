@@ -5,8 +5,13 @@
 [sub_resource type="GDScript" id="GDScript_bvqy0"]
 script/source = "extends CanvasLayer
 
+@export var text = \"\"
+
+func _ready():
+	$Label.text = text
+
 func _on_pause_button_pressed():
-	GameManager.pause_game()
+	GameManager.pause_game(0)
 "
 
 [sub_resource type="InputEventAction" id="InputEventAction_umm2v"]
@@ -37,6 +42,6 @@ offset_right = 24.5
 offset_bottom = 23.0
 grow_horizontal = 2
 theme = ExtResource("2_qfcyb")
-text = "DEMO"
+text = "UI GOES HERE"
 
 [connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]

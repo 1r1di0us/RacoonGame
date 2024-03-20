@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0xubvy6qcg1h"]
+
+[ext_resource type="PackedScene" uid="uid://cx37s3en6c2qj" path="res://ui/cutscene.tscn" id="1_pvdpn"]
+
+[node name="Credits" instance=ExtResource("1_pvdpn")]
+target_level_path = "res://ui/start_screen.tscn"
+play_enter_animation = false
+
+[node name="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" index="0"]
+text = "done"
+
+[node name="Label" parent="." index="2"]
+text = "Credits"

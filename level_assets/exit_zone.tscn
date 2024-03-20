@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwwaiwbrrw2fx"]
+
+[ext_resource type="PackedScene" uid="uid://bfad8b5ndhqgm" path="res://level_assets/player_detect_zone.tscn" id="1_fnor5"]
+[ext_resource type="Script" path="res://scripts/exit_zone.gd" id="2_6u4v0"]
+
+[node name="exit_zone_2" instance=ExtResource("1_fnor5")]
+script = ExtResource("2_6u4v0")
+target_level_path = ""
+play_exit_animation = true
+play_enter_animation = true
