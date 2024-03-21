@@ -7,6 +7,7 @@ extends player_detect_zone
 func _on_body_entered(body):
 	if not body is Raccoon: return
 	if target_level_path.is_empty(): return
+	AudioManager.emit_signal("level_complete")
 	get_tree().paused = true
 	await(LevelTransitions.play_exit_transition(play_exit_animation))
 	GameManager.transition_to_scene(target_level_path)

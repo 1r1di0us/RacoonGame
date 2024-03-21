@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://mwl5glcd7hyj"]
+[gd_scene load_steps=13 format=3 uid="uid://mwl5glcd7hyj"]
 
 [ext_resource type="Script" path="res://scripts/AudioManager.gd" id="1_7gyvn"]
 [ext_resource type="AudioStream" uid="uid://yx8x1dipwbhy" path="res://music/Bunnymajs - Split Persona.mp3" id="1_f82f8"]
@@ -7,13 +7,17 @@
 [ext_resource type="AudioStream" uid="uid://2jshm37ci5ph" path="res://sfx/ui (96).wav" id="5_8d4tf"]
 [ext_resource type="AudioStream" uid="uid://b23plw333fw28" path="res://sfx/sfx_sounds_pause5_in.wav" id="6_7ebod"]
 [ext_resource type="AudioStream" uid="uid://dt7xdgila4ujj" path="res://sfx/sfx_sounds_button14.wav" id="6_i52ys"]
+[ext_resource type="AudioStream" uid="uid://cn3la01ua3yeb" path="res://sfx/sfx_exp_various1.wav" id="8_yj6hk"]
+[ext_resource type="AudioStream" uid="uid://cjvhgouxrf27a" path="res://sfx/sfx_movement_portal1.wav" id="9_4bixw"]
+[ext_resource type="AudioStream" uid="uid://ch5jov4qbe713" path="res://sfx/sfx_movement_jump20.wav" id="10_k8fqf"]
+[ext_resource type="AudioStream" uid="uid://dko8rv77hsu1s" path="res://sfx/sfx_movement_jump9_landing.wav" id="12_2anvo"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_yme72"]
 streams_count = 3
 stream_0/stream = ExtResource("3_wr3cq")
 stream_0/weight = 1.0
 stream_1/stream = ExtResource("2_dcs07")
-stream_1/weight = 1.0
+stream_1/weight = 0.0
 stream_2/stream = ExtResource("1_f82f8")
 stream_2/weight = 1.0
 
@@ -23,7 +27,7 @@ script = ExtResource("1_7gyvn")
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_yme72")
-volume_db = -10.0
+volume_db = -12.0
 autoplay = true
 
 [node name="HoverSound" type="AudioStreamPlayer" parent="."]
@@ -37,3 +41,19 @@ volume_db = -12.0
 [node name="SelectSoundNext" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_i52ys")
 volume_db = -9.0
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_yj6hk")
+volume_db = -6.0
+
+[node name="LevelComplete" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_4bixw")
+volume_db = -15.0
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_k8fqf")
+volume_db = -15.0
+
+[node name="JumpLandingSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_2anvo")
+volume_db = 6.0

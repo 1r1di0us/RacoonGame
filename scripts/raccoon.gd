@@ -27,11 +27,6 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var has_landed: bool = false
 
-# Sounds
-@onready var jump_sound: AudioStreamPlayer = $JumpSound
-@onready var jump_landing_sound: AudioStreamPlayer = $JumpLandingSound
-
-
 func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	direction = Input.get_axis("move_left", "move_right") # direction = -1, 0, or 1, I think
@@ -43,6 +38,6 @@ func _physics_process(delta):
 	
 	if is_on_floor() and not has_landed:
 		has_landed = true
-		jump_landing_sound.play()
+		AudioManager.emit_signal("player_landed")
 	elif not is_on_floor():
 		has_landed = false
