@@ -7,7 +7,7 @@
 [node name="Raccoon" parent="." index="1"]
 position = Vector2(150, 501)
 
-[node name="Camera2D" parent="Raccoon" index="7"]
+[node name="Camera2D" parent="Raccoon" index="5"]
 limit_left = 0
 
 [node name="UIScreen" parent="." index="2"]
