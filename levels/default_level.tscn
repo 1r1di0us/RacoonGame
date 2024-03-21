@@ -44,6 +44,7 @@ centered = false
 
 [node name="Raccoon" parent="." instance=ExtResource("1_ovwk0")]
 position = Vector2(151, 324)
+scale = Vector2(0.6, 0.6)
 
 [node name="Camera2D" type="Camera2D" parent="Raccoon"]
 limit_bottom = 670

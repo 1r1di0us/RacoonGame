@@ -94,6 +94,7 @@ _data = {
 
 [node name="Level_transitions" type="CanvasLayer"]
 process_mode = 3
+layer = 2
 script = ExtResource("1_x1idp")
 
 [node name="ColorRect" type="ColorRect" parent="."]

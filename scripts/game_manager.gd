@@ -11,15 +11,19 @@ var level_flags = [true, false, false]
 
 func setLevelDone(i):
 	level_flags[i-1] = true
+	current_level = i
 
 func isLevelDone(i):
 	return level_flags[i-1];
+
+var current_level = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
 func start_game():
+	current_level = 1
 	transition_to_scene("res://levels/level_1_cutscene.tscn")
 
 func exit_game():
@@ -28,6 +32,7 @@ func exit_game():
 func main_menu():
 	if get_tree().paused==true:
 		get_tree().paused = false
+	current_level = 0
 	transition_to_scene(start_screen.resource_path)
 
 func pause_game(type):
@@ -40,6 +45,7 @@ func pause_game(type):
 			screen_type = pause_screen.instantiate()
 		else: #type == 1
 			screen_type = game_over_screen.instantiate()
+			#TODO send signal to Raccoon to play game over animation
 		get_tree().get_root().add_child(screen_type)
 	else:
 		#game is paused, so unpause it and hide the pause screen
