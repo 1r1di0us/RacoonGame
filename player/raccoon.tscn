@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://c1qok2g7135af"]
+[gd_scene load_steps=85 format=3 uid="uid://c1qok2g7135af"]
 
 [ext_resource type="Texture2D" uid="uid://dyato5cemyy8a" path="res://art/Raccoon Assets/Protagonist Raccoon/Crawl/Draft #2/Raccoon_Crawl_Edited-Sheet.png" id="1_fgivg"]
 [ext_resource type="Script" path="res://scripts/raccoon.gd" id="1_nso0o"]
@@ -16,12 +16,16 @@
 [ext_resource type="Texture2D" uid="uid://cele3ncq7kasd" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll1.png" id="11_44sq5"]
 [ext_resource type="Texture2D" uid="uid://cajxlef1xoqcj" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll2.png" id="12_p7nk8"]
 [ext_resource type="Texture2D" uid="uid://cj4fwbrfgq2px" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll3.png" id="13_pm3qs"]
+[ext_resource type="Texture2D" uid="uid://ck5veqeilsftg" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Climb/Raccoon_Pole-Climb1.png" id="14_2urgf"]
 [ext_resource type="Script" path="res://player/States/StateMachine.gd" id="14_66lkj"]
 [ext_resource type="Texture2D" uid="uid://ceicgyhtqk5as" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll4.png" id="14_hm5sl"]
 [ext_resource type="Script" path="res://player/States/Idle.gd" id="15_0bv0f"]
+[ext_resource type="Texture2D" uid="uid://8ouv4iodix77" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Climb/Raccoon_Pole-Climb2.png" id="15_3anr3"]
 [ext_resource type="Texture2D" uid="uid://c41hkkkuuqwxq" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll5.png" id="15_pjntl"]
 [ext_resource type="Script" path="res://player/States/Run.gd" id="16_1avld"]
+[ext_resource type="Texture2D" uid="uid://5etr11yn884d" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Climb/Raccoon_Pole-Climb3.png" id="16_6itag"]
 [ext_resource type="Texture2D" uid="uid://b5xtq7so20lbw" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll6.png" id="16_nusdx"]
+[ext_resource type="Texture2D" uid="uid://dkukqge5darfy" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Climb/Raccoon_Pole-Climb4.png" id="17_em42u"]
 [ext_resource type="Script" path="res://player/States/Crouch.gd" id="17_fisyi"]
 [ext_resource type="Script" path="res://player/States/Crawl.gd" id="18_jo6b5"]
 [ext_resource type="Script" path="res://player/States/Freefall.gd" id="19_0yqig"]
@@ -242,6 +246,23 @@ animations = [{
 }],
 "loop": true,
 "name": &"launch",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_2urgf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_3anr3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_6itag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_em42u")
+}],
+"loop": true,
+"name": &"pole_climb",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1661,6 +1682,71 @@ tracks/3/keys = {
 "values": [Vector2(0, -63)]
 }
 
+[sub_resource type="Animation" id="Animation_4maxr"]
+resource_name = "pole_climb"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [&"pole_climb", &"pole_climb", &"pole_climb", &"pole_climb"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:shape:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(250, 260), Vector2(250, 260), Vector2(250, 260), Vector2(250, 260)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -78), Vector2(0, -78), Vector2(0, -78), Vector2(0, -78)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-3, -54), Vector2(-3, -54), Vector2(-3, -54), Vector2(-3, -54)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7mnnp"]
 _data = {
 "RESET": SubResource("Animation_lxm5c"),
@@ -1676,6 +1762,7 @@ _data = {
 "jump_flip": SubResource("Animation_80204"),
 "launch": SubResource("Animation_iagby"),
 "launch_flip": SubResource("Animation_723tx"),
+"pole_climb": SubResource("Animation_4maxr"),
 "roll": SubResource("Animation_6r32t"),
 "roll_flip": SubResource("Animation_n54kl"),
 "run": SubResource("Animation_roait"),

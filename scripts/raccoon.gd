@@ -7,6 +7,7 @@ const TUCK_VELOCITY = -200.0
 const HIGH_JUMP_VELOCITY_X = 150.0
 const ROLL_PUSH = 300.0 # minimum roll push velocity
 const LAUNCH_SPEED = 1200.0
+const CLIMB_SPEED = 400.0
 
 const ACCELERATION = 500
 const MAX_SPEED = 80
@@ -18,6 +19,7 @@ var direction = 0
 var facing = 0
 var prev_facing = 0
 var locked_facing = -1
+var climbables_count = 0
 
 var prevVelY = 0 #helps freeball know whether to start rolling or not
 
