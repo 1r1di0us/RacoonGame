@@ -22,16 +22,12 @@ var locked_dir = 0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
-var raycast1: RayCast2D
-var raycast2: RayCast2D
+var has_landed: bool = false
 
 # Sounds
 @onready var jump_sound: AudioStreamPlayer = $JumpSound
 @onready var jump_landing_sound: AudioStreamPlayer = $JumpLandingSound
 
-func _ready():
-	raycast1 = $RayCastLandingDetection1
-	raycast2 = $RayCastLandingDetection2
 
 func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
@@ -40,3 +36,9 @@ func _physics_process(delta):
 		prev_facing = facing
 		facing = (-direction+1)/2 #facing is 0 or 1
 	move_and_slide()
+	
+	if is_on_floor() and not has_landed:
+		has_landed = true
+		jump_landing_sound.play()
+	elif not is_on_floor():
+		has_landed = false

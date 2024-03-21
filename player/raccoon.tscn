@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://c1qok2g7135af"]
+[gd_scene load_steps=77 format=3 uid="uid://c1qok2g7135af"]
 
 [ext_resource type="Texture2D" uid="uid://dyato5cemyy8a" path="res://art/Raccoon Assets/Protagonist Raccoon/Crawl/Draft #2/Raccoon_Crawl_Edited-Sheet.png" id="1_fgivg"]
 [ext_resource type="Script" path="res://scripts/raccoon.gd" id="1_nso0o"]
@@ -25,6 +25,7 @@
 [ext_resource type="Script" path="res://player/States/Crouch.gd" id="17_fisyi"]
 [ext_resource type="Script" path="res://player/States/Crawl.gd" id="18_jo6b5"]
 [ext_resource type="Script" path="res://player/States/Freefall.gd" id="19_0yqig"]
+[ext_resource type="AudioStream" uid="uid://ch5jov4qbe713" path="res://sfx/sfx_movement_jump20.wav" id="19_sydxy"]
 [ext_resource type="AudioStream" uid="uid://b7hh7wkcj0ngj" path="res://sfx/sfx_movement_jump11_landing.wav" id="20_ccorw"]
 [ext_resource type="Script" path="res://player/States/Jump.gd" id="20_lx7k6"]
 [ext_resource type="Script" path="res://player/States/Roll.gd" id="27_tx8y4"]
@@ -1527,28 +1528,14 @@ position = Vector2(0, -66)
 scale = Vector2(0.6, 0.6)
 shape = SubResource("RectangleShape2D_pqqmg")
 
-[node name="ShapeCast2D" type="ShapeCast2D" parent="."]
-
-[node name="RayCastLandingDetection1" type="RayCast2D" parent="."]
-position = Vector2(48, -66)
-target_position = Vector2(0, 80)
-collide_with_areas = true
-collide_with_bodies = false
-
-[node name="RayCastLandingDetection2" type="RayCast2D" parent="."]
-position = Vector2(-48, -66)
-target_position = Vector2(0, 80)
-collide_with_areas = true
-collide_with_bodies = false
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_7mnnp")
 }
 
 [node name="JumpSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_v2btb")
-pitch_scale = 1.33
+stream = ExtResource("19_sydxy")
+volume_db = -12.0
 
 [node name="WhooshSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_v2btb")
