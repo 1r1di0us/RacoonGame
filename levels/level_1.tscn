@@ -23,4 +23,4 @@ target_level_path = "res://levels/level_2_cutscene.tscn"
 play_enter_animation = false
 
 [node name="out_of_bounds" parent="." index="5"]
-position = Vector2(26, 564)
+position = Vector2(-27, 564)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://blr8wk10wdyy8"]
+[gd_scene load_steps=7 format=3 uid="uid://blr8wk10wdyy8"]
 
 [ext_resource type="Theme" uid="uid://b02a2u15epnu7" path="res://ui/ui_theme.tres" id="1_nlur1"]
 [ext_resource type="Script" path="res://scripts/game_over_screen.gd" id="1_phcnx"]
@@ -8,6 +8,12 @@ action = &"pause_game"
 
 [sub_resource type="Shortcut" id="Shortcut_28f3v"]
 events = [SubResource("InputEventAction_tjxgv")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_ski08"]
+action = &"confirm"
+
+[sub_resource type="Shortcut" id="Shortcut_pdxde"]
+events = [SubResource("InputEventAction_ski08")]
 
 [node name="game_over_screen" type="CanvasLayer"]
 process_mode = 2
@@ -44,6 +50,7 @@ text = "RETRY"
 
 [node name="MainMenuButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+shortcut = SubResource("Shortcut_pdxde")
 shortcut_in_tooltip = false
 text = "MAIN MENU"
 
