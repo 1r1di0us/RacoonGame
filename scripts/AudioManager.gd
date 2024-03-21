@@ -10,7 +10,6 @@ func _enter_tree() -> void:
 	select_sound_next = $SelectSoundNext
 	get_tree().node_added.connect(_on_node_added)
 
-
 func _on_node_added(node:Node) -> void:
 	if node is Button:
 		# If the added node is a button we connect to its mouse_entered and pressed signals
@@ -18,7 +17,7 @@ func _on_node_added(node:Node) -> void:
 		node.mouse_entered.connect(PlayHover)
 		
 		if get_tree().get_current_scene().get_name() == "LevelOneCutscene":
-			node.pressed.connect(PlayPressed2)
+			node.pressed.connect(PlayPressed)
 		else:
 			node.pressed.connect(PlayPressed)
 

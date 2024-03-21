@@ -48,7 +48,7 @@ centered = false
 [node name="Raccoon" parent="." index="2"]
 position = Vector2(150, 565)
 
-[node name="Camera2D" parent="Raccoon" index="6"]
+[node name="Camera2D" parent="Raccoon" index="7"]
 limit_left = 0
 
 [node name="UIScreen" parent="." index="3"]
