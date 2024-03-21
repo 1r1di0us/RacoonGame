@@ -23,7 +23,7 @@ func physics_update(delta: float):
 func enter(msg: Dictionary = {}):
 	if raccoon.velocity.y >= raccoon.TUCK_VELOCITY: #raccoon not going faster than tuck velocity
 		raccoon.velocity.y = raccoon.TUCK_VELOCITY
-	raccoon.jump_sound.play() #Play Jump Sound
+	AudioManager.emit_signal("player_tuck")
 	
 	if raccoon.facing == 1:
 		animationPlayer.play("launch_flip") #launch and tuck are the same for now

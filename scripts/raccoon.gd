@@ -26,8 +26,8 @@ var prevVelY = 0 #helps freeball know whether to start rolling or not
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-# Sounds
-@onready var jump_sound: AudioStreamPlayer = $JumpSound
+
+var has_landed: bool = false
 
 func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
@@ -37,3 +37,9 @@ func _physics_process(delta):
 		facing = (-direction+1)/2 #facing is 0 or 1
 	prevVelY = velocity.y
 	move_and_slide()
+	
+	if is_on_floor() and not has_landed:
+		has_landed = true
+		AudioManager.emit_signal("player_landed")
+	elif not is_on_floor():
+		has_landed = false

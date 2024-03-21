@@ -1,9 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://cd5amkly15udr"]
+[gd_scene load_steps=3 format=3 uid="uid://cd5amkly15udr"]
 
 [ext_resource type="PackedScene" uid="uid://cx37s3en6c2qj" path="res://ui/cutscene.tscn" id="1_fde58"]
+[ext_resource type="AudioStream" uid="uid://dt7xdgila4ujj" path="res://sfx/sfx_sounds_button14.wav" id="2_h3mpa"]
 
 [node name="LevelOneCutscene" instance=ExtResource("1_fde58")]
 target_level_path = "res://levels/level_1.tscn"
 
 [node name="Label" parent="." index="2"]
 text = "Level 1 cutscene"
+
+[node name="SelectSoundPlay" type="AudioStreamPlayer" parent="." index="3"]
+stream = ExtResource("2_h3mpa")
+volume_db = -9.0

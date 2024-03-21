@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://ddqx4q7cpom6y" path="res://art/Raccoon Assets/Protagonist Raccoon/Walk/Draft #2/Raccoon_Walk_Edited-Sheet.png" id="6_ums2s"]
 [ext_resource type="Texture2D" uid="uid://cbbdcw7ai4nc6" path="res://art/Raccoon Assets/Protagonist Raccoon/Idle/Draft #3/Raccoon_Idle_Draft3 (Frame 2).png" id="7_7kgvc"]
 [ext_resource type="Texture2D" uid="uid://ceuoht14nnagu" path="res://art/Raccoon Assets/Protagonist Raccoon/Idle/Draft #3/Raccoon_Idle_Draft3 (Frame 3).png" id="8_6ll1n"]
-[ext_resource type="AudioStream" uid="uid://dcgm8ljqvrudh" path="res://sfx/whoosh sound effect.mp3" id="8_v2btb"]
 [ext_resource type="Texture2D" uid="uid://dj3jt68cgfs7l" path="res://art/Raccoon Assets/Protagonist Raccoon/Idle/Draft #3/Raccoon_Idle_Draft3 (Frame 4).png" id="9_5smny"]
 [ext_resource type="Texture2D" uid="uid://cele3ncq7kasd" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll1.png" id="11_44sq5"]
 [ext_resource type="Texture2D" uid="uid://cajxlef1xoqcj" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll2.png" id="12_p7nk8"]
@@ -29,6 +28,7 @@
 [ext_resource type="Script" path="res://player/States/Crouch.gd" id="17_fisyi"]
 [ext_resource type="Script" path="res://player/States/Crawl.gd" id="18_jo6b5"]
 [ext_resource type="Script" path="res://player/States/Freefall.gd" id="19_0yqig"]
+[ext_resource type="AudioStream" uid="uid://ch5jov4qbe713" path="res://sfx/sfx_movement_jump20.wav" id="19_5367k"]
 [ext_resource type="Script" path="res://player/States/Jump.gd" id="20_lx7k6"]
 [ext_resource type="Script" path="res://player/States/Roll.gd" id="27_tx8y4"]
 [ext_resource type="Script" path="res://player/States/High_Jump.gd" id="28_kf40v"]
@@ -747,7 +747,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [Vector2(220.5, 310), Vector2(220.5, 310)]
+"values": [Vector2(220, 310), Vector2(220, 310)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -824,7 +824,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [Vector2(220.5, 310), Vector2(220.5, 310)]
+"values": [Vector2(220, 310), Vector2(220, 310)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -901,7 +901,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(160, 220), Vector2(160, 220), Vector2(160, 220), Vector2(160, 220)]
+"values": [Vector2(220, 220), Vector2(220, 220), Vector2(220, 220), Vector2(220, 220)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -913,7 +913,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(0, -66), Vector2(0, -66), Vector2(0, -66), Vector2(0, -66)]
+"values": [Vector2(-18, -66), Vector2(-18, -66), Vector2(-18, -66), Vector2(-18, -66)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -978,7 +978,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(160, 220), Vector2(160, 220), Vector2(160, 220), Vector2(160, 220)]
+"values": [Vector2(220, 220), Vector2(220, 220), Vector2(220, 220), Vector2(220, 220)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -990,7 +990,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(0, -66), Vector2(0, -66), Vector2(0, -66), Vector2(0, -66)]
+"values": [Vector2(18, -66), Vector2(18, -66), Vector2(18, -66), Vector2(18, -66)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -1778,6 +1778,7 @@ position = Vector2(-24, -66)
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_fxkla")
 animation = &"idle"
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -66)
@@ -1790,13 +1791,8 @@ libraries = {
 }
 
 [node name="JumpSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_v2btb")
-pitch_scale = 1.33
-
-[node name="WhooshSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_v2btb")
-volume_db = -5.0
-pitch_scale = 1.79
+stream = ExtResource("19_5367k")
+volume_db = -15.0
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("14_66lkj")
