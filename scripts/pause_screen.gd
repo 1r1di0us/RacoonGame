@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 func _on_resume_button_pressed():
-	GameManager.pause_game()
+	GameManager.pause_game(0)
 	queue_free()
 	#hide()
 	#get_tree().paused = false

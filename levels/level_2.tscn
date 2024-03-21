@@ -5,11 +5,15 @@
 [node name="Level_2" instance=ExtResource("1_sfuhb")]
 
 [node name="Raccoon" parent="." index="1"]
-position = Vector2(823, 379)
+position = Vector2(821, 321)
 
 [node name="UIScreen" parent="." index="2"]
 text = "level 2"
 
-[node name="Exit_zone" parent="." index="4"]
-position = Vector2(121, 392)
+[node name="exit_zone" parent="." index="4"]
+position = Vector2(113, 377)
 target_level_path = "res://levels/level_3_cutscene.tscn"
+play_enter_animation = false
+
+[node name="out_of_bounds" parent="." index="5"]
+position = Vector2(1084, 385)

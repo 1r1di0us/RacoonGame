@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://btab6ehn8airj"]
+
+[ext_resource type="Script" path="res://levels/object/climbable_wall_left.gd" id="1_eb1pc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qj0oi"]
+size = Vector2(32, 32)
+
+[sub_resource type="QuadMesh" id="QuadMesh_a7by3"]
+size = Vector2(32, 32)
+
+[sub_resource type="QuadMesh" id="QuadMesh_8gqib"]
+size = Vector2(8, 32)
+center_offset = Vector3(-12, 0, 0)
+
+[node name="ClimbableWallLeft" type="Area2D"]
+collision_layer = 0
+script = ExtResource("1_eb1pc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qj0oi")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color(0.376471, 0.258824, 0, 1)
+mesh = SubResource("QuadMesh_a7by3")
+
+[node name="SideIndicator" type="MeshInstance2D" parent="."]
+modulate = Color(0.65098, 0.407843, 0, 1)
+mesh = SubResource("QuadMesh_8gqib")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

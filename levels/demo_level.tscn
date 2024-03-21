@@ -11,8 +11,7 @@ process_mode = 1
 
 [node name="Raccoon" parent="." instance=ExtResource("2_k443v")]
 z_index = 1
-position = Vector2(178, 598)
-scale = Vector2(0.5, 0.5)
+position = Vector2(182, 530)
 
 [node name="Camera2D" type="Camera2D" parent="Raccoon"]
 limit_left = 0

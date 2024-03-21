@@ -1,9 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://cx37s3en6c2qj"]
+[gd_scene load_steps=5 format=3 uid="uid://cx37s3en6c2qj"]
 
 [ext_resource type="Theme" uid="uid://b02a2u15epnu7" path="res://ui/ui_theme.tres" id="1_drqhd"]
 [ext_resource type="Script" path="res://scripts/cutscene.gd" id="1_tdulo"]
 
+[sub_resource type="InputEventAction" id="InputEventAction_132kp"]
+action = &"confirm"
+
+[sub_resource type="Shortcut" id="Shortcut_4mh6a"]
+events = [SubResource("InputEventAction_132kp")]
+
 [node name="Cutscene" type="CanvasLayer"]
+layer = 2
 script = ExtResource("1_tdulo")
 play_exit_animation = false
 
@@ -42,6 +49,7 @@ layout_mode = 2
 
 [node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+shortcut = SubResource("Shortcut_4mh6a")
 text = "next"
 
 [node name="Label" type="Label" parent="."]

@@ -13,6 +13,8 @@ func physics_update(delta: float):
 				finished.emit("Crouch")
 			else:
 				finished.emit("Idle")
+	elif Input.is_action_just_pressed("jump"):
+		finished.emit("Tuck")
 	
 	if raccoon.prev_facing != raccoon.facing: # we want to flip in the middle of the state
 		var temp = animationPlayer.current_animation_position

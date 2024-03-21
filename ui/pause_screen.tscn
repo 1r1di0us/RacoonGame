@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://2bi3hpb3yp4"]
+[gd_scene load_steps=7 format=3 uid="uid://2bi3hpb3yp4"]
 
 [ext_resource type="Script" path="res://scripts/pause_screen.gd" id="1_2bpsj"]
 [ext_resource type="Theme" uid="uid://b02a2u15epnu7" path="res://ui/ui_theme.tres" id="2_glavy"]
@@ -8,6 +8,12 @@ action = &"pause_game"
 
 [sub_resource type="Shortcut" id="Shortcut_x3u8e"]
 events = [SubResource("InputEventAction_tjxgv")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_y3f3s"]
+action = &"confirm"
+
+[sub_resource type="Shortcut" id="Shortcut_74upv"]
+events = [SubResource("InputEventAction_y3f3s")]
 
 [node name="PauseScreen" type="CanvasLayer"]
 process_mode = 2
@@ -45,10 +51,9 @@ text = "RESUME GAME"
 
 [node name="MainMenuButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+shortcut = SubResource("Shortcut_74upv")
 shortcut_in_tooltip = false
 text = "MAIN MENU"
 
-[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ResumeButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
-[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MainMenuButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
