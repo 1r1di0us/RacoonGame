@@ -2,7 +2,10 @@ extends RaccoonState
 class_name Idle
 
 func physics_update(delta: float):
-	if not raccoon.is_on_floor():
+	
+	if Input.is_action_pressed("move_up") && raccoon.climbables_count >= 6:
+		finished.emit("Pole_Climb")
+	elif not raccoon.is_on_floor():
 		finished.emit("Freefall")
 	elif Input.is_action_just_pressed("jump"):
 		finished.emit("Jump")

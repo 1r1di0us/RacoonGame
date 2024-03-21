@@ -32,7 +32,7 @@ func _ready():
 	states_stack.push_front(current_state)
 	current_state = states_stack[0]
 	current_state.enter()
-	states_map = {"Idle": $Idle, "Run": $Run, "Crouch": $Crouch, "Crawl": $Crawl, "Jump": $Jump, "Freefall": $Freefall, "Roll": $Roll, "High_Jump": $High_Jump, "Launch": $Launch, "Freeball": $Freeball, "Tuck": $Tuck}
+	states_map = {"Idle": $Idle, "Run": $Run, "Crouch": $Crouch, "Crawl": $Crawl, "Jump": $Jump, "Freefall": $Freefall, "Roll": $Roll, "High_Jump": $High_Jump, "Launch": $Launch, "Freeball": $Freeball, "Tuck": $Tuck, "Pole_Climb": $Pole_Climb}
 
 # The state machine subscribes to node callbacks and delegates them to the current state
 

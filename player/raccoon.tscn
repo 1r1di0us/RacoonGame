@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=3 uid="uid://c1qok2g7135af"]
+[gd_scene load_steps=112 format=3 uid="uid://c1qok2g7135af"]
 
 [ext_resource type="Texture2D" uid="uid://dyato5cemyy8a" path="res://art/Raccoon Assets/Protagonist Raccoon/Crawl/Draft #2/Raccoon_Crawl_Edited-Sheet.png" id="1_fgivg"]
 [ext_resource type="Script" path="res://scripts/raccoon.gd" id="1_nso0o"]
@@ -17,24 +17,50 @@
 [ext_resource type="Texture2D" uid="uid://cj4fwbrfgq2px" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll3.png" id="13_pm3qs"]
 [ext_resource type="Texture2D" uid="uid://ck5veqeilsftg" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Climb/Raccoon_Pole-Climb1.png" id="14_2urgf"]
 [ext_resource type="Script" path="res://player/States/StateMachine.gd" id="14_66lkj"]
+[ext_resource type="Texture2D" uid="uid://xfq52yh4mdcf" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Clamber/Raccoon_Clamber-on-Top-Pole-Background1.png" id="14_dmud6"]
 [ext_resource type="Texture2D" uid="uid://ceicgyhtqk5as" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll4.png" id="14_hm5sl"]
 [ext_resource type="Script" path="res://player/States/Idle.gd" id="15_0bv0f"]
 [ext_resource type="Texture2D" uid="uid://8ouv4iodix77" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Climb/Raccoon_Pole-Climb2.png" id="15_3anr3"]
+[ext_resource type="Texture2D" uid="uid://cglojmpt6qw1w" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Clamber/Raccoon_Clamber-on-Top-Pole-Background2.png" id="15_5lfsx"]
 [ext_resource type="Texture2D" uid="uid://c41hkkkuuqwxq" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll5.png" id="15_pjntl"]
 [ext_resource type="Script" path="res://player/States/Run.gd" id="16_1avld"]
+[ext_resource type="Texture2D" uid="uid://dj2fbxdvu0il2" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Clamber/Raccoon_Clamber-on-Top-Pole-Background3.png" id="16_04clg"]
 [ext_resource type="Texture2D" uid="uid://5etr11yn884d" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Climb/Raccoon_Pole-Climb3.png" id="16_6itag"]
 [ext_resource type="Texture2D" uid="uid://b5xtq7so20lbw" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll6.png" id="16_nusdx"]
+[ext_resource type="Texture2D" uid="uid://mhnftnd8if3p" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Clamber/Raccoon_Clamber-on-Top-Pole-Background4.png" id="17_8dovw"]
 [ext_resource type="Texture2D" uid="uid://dkukqge5darfy" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Climb/Raccoon_Pole-Climb4.png" id="17_em42u"]
 [ext_resource type="Script" path="res://player/States/Crouch.gd" id="17_fisyi"]
+[ext_resource type="Texture2D" uid="uid://doulbud35mgl2" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Clamber/Raccoon_Clamber-on-Top-Pole-Background5.png" id="18_33dky"]
 [ext_resource type="Script" path="res://player/States/Crawl.gd" id="18_jo6b5"]
 [ext_resource type="Script" path="res://player/States/Freefall.gd" id="19_0yqig"]
 [ext_resource type="AudioStream" uid="uid://ch5jov4qbe713" path="res://sfx/sfx_movement_jump20.wav" id="19_5367k"]
+[ext_resource type="Texture2D" uid="uid://dy2k3ryatxmcv" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Clamber/Raccoon_Clamber-on-Top-Pole-Background6.png" id="19_nynjn"]
+[ext_resource type="Texture2D" uid="uid://bdek4chw0yvlc" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Clamber/Raccoon_Clamber-on-Top-Pole-Background7.png" id="20_ft2iy"]
 [ext_resource type="Script" path="res://player/States/Jump.gd" id="20_lx7k6"]
+[ext_resource type="Texture2D" uid="uid://cevuoikoebckp" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Clamber/Raccoon_Clamber-on-Top-Pole-Background8.png" id="21_5l04b"]
+[ext_resource type="Texture2D" uid="uid://c80vc71np8y3j" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Clamber/Raccoon_Clamber-on-Top-Pole-Background9.png" id="22_3tjnf"]
 [ext_resource type="Script" path="res://player/States/Roll.gd" id="27_tx8y4"]
 [ext_resource type="Script" path="res://player/States/High_Jump.gd" id="28_kf40v"]
 [ext_resource type="Script" path="res://player/States/Tuck.gd" id="29_463kt"]
 [ext_resource type="Script" path="res://player/States/Launch.gd" id="29_yaxwu"]
 [ext_resource type="Script" path="res://player/States/Freeball.gd" id="30_w2pdj"]
+[ext_resource type="Texture2D" uid="uid://rx57s6wwkems" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall1.png" id="32_hdts7"]
+[ext_resource type="Texture2D" uid="uid://7d4t8e1m3l5q" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall2.png" id="33_ywpsm"]
+[ext_resource type="Texture2D" uid="uid://ccq2cayibyow7" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall3.png" id="34_bndr6"]
+[ext_resource type="Texture2D" uid="uid://rutrqasibxd" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall4.png" id="35_a8rm4"]
+[ext_resource type="Texture2D" uid="uid://dxrgkrqchfcjj" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall5.png" id="36_7qhga"]
+[ext_resource type="Script" path="res://player/States/Pole_Climb.gd" id="36_l16wd"]
+[ext_resource type="Texture2D" uid="uid://cba2kwbohksf3" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall6.png" id="37_w108f"]
+[ext_resource type="Texture2D" uid="uid://gc1gtdhpo0c6" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall7.png" id="38_oxmtv"]
+[ext_resource type="Texture2D" uid="uid://dpkx1467e7d53" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall8.png" id="39_uwpp1"]
+[ext_resource type="Texture2D" uid="uid://b3ixmmtx6yck2" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall9.png" id="40_uu1eh"]
+[ext_resource type="Texture2D" uid="uid://bhvvbrwlhlx25" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall10.png" id="41_c4nhp"]
+[ext_resource type="Texture2D" uid="uid://77036sc70dvf" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall11.png" id="42_5q50j"]
+[ext_resource type="Texture2D" uid="uid://jj87yqo4u1fd" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall12.png" id="43_lle6o"]
+[ext_resource type="Texture2D" uid="uid://d005ctvxrix1h" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall13.png" id="44_kra05"]
+[ext_resource type="Texture2D" uid="uid://fsf5hwwa64ju" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall14.png" id="45_cq7fb"]
+[ext_resource type="Texture2D" uid="uid://c48rbdc1f1wlx" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Climb/Raccoon_Wall-Climb1.png" id="46_c34k6"]
+[ext_resource type="Texture2D" uid="uid://cf2q23d6mnpe4" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Climb/Raccoon_Wall-Climb2.png" id="47_2twur"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1hxyy"]
 atlas = ExtResource("1_fgivg")
@@ -250,6 +276,38 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("14_dmud6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_5lfsx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_04clg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_8dovw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_33dky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_nynjn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ft2iy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_5l04b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_3tjnf")
+}],
+"loop": true,
+"name": &"pole_clamber",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("14_2urgf")
 }, {
 "duration": 1.0,
@@ -332,6 +390,64 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_hdts7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ywpsm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_bndr6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_a8rm4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_7qhga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_w108f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_oxmtv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_uwpp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_uu1eh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_c4nhp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_5q50j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_lle6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_kra05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_cq7fb")
+}],
+"loop": true,
+"name": &"wall_clamber",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("46_c34k6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_2twur")
+}],
+"loop": true,
+"name": &"wall_climb",
 "speed": 5.0
 }]
 
@@ -682,7 +798,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [Vector2(0, -45), Vector2(0, -45)]
+"values": [Vector2(27, -45), Vector2(27, -45)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -706,7 +822,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(36, -48), Vector2(36, -48)]
+"values": [Vector2(60, -48), Vector2(60, -48)]
 }
 
 [sub_resource type="Animation" id="Animation_a83cn"]
@@ -1321,6 +1437,71 @@ tracks/5/keys = {
 "values": [Vector2(220, 200), Vector2(220, 200), Vector2(220, 200)]
 }
 
+[sub_resource type="Animation" id="Animation_4maxr"]
+resource_name = "pole_climb"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [&"pole_climb", &"pole_climb", &"pole_climb", &"pole_climb"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:shape:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(250, 260), Vector2(250, 260), Vector2(250, 260), Vector2(250, 260)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -78), Vector2(0, -78), Vector2(0, -78), Vector2(0, -78)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-3, -54), Vector2(-3, -54), Vector2(-3, -54), Vector2(-3, -54)]
+}
+
 [sub_resource type="Animation" id="Animation_6r32t"]
 resource_name = "roll"
 length = 0.6
@@ -1682,10 +1863,9 @@ tracks/3/keys = {
 "values": [Vector2(0, -63)]
 }
 
-[sub_resource type="Animation" id="Animation_4maxr"]
-resource_name = "pole_climb"
-length = 0.4
-loop_mode = 1
+[sub_resource type="Animation" id="Animation_1o3r8"]
+resource_name = "pole_clamber"
+length = 0.9
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1693,10 +1873,10 @@ tracks/0/path = NodePath("AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [&"pole_climb", &"pole_climb", &"pole_climb", &"pole_climb"]
+"values": [&"pole_clamber", &"pole_clamber", &"pole_clamber", &"pole_clamber", &"pole_clamber", &"pole_clamber", &"pole_clamber", &"pole_clamber", &"pole_clamber"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1705,22 +1885,22 @@ tracks/1/path = NodePath("AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3]
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CollisionShape2D:shape:size")
+tracks/2/path = NodePath("AnimatedSprite2D:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [Vector2(250, 260), Vector2(250, 260), Vector2(250, 260), Vector2(250, 260)]
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(3, -60), Vector2(3, -60), Vector2(3, -60), Vector2(3, -60), Vector2(3, -60), Vector2(3, -60), Vector2(3, -60), Vector2(3, -60), Vector2(3, -60)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1729,22 +1909,22 @@ tracks/3/path = NodePath("CollisionShape2D:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(0, -78), Vector2(0, -78), Vector2(0, -78), Vector2(0, -78)]
+"values": [Vector2(0, -81), Vector2(0, -81), Vector2(0, -81), Vector2(0, -81), Vector2(0, -81), Vector2(0, -81), Vector2(0, -81), Vector2(0, -81), Vector2(0, -81)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("AnimatedSprite2D:position")
+tracks/4/path = NodePath("CollisionShape2D:shape:size")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(-3, -54), Vector2(-3, -54), Vector2(-3, -54), Vector2(-3, -54)]
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(190, 270), Vector2(190, 270), Vector2(190, 270), Vector2(190, 270), Vector2(190, 270), Vector2(190, 270), Vector2(190, 270), Vector2(190, 270), Vector2(190, 270)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7mnnp"]
@@ -1762,6 +1942,7 @@ _data = {
 "jump_flip": SubResource("Animation_80204"),
 "launch": SubResource("Animation_iagby"),
 "launch_flip": SubResource("Animation_723tx"),
+"pole_clamber": SubResource("Animation_1o3r8"),
 "pole_climb": SubResource("Animation_4maxr"),
 "roll": SubResource("Animation_6r32t"),
 "roll_flip": SubResource("Animation_n54kl"),
@@ -1830,3 +2011,6 @@ script = ExtResource("30_w2pdj")
 
 [node name="Tuck" type="Node" parent="StateMachine"]
 script = ExtResource("29_463kt")
+
+[node name="Pole_Climb" type="Node" parent="StateMachine"]
+script = ExtResource("36_l16wd")
