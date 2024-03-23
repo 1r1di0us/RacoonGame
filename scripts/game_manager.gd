@@ -38,7 +38,7 @@ func main_menu():
 func pause_game(type):
 	if get_tree().paused == false:
 		#game is not paused, so pause it and show the pause screen
-		
+		AudioManager.emit_signal("game_paused")
 		get_tree().paused = true
 		var screen_type
 		if (type == 0):
@@ -49,6 +49,7 @@ func pause_game(type):
 		get_tree().get_root().add_child(screen_type)
 	else:
 		#game is paused, so unpause it and hide the pause screen
+		AudioManager.emit_signal("game_resumed")
 		#$PauseScreen.hide()
 		get_tree().paused = false
 		

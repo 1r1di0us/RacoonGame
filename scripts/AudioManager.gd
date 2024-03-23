@@ -5,6 +5,8 @@ signal level_complete
 signal player_landed
 signal player_jumped
 signal player_tuck
+signal game_paused
+signal game_resumed
 
 var hover_sound: AudioStreamPlayer
 var select_sound: AudioStreamPlayer
@@ -13,6 +15,8 @@ var death_sound: AudioStreamPlayer
 var levelcomplete_sound: AudioStreamPlayer
 var jumplanding_sound: AudioStreamPlayer
 var jump_sound: AudioStreamPlayer
+var pause_sound: AudioStreamPlayer
+var resume_sound: AudioStreamPlayer
 
 func _ready():
 	hover_sound = $HoverSound
@@ -22,12 +26,16 @@ func _ready():
 	levelcomplete_sound = $LevelComplete
 	jumplanding_sound = $JumpLandingSound
 	jump_sound = $JumpSound
+	pause_sound = $PauseSound
+	resume_sound = $ResumeSound
 	
 	player_died.connect(on_player_died)
 	level_complete.connect(on_level_complete)
 	player_landed.connect(on_player_landed)
 	player_jumped.connect(on_player_jumped)
 	player_tuck.connect(on_player_tuck)
+	game_paused.connect(on_game_paused)
+	game_resumed.connect(on_game_resumed)
 
 func _enter_tree() -> void:
 	get_tree().node_added.connect(_on_node_added)
@@ -40,6 +48,8 @@ func _on_node_added(node:Node) -> void:
 		
 		if get_tree().get_current_scene().get_name() == "LevelOneCutscene":
 			node.pressed.connect(PlayPressed)
+		elif node.name == "ResumeButton":
+			pass
 		else:
 			node.pressed.connect(PlayPressed)
 
@@ -57,6 +67,12 @@ func on_player_jumped():
 
 func on_player_tuck():
 	jump_sound.play()
+
+func on_game_paused():
+	pause_sound.play()
+
+func on_game_resumed():
+	resume_sound.play()
 
 func PlayHover() -> void:
 	hover_sound.play()
