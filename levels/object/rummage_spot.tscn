@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn0px7ku88r8u"]
+
+[ext_resource type="Script" path="res://levels/object/rummage_spot.gd" id="1_nlfry"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yd4uh"]
+size = Vector2(32, 32)
+
+[node name="Rummage spot" type="Area2D"]
+collision_layer = 0
+monitorable = false
+script = ExtResource("1_nlfry")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_yd4uh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -24,6 +24,7 @@ var prevVelY = 0 #helps freeball know whether to start rolling or not
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+var is_near_rummagable : Dictionary = {}
 
 var has_landed: bool = false
 
