@@ -20,6 +20,8 @@ var facing = 0
 var prev_facing = 0
 var locked_facing = -1
 var climbables_count = 0
+var platforms = 0
+var clambering = false
 
 var prevVelY = 0 #helps freeball know whether to start rolling or not
 
