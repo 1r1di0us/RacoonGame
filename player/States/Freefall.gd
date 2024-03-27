@@ -2,7 +2,14 @@ extends RaccoonState
 class_name Freefall
 
 func physics_update(delta: float):
-	if Input.is_action_pressed("move_up") && raccoon.climbables_count >= 6:
+	if (Input.is_action_pressed("move_up") && raccoon.platforms >= 1
+		&& raccoon.global_position.x >= raccoon.clamber_x - 32
+		&& raccoon.global_position.x <= raccoon.clamber_x + 32
+		&& raccoon.global_position.y >= raccoon.clamber_y  - 32):
+		finished.emit("Pole_Clamber")
+	elif (Input.is_action_pressed("move_up") && raccoon.climbables_count >= 1
+		&& raccoon.global_position.x >= raccoon.climbable_x - 32
+		&& raccoon.global_position.x <= raccoon.climbable_x + 32):
 		finished.emit("Pole_Climb")
 	elif raccoon.is_on_floor():
 		if raccoon.direction != 0:

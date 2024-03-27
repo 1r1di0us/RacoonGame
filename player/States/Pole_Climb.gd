@@ -2,22 +2,17 @@ extends RaccoonState
 class_name Pole_Climb
 
 func physics_update(delta: float):
-	
-	if (!raccoon.clambering):
+	raccoon.global_position.x = raccoon.climbable_x
 		
-		if Input.is_action_pressed("move_up") && not Input.is_action_pressed("move_down"):
-			animationPlayer.play()
-			raccoon.velocity.y = -raccoon.CLIMB_SPEED
-		elif Input.is_action_pressed("move_down") && not Input.is_action_pressed("move_up"):
-			animationPlayer.play_backwards()
-			raccoon.velocity.y = raccoon.CLIMB_SPEED
-		else:
-			animationPlayer.pause()
-			raccoon.velocity.y = 0
+	if Input.is_action_pressed("move_up") && not Input.is_action_pressed("move_down"):
+		animationPlayer.play()
+		raccoon.velocity.y = -raccoon.CLIMB_SPEED
+	elif Input.is_action_pressed("move_down") && not Input.is_action_pressed("move_up"):
+		animationPlayer.play_backwards()
+		raccoon.velocity.y = raccoon.CLIMB_SPEED
 	else:
-		if Input.is_action_just_pressed("move_down"):
-			animationPlayer.stop()
-			finished.emit("Freefall")
+		animationPlayer.pause()
+		raccoon.velocity.y = 0
 	
 	if raccoon.velocity.x != 0:
 		raccoon.velocity.x = move_toward(raccoon.velocity.x, 0, raccoon.ACCELERATION)
@@ -26,17 +21,12 @@ func physics_update(delta: float):
 		finished.emit("Jump")
 	elif raccoon.is_on_floor():
 		finished.emit("Idle")
-	elif raccoon.platforms >= 2:
-		animationPlayer.play("pole_clamber")
-		raccoon.velocity.y = -160
-		raccoon.clambering = true
-		
-	if (raccoon.clambering && raccoon.platforms <= 0):
-		finished.emit("Idle")
-
+	elif Input.is_action_pressed("move_up") && raccoon.platforms >= 1 && raccoon.global_position.x >= raccoon.clamber_x - 32 && raccoon.global_position.x <= raccoon.clamber_x + 32:
+		finished.emit("Pole_Clamber")
 
 func enter(msg: Dictionary = {}):
 	animationPlayer.play("pole_climb")
+	raccoon.global_position.x = raccoon.climbable_x
 
 func exit():
-	raccoon.clambering = false
+	pass

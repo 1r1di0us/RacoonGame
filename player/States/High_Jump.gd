@@ -2,7 +2,15 @@ extends RaccoonState
 class_name High_Jump
 
 func physics_update(delta: float):
-	if raccoon.is_on_floor():
+	if (Input.is_action_pressed("move_up") && raccoon.platforms >= 1
+		&& raccoon.global_position.x >= raccoon.clamber_x - 32
+		&& raccoon.global_position.x <= raccoon.clamber_x + 32):
+		finished.emit("Pole_Clamber")
+	elif (Input.is_action_pressed("move_up") && raccoon.climbables_count >= 1
+		&& raccoon.global_position.x >= raccoon.climbable_x - 32
+		&& raccoon.global_position.x <= raccoon.climbable_x + 32):
+		finished.emit("Pole_Climb")
+	elif raccoon.is_on_floor():
 		if raccoon.direction != 0:
 			if Input.is_action_pressed("crouch"):
 				finished.emit("Crawl")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=3 uid="uid://c1qok2g7135af"]
+[gd_scene load_steps=115 format=3 uid="uid://c1qok2g7135af"]
 
 [ext_resource type="Texture2D" uid="uid://dyato5cemyy8a" path="res://art/Raccoon Assets/Protagonist Raccoon/Crawl/Draft #2/Raccoon_Crawl_Edited-Sheet.png" id="1_fgivg"]
 [ext_resource type="Script" path="res://scripts/raccoon.gd" id="1_nso0o"]
@@ -61,6 +61,7 @@
 [ext_resource type="Texture2D" uid="uid://fsf5hwwa64ju" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall14.png" id="45_cq7fb"]
 [ext_resource type="Texture2D" uid="uid://c48rbdc1f1wlx" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Climb/Raccoon_Wall-Climb1.png" id="46_c34k6"]
 [ext_resource type="Texture2D" uid="uid://cf2q23d6mnpe4" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Climb/Raccoon_Wall-Climb2.png" id="47_2twur"]
+[ext_resource type="Script" path="res://player/States/Pole_Clamber.gd" id="62_sbxa5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1hxyy"]
 atlas = ExtResource("1_fgivg")
@@ -1500,6 +1501,18 @@ tracks/4/keys = {
 "update": 1,
 "values": [Vector2(190, 270), Vector2(190, 270), Vector2(190, 270), Vector2(190, 270), Vector2(190, 270), Vector2(190, 270), Vector2(190, 270), Vector2(190, 270), Vector2(190, 270)]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimatedSprite2D:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, false, false, false, false, false, false, false, false]
+}
 
 [sub_resource type="Animation" id="Animation_4maxr"]
 resource_name = "pole_climb"
@@ -1539,7 +1552,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(210, 260), Vector2(210, 260), Vector2(210, 260), Vector2(210, 260)]
+"values": [Vector2(160, 260), Vector2(160, 260), Vector2(160, 260), Vector2(160, 260)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1563,7 +1576,19 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(3, -54), Vector2(3, -54), Vector2(3, -54), Vector2(3, -54)]
+"values": [Vector2(-3, -54), Vector2(-3, -54), Vector2(-3, -54), Vector2(-3, -54)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimatedSprite2D:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, false, false, false]
 }
 
 [sub_resource type="Animation" id="Animation_6r32t"]
@@ -2114,7 +2139,6 @@ position = Vector2(-24, -66)
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_fxkla")
 animation = &"idle"
-flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -66)
@@ -2169,3 +2193,6 @@ script = ExtResource("29_463kt")
 
 [node name="Pole_Climb" type="Node" parent="StateMachine"]
 script = ExtResource("36_l16wd")
+
+[node name="Pole_Clamber" type="Node" parent="StateMachine"]
+script = ExtResource("62_sbxa5")

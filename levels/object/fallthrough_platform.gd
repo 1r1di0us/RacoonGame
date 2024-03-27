@@ -21,9 +21,14 @@ func _on_area_2d_body_entered(body):
 		var count = body.get("platforms")
 		body.set("platforms", count + 1)
 	
-	if "climbables_count" in body:
-		var count = body.get("climbables_count")
-		body.set("climbables_count", count + 1)
+	#if "climbables_count" in body:
+	#	var count = body.get("climbables_count")
+	#	body.set("climbables_count", count + 1)
+		
+	if "clamber_x" in body:
+		body.set("clamber_x", global_position.x)
+	if "clamber_y" in body:
+		body.set("clamber_y", global_position.y)
 
 
 func _on_area_2d_body_exited(body):
@@ -34,7 +39,3 @@ func _on_area_2d_body_exited(body):
 	if "platforms" in body:
 		var count = body.get("platforms")
 		body.set("platforms", count - 1)
-		
-	if "climbables_count" in body:
-		var count = body.get("climbables_count")
-		body.set("climbables_count", count - 1)
