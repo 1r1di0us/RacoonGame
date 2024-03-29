@@ -1,17 +1,23 @@
-[gd_scene load_steps=123 format=3 uid="uid://c1qok2g7135af"]
+[gd_scene load_steps=140 format=3 uid="uid://c1qok2g7135af"]
 
 [ext_resource type="Texture2D" uid="uid://dyato5cemyy8a" path="res://art/Raccoon Assets/Protagonist Raccoon/Crawl/Draft #2/Raccoon_Crawl_Edited-Sheet.png" id="1_fgivg"]
 [ext_resource type="Script" path="res://scripts/raccoon.gd" id="1_nso0o"]
 [ext_resource type="Texture2D" uid="uid://uo8cbhoywjlp" path="res://art/Raccoon Assets/Protagonist Raccoon/Crouch/Raccoon_Crouch.png" id="2_yx362"]
+[ext_resource type="Texture2D" uid="uid://c4s6v4iuwx71l" path="res://art/Raccoon Assets/Protagonist Raccoon/Death/Raccoon_Faint1.png" id="4_4hocb"]
 [ext_resource type="Texture2D" uid="uid://b6dnxi2vynukj" path="res://art/Raccoon Assets/Protagonist Raccoon/Jump/Draft #2/Raccoon_Jump_Edited-Sheet.png" id="4_bk6om"]
 [ext_resource type="Texture2D" uid="uid://8q5aleys04s2" path="res://art/Raccoon Assets/Protagonist Raccoon/Freefall/Raccoon_Freefall1.png" id="4_dbg84"]
 [ext_resource type="Texture2D" uid="uid://dc71shc54sgsp" path="res://art/Raccoon Assets/Protagonist Raccoon/Run/Draft #2/Raccoon_Run_Edited-Sheet.png" id="5_b14wm"]
+[ext_resource type="Texture2D" uid="uid://cku41pnxbjfiv" path="res://art/Raccoon Assets/Protagonist Raccoon/Death/Raccoon_Faint2.png" id="5_psntt"]
 [ext_resource type="Texture2D" uid="uid://xbwyevkc2foi" path="res://art/Raccoon Assets/Protagonist Raccoon/Freefall/Raccoon_Freefall2.png" id="5_r7q50"]
 [ext_resource type="Texture2D" uid="uid://capx6poryy832" path="res://art/Raccoon Assets/Protagonist Raccoon/Idle/Draft #3/Raccoon_Idle_Draft3 (Frame 1).png" id="6_kkr03"]
 [ext_resource type="Texture2D" uid="uid://ddqx4q7cpom6y" path="res://art/Raccoon Assets/Protagonist Raccoon/Walk/Draft #2/Raccoon_Walk_Edited-Sheet.png" id="6_ums2s"]
+[ext_resource type="Texture2D" uid="uid://do0jlr6v5g4q2" path="res://art/Raccoon Assets/Protagonist Raccoon/Death/Raccoon_Faint3.png" id="6_xo4dh"]
 [ext_resource type="Texture2D" uid="uid://cbbdcw7ai4nc6" path="res://art/Raccoon Assets/Protagonist Raccoon/Idle/Draft #3/Raccoon_Idle_Draft3 (Frame 2).png" id="7_7kgvc"]
+[ext_resource type="Texture2D" uid="uid://daqjb2kdnaytk" path="res://art/Raccoon Assets/Protagonist Raccoon/Death/Raccoon_Faint4.png" id="7_38336"]
 [ext_resource type="Texture2D" uid="uid://ceuoht14nnagu" path="res://art/Raccoon Assets/Protagonist Raccoon/Idle/Draft #3/Raccoon_Idle_Draft3 (Frame 3).png" id="8_6ll1n"]
+[ext_resource type="Texture2D" uid="uid://biclqdiwsk5xj" path="res://art/Raccoon Assets/Protagonist Raccoon/Death/Raccoon_Faint5.png" id="8_k355m"]
 [ext_resource type="Texture2D" uid="uid://dj3jt68cgfs7l" path="res://art/Raccoon Assets/Protagonist Raccoon/Idle/Draft #3/Raccoon_Idle_Draft3 (Frame 4).png" id="9_5smny"]
+[ext_resource type="Texture2D" uid="uid://oapoqn2yaupj" path="res://art/Raccoon Assets/Protagonist Raccoon/Death/Raccoon_Faint6.png" id="9_u50j2"]
 [ext_resource type="Texture2D" uid="uid://cele3ncq7kasd" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll1.png" id="11_44sq5"]
 [ext_resource type="Texture2D" uid="uid://cajxlef1xoqcj" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll2.png" id="12_p7nk8"]
 [ext_resource type="Texture2D" uid="uid://cj4fwbrfgq2px" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll3.png" id="13_pm3qs"]
@@ -47,6 +53,7 @@
 [ext_resource type="Script" path="res://player/States/Launch.gd" id="29_yaxwu"]
 [ext_resource type="Script" path="res://player/States/Freeball.gd" id="30_w2pdj"]
 [ext_resource type="Texture2D" uid="uid://rx57s6wwkems" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall1.png" id="32_hdts7"]
+[ext_resource type="Texture2D" uid="uid://da7bl28baoicm" path="res://art/Raccoon Assets/Protagonist Raccoon/Ready/Raccoon_Ready-to-Pounce.png" id="33_1oroq"]
 [ext_resource type="Texture2D" uid="uid://7d4t8e1m3l5q" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall2.png" id="33_ywpsm"]
 [ext_resource type="Texture2D" uid="uid://ccq2cayibyow7" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall3.png" id="34_bndr6"]
 [ext_resource type="Texture2D" uid="uid://rutrqasibxd" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall4.png" id="35_a8rm4"]
@@ -54,18 +61,24 @@
 [ext_resource type="Script" path="res://player/States/Pole_Climb.gd" id="36_l16wd"]
 [ext_resource type="Texture2D" uid="uid://cba2kwbohksf3" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall6.png" id="37_w108f"]
 [ext_resource type="Texture2D" uid="uid://gc1gtdhpo0c6" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall7.png" id="38_oxmtv"]
+[ext_resource type="Texture2D" uid="uid://b8a71wnkwioww" path="res://art/Raccoon Assets/Protagonist Raccoon/Rummage/Raccoon_Rummage1.png" id="39_54pbr"]
 [ext_resource type="Texture2D" uid="uid://dpkx1467e7d53" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall8.png" id="39_uwpp1"]
 [ext_resource type="Texture2D" uid="uid://b3ixmmtx6yck2" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall9.png" id="40_uu1eh"]
+[ext_resource type="Texture2D" uid="uid://ce6wc2710pxiy" path="res://art/Raccoon Assets/Protagonist Raccoon/Rummage/Raccoon_Rummage2.png" id="40_wnvpx"]
 [ext_resource type="Texture2D" uid="uid://bhvvbrwlhlx25" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall10.png" id="41_c4nhp"]
+[ext_resource type="Texture2D" uid="uid://bunuo8662yc4p" path="res://art/Raccoon Assets/Protagonist Raccoon/Rummage/Raccoon_Rummage3.png" id="41_jqxcu"]
 [ext_resource type="Texture2D" uid="uid://77036sc70dvf" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall11.png" id="42_5q50j"]
+[ext_resource type="Texture2D" uid="uid://c534s0udybrsq" path="res://art/Raccoon Assets/Protagonist Raccoon/Rummage/Raccoon_Rummage4.png" id="42_ug0jv"]
 [ext_resource type="Texture2D" uid="uid://jj87yqo4u1fd" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall12.png" id="43_lle6o"]
 [ext_resource type="Texture2D" uid="uid://d005ctvxrix1h" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall13.png" id="44_kra05"]
+[ext_resource type="Texture2D" uid="uid://w8uavxh03hft" path="res://art/Raccoon Assets/Protagonist Raccoon/Splat/Raccoon_Splat.png" id="44_p14m2"]
 [ext_resource type="Texture2D" uid="uid://fsf5hwwa64ju" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall14.png" id="45_cq7fb"]
 [ext_resource type="Texture2D" uid="uid://c48rbdc1f1wlx" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Climb/Raccoon_Wall-Climb1.png" id="46_c34k6"]
 [ext_resource type="Texture2D" uid="uid://cf2q23d6mnpe4" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Climb/Raccoon_Wall-Climb2.png" id="47_2twur"]
 [ext_resource type="Script" path="res://player/States/Pole_Clamber.gd" id="62_sbxa5"]
 [ext_resource type="Script" path="res://player/States/Wall_Climb.gd" id="63_qsonk"]
 [ext_resource type="Script" path="res://player/States/Wall_Clamber.gd" id="64_x3gv7"]
+[ext_resource type="Script" path="res://player/States/Splat.gd" id="79_tgt17"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1hxyy"]
 atlas = ExtResource("1_fgivg")
@@ -216,6 +229,29 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("4_4hocb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_psntt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xo4dh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_38336")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_k355m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_u50j2")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("4_dbg84")
 }, {
 "duration": 1.0,
@@ -330,6 +366,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("33_1oroq")
+}],
+"loop": true,
+"name": &"ready",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("11_44sq5")
 }, {
 "duration": 1.0,
@@ -359,6 +403,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("39_54pbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_wnvpx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_jqxcu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_ug0jv")
+}],
+"loop": true,
+"name": &"rummage",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_m2g8u")
 }, {
 "duration": 1.0,
@@ -378,6 +439,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"run",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("44_p14m2")
+}],
+"loop": true,
+"name": &"splat",
 "speed": 5.0
 }, {
 "frames": [{
@@ -2417,6 +2486,310 @@ tracks/5/keys = {
 "values": [Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200)]
 }
 
+[sub_resource type="Animation" id="Animation_jidns"]
+resource_name = "ready"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"ready"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:shape:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(230, 140)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-48, -42)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D:flip_h")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-21, -42)]
+}
+
+[sub_resource type="Animation" id="Animation_w2qqe"]
+resource_name = "splat"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"splat"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:shape:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(250, 100)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-36, -30)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D:flip_h")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-27, -30)]
+}
+
+[sub_resource type="Animation" id="Animation_2dt5l"]
+resource_name = "ready_flip"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"ready"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:shape:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(230, 140)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(48, -42)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D:flip_h")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(21, -42)]
+}
+
+[sub_resource type="Animation" id="Animation_v7n4k"]
+resource_name = "splat_flip"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"splat"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:shape:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(250, 100)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(36, -30)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D:flip_h")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(27, -30)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7mnnp"]
 _data = {
 "RESET": SubResource("Animation_lxm5c"),
@@ -2434,10 +2807,14 @@ _data = {
 "launch_flip": SubResource("Animation_723tx"),
 "pole_clamber": SubResource("Animation_1o3r8"),
 "pole_climb": SubResource("Animation_4maxr"),
+"ready": SubResource("Animation_jidns"),
+"ready_flip": SubResource("Animation_2dt5l"),
 "roll": SubResource("Animation_6r32t"),
 "roll_flip": SubResource("Animation_t3mn6"),
 "run": SubResource("Animation_roait"),
 "run_flip": SubResource("Animation_o4j48"),
+"splat": SubResource("Animation_w2qqe"),
+"splat_flip": SubResource("Animation_v7n4k"),
 "walk": SubResource("Animation_mbwvt"),
 "wall_clamber": SubResource("Animation_m071w"),
 "wall_clamber_flip": SubResource("Animation_4agt0"),
@@ -2520,3 +2897,6 @@ script = ExtResource("63_qsonk")
 
 [node name="Wall_Clamber" type="Node" parent="StateMachine"]
 script = ExtResource("64_x3gv7")
+
+[node name="Splat" type="Node" parent="StateMachine"]
+script = ExtResource("79_tgt17")

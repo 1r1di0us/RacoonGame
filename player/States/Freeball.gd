@@ -2,7 +2,7 @@ extends RaccoonState
 class_name Freeball
 
 const ROLL_THRESHOLD = 500.0 # moving faster than this on the x allows rolling if we don't splat
-const SPLAT_THRESHOLD = 500.0 # falling faster than this splats
+const SPLAT_THRESHOLD = 1000.0 # falling faster than this splats
 
 func physics_update(delta: float):
 	
@@ -12,9 +12,7 @@ func physics_update(delta: float):
 			finished.emit("Roll")
 		else:
 			if raccoon.prevVelY >= SPLAT_THRESHOLD:
-				#splat
-				raccoon.locked_facing = -1 #splat will keep facing locked
-				finished.emit("Idle")
+				finished.emit("Splat")
 			else:
 				raccoon.locked_facing = -1
 				if raccoon.direction != 0:

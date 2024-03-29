@@ -7,9 +7,9 @@ var launch_ready: int = 0
 func physics_update(delta: float):
 	if launch_ready == 1:
 		if raccoon.facing == 1:
-			animationPlayer.play("crouch_flip")
+			animationPlayer.play("ready_flip")
 		else:
-			animationPlayer.play("crouch")
+			animationPlayer.play("ready")
 		
 		if Input.is_action_just_released("jump"):
 			raccoon.velocity.x = (-raccoon.facing*2 + 1) * raccoon.LAUNCH_SPEED
@@ -24,11 +24,13 @@ func physics_update(delta: float):
 			finished.emit("Pole_Climb")
 		elif not raccoon.is_on_floor():
 			finished.emit("Freefall")
-		elif Input.is_action_just_pressed("jump") && (Input.is_action_pressed("crouch") || raccoon.platforms > 0):
+		elif Input.is_action_just_pressed("jump") && charge_timer == 0 && (Input.is_action_pressed("crouch") || raccoon.platforms > 0):
 			charge_timer = 0.5;
-		elif Input.is_action_just_pressed("jump") && not Input.is_action_pressed("crouch"):
-			finished.emit("Jump")
 		elif Input.is_action_pressed("jump") && charge_timer > 0:
+			if raccoon.facing == 1:
+				animationPlayer.play("crouch_flip")
+			else:
+				animationPlayer.play("crouch")
 			charge_timer -= delta # decrement timer
 			if charge_timer <= 0:
 				charge_timer = 0
