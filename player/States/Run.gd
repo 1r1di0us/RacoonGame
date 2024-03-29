@@ -10,7 +10,7 @@ func physics_update(delta: float):
 		finished.emit("Freefall")
 	elif Input.is_action_just_pressed("jump"):
 		finished.emit("Jump")
-	elif Input.is_action_pressed("crouch"):
+	elif Input.is_action_pressed("crouch") || raccoon.platforms > 0:
 		finished.emit("Crawl")
 	elif raccoon.direction == 0:
 		finished.emit("Idle")

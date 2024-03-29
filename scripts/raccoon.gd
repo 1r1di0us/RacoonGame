@@ -7,8 +7,8 @@ const TUCK_VELOCITY = -200.0
 const HIGH_JUMP_VELOCITY_X = 150.0
 const ROLL_PUSH = 300.0 # minimum roll push velocity
 const LAUNCH_SPEED = 1200.0
-const CLIMB_SPEED = 400.0
-const CLAMBER_SPEED = -80
+const CLIMB_SPEED = 300.0
+const CLAMBER_SPEED = -120
 
 const ACCELERATION = 500
 const MAX_SPEED = 80

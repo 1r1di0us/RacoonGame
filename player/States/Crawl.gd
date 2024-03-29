@@ -2,11 +2,15 @@ extends RaccoonState
 class_name Crawl
 
 func physics_update(delta: float):
-	if not raccoon.is_on_floor():
+	if (Input.is_action_pressed("move_up") && raccoon.climbables_count >= 1
+		&& raccoon.global_position.x >= raccoon.climbable_x - 32
+		&& raccoon.global_position.x <= raccoon.climbable_x + 32):
+		finished.emit("Pole_Climb")
+	elif not raccoon.is_on_floor():
 		finished.emit("Freefall")
 	elif Input.is_action_just_pressed("jump") && not Input.is_action_pressed("crouch"):
 		finished.emit("Jump")
-	elif not Input.is_action_pressed("crouch"):
+	elif not Input.is_action_pressed("crouch") && raccoon.platforms <= 0:
 		finished.emit("Run")
 	elif raccoon.direction == 0:
 		finished.emit("Crouch")

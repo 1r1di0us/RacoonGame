@@ -3,7 +3,7 @@ class_name Idle
 
 func physics_update(delta: float):
 	if raccoon.platforms >= 1:
-		finished.emit("crouch")
+		finished.emit("Crouch")
 	elif (Input.is_action_pressed("move_up") && raccoon.climbables_count >= 1
 		&& raccoon.global_position.x >= raccoon.climbable_x - 32
 		&& raccoon.global_position.x <= raccoon.climbable_x + 32):
@@ -15,7 +15,10 @@ func physics_update(delta: float):
 	elif Input.is_action_pressed("crouch"):
 		finished.emit("Crouch")
 	elif not raccoon.direction == 0:
-		finished.emit("Run")
+		if raccoon.platforms <= 0:
+			finished.emit("Crawl")
+		else:
+			finished.emit("Run")
 	
 	raccoon.velocity.y += raccoon.gravity * delta
 	if raccoon.velocity.x != 0:
