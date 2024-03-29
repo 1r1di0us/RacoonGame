@@ -24,7 +24,7 @@ mesh = SubResource("QuadMesh_hm270")
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, -18.5)
+position = Vector2(0, -14)
 shape = SubResource("RectangleShape2D_uwug2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

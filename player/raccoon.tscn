@@ -1,4 +1,4 @@
-[gd_scene load_steps=115 format=3 uid="uid://c1qok2g7135af"]
+[gd_scene load_steps=123 format=3 uid="uid://c1qok2g7135af"]
 
 [ext_resource type="Texture2D" uid="uid://dyato5cemyy8a" path="res://art/Raccoon Assets/Protagonist Raccoon/Crawl/Draft #2/Raccoon_Crawl_Edited-Sheet.png" id="1_fgivg"]
 [ext_resource type="Script" path="res://scripts/raccoon.gd" id="1_nso0o"]
@@ -18,15 +18,15 @@
 [ext_resource type="Texture2D" uid="uid://ck5veqeilsftg" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Climb/Raccoon_Pole-Climb1.png" id="14_2urgf"]
 [ext_resource type="Script" path="res://player/States/StateMachine.gd" id="14_66lkj"]
 [ext_resource type="Texture2D" uid="uid://xfq52yh4mdcf" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Clamber/Raccoon_Clamber-on-Top-Pole-Background1.png" id="14_dmud6"]
-[ext_resource type="Texture2D" uid="uid://ceicgyhtqk5as" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll4.png" id="14_hm5sl"]
+[ext_resource type="Texture2D" uid="uid://dxsmjwrhev00l" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll4.png" id="14_hm5sl"]
 [ext_resource type="Script" path="res://player/States/Idle.gd" id="15_0bv0f"]
 [ext_resource type="Texture2D" uid="uid://8ouv4iodix77" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Climb/Raccoon_Pole-Climb2.png" id="15_3anr3"]
 [ext_resource type="Texture2D" uid="uid://cglojmpt6qw1w" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Clamber/Raccoon_Clamber-on-Top-Pole-Background2.png" id="15_5lfsx"]
-[ext_resource type="Texture2D" uid="uid://c41hkkkuuqwxq" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll5.png" id="15_pjntl"]
+[ext_resource type="Texture2D" uid="uid://ctchp5rb2s1m8" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll5.png" id="15_pjntl"]
 [ext_resource type="Script" path="res://player/States/Run.gd" id="16_1avld"]
 [ext_resource type="Texture2D" uid="uid://dj2fbxdvu0il2" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Clamber/Raccoon_Clamber-on-Top-Pole-Background3.png" id="16_04clg"]
 [ext_resource type="Texture2D" uid="uid://5etr11yn884d" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Climb/Raccoon_Pole-Climb3.png" id="16_6itag"]
-[ext_resource type="Texture2D" uid="uid://b5xtq7so20lbw" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll6.png" id="16_nusdx"]
+[ext_resource type="Texture2D" uid="uid://ceicgyhtqk5as" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll6.png" id="16_nusdx"]
 [ext_resource type="Texture2D" uid="uid://mhnftnd8if3p" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Clamber/Raccoon_Clamber-on-Top-Pole-Background4.png" id="17_8dovw"]
 [ext_resource type="Texture2D" uid="uid://dkukqge5darfy" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Climb/Raccoon_Pole-Climb4.png" id="17_em42u"]
 [ext_resource type="Script" path="res://player/States/Crouch.gd" id="17_fisyi"]
@@ -41,7 +41,9 @@
 [ext_resource type="Texture2D" uid="uid://c80vc71np8y3j" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Clamber/Raccoon_Clamber-on-Top-Pole-Background9.png" id="22_3tjnf"]
 [ext_resource type="Script" path="res://player/States/Roll.gd" id="27_tx8y4"]
 [ext_resource type="Script" path="res://player/States/High_Jump.gd" id="28_kf40v"]
+[ext_resource type="Texture2D" uid="uid://c41hkkkuuqwxq" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll7.png" id="28_kfgpn"]
 [ext_resource type="Script" path="res://player/States/Tuck.gd" id="29_463kt"]
+[ext_resource type="Texture2D" uid="uid://b5xtq7so20lbw" path="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll8.png" id="29_ehwtd"]
 [ext_resource type="Script" path="res://player/States/Launch.gd" id="29_yaxwu"]
 [ext_resource type="Script" path="res://player/States/Freeball.gd" id="30_w2pdj"]
 [ext_resource type="Texture2D" uid="uid://rx57s6wwkems" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Clamber/Raccoon_Clamber-on-Top-Wall1.png" id="32_hdts7"]
@@ -62,6 +64,8 @@
 [ext_resource type="Texture2D" uid="uid://c48rbdc1f1wlx" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Climb/Raccoon_Wall-Climb1.png" id="46_c34k6"]
 [ext_resource type="Texture2D" uid="uid://cf2q23d6mnpe4" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Climb/Raccoon_Wall-Climb2.png" id="47_2twur"]
 [ext_resource type="Script" path="res://player/States/Pole_Clamber.gd" id="62_sbxa5"]
+[ext_resource type="Script" path="res://player/States/Wall_Climb.gd" id="63_qsonk"]
+[ext_resource type="Script" path="res://player/States/Wall_Clamber.gd" id="64_x3gv7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1hxyy"]
 atlas = ExtResource("1_fgivg")
@@ -342,6 +346,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("16_nusdx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_kfgpn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ehwtd")
 }],
 "loop": true,
 "name": &"roll",
@@ -1440,7 +1450,6 @@ tracks/5/keys = {
 
 [sub_resource type="Animation" id="Animation_1o3r8"]
 resource_name = "pole_clamber"
-length = 0.9
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1448,7 +1457,7 @@ tracks/0/path = NodePath("AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.7, 0.8, 0.9),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [&"pole_clamber", &"pole_clamber", &"pole_clamber", &"pole_clamber", &"pole_clamber", &"pole_clamber", &"pole_clamber", &"pole_clamber", &"pole_clamber"]
@@ -1460,7 +1469,7 @@ tracks/1/path = NodePath("AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.7, 0.8, 0.9),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
@@ -1472,10 +1481,10 @@ tracks/2/path = NodePath("AnimatedSprite2D:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(3, -60), Vector2(3, -60), Vector2(3, -60), Vector2(3, -60), Vector2(3, -60), Vector2(3, -60), Vector2(3, -60), Vector2(3, -60), Vector2(3, -60)]
+"values": [Vector2(-3, -48), Vector2(-3, -42), Vector2(-3, -42), Vector2(-3, -48), Vector2(-3, -54), Vector2(-3, -60), Vector2(-3, -48), Vector2(-3, -72), Vector2(-3, -66), Vector2(-3, -54)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1484,10 +1493,10 @@ tracks/3/path = NodePath("CollisionShape2D:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.7, 0.8, 0.9),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(0, -81), Vector2(0, -81), Vector2(0, -81), Vector2(0, -81), Vector2(0, -81), Vector2(0, -81), Vector2(0, -81), Vector2(0, -81), Vector2(0, -81)]
+"values": [Vector2(0, -75), Vector2(0, -75), Vector2(0, -75), Vector2(0, -75), Vector2(0, -75), Vector2(0, -75), Vector2(0, -75), Vector2(0, -75), Vector2(0, -75)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -1496,10 +1505,10 @@ tracks/4/path = NodePath("CollisionShape2D:shape:size")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.7, 0.8, 0.9),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(190, 270), Vector2(190, 270), Vector2(190, 270), Vector2(190, 270), Vector2(190, 270), Vector2(190, 270), Vector2(190, 270), Vector2(190, 270), Vector2(190, 270)]
+"values": [Vector2(190, 250), Vector2(190, 250), Vector2(190, 250), Vector2(190, 250), Vector2(190, 250), Vector2(190, 250), Vector2(190, 250), Vector2(190, 250), Vector2(190, 250)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -1508,7 +1517,7 @@ tracks/5/path = NodePath("AnimatedSprite2D:flip_h")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.7, 0.8, 0.9),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [false, false, false, false, false, false, false, false, false]
@@ -1593,7 +1602,7 @@ tracks/5/keys = {
 
 [sub_resource type="Animation" id="Animation_6r32t"]
 resource_name = "roll"
-length = 0.6
+length = 0.8
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1602,10 +1611,10 @@ tracks/0/path = NodePath("AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [&"roll", &"roll", &"roll", &"roll", &"roll", &"roll"]
+"values": [&"roll", &"roll", &"roll", &"roll", &"roll", &"roll", &"roll", &"roll"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1614,10 +1623,10 @@ tracks/1/path = NodePath("AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [3, 4, 5, 0, 1, 2]
+"values": [3, 4, 5, 6, 7, 0, 1, 2]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -1626,10 +1635,10 @@ tracks/2/path = NodePath("AnimatedSprite2D:flip_h")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [false, false, false, false, false, false]
+"values": [false, false, false, false, false, false, false, false]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1638,10 +1647,10 @@ tracks/3/path = NodePath("AnimatedSprite2D:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-24, -54), Vector2(-24, -54), Vector2(-24, -54), Vector2(-36, -60), Vector2(-24, -60), Vector2(-12, -54)]
+"values": [Vector2(-6, -54), Vector2(-6, -54), Vector2(-24, -54), Vector2(-24, -54), Vector2(-24, -54), Vector2(-36, -60), Vector2(-24, -60), Vector2(-12, -54)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -1650,10 +1659,10 @@ tracks/4/path = NodePath("CollisionShape2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-18, -60), Vector2(-18, -60), Vector2(-18, -60), Vector2(-18, -60), Vector2(-18, -60), Vector2(-18, -60)]
+"values": [Vector2(-18, -60), Vector2(-18, -60), Vector2(-18, -60), Vector2(-18, -60), Vector2(-18, -60), Vector2(-18, -60), Vector2(-18, -60), Vector2(-18, -60)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -1662,87 +1671,10 @@ tracks/5/path = NodePath("CollisionShape2D:shape:size")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200)]
-}
-
-[sub_resource type="Animation" id="Animation_n54kl"]
-resource_name = "roll_flip"
-length = 0.6
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [&"roll", &"roll", &"roll", &"roll", &"roll", &"roll"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AnimatedSprite2D:flip_h")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [true, true, true, true, true, true]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("AnimatedSprite2D:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(36, -60), Vector2(24, -60), Vector2(12, -54), Vector2(24, -54), Vector2(24, -54), Vector2(24, -54)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("CollisionShape2D:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(18, -60), Vector2(18, -60), Vector2(18, -60), Vector2(18, -60), Vector2(18, -60), Vector2(18, -60)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("CollisionShape2D:shape:size")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200)]
+"values": [Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200)]
 }
 
 [sub_resource type="Animation" id="Animation_roait"]
@@ -1955,6 +1887,7 @@ tracks/3/keys = {
 [sub_resource type="Animation" id="Animation_6p4gj"]
 resource_name = "wall_climb"
 length = 0.2
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -2031,6 +1964,7 @@ tracks/5/keys = {
 [sub_resource type="Animation" id="Animation_pbymw"]
 resource_name = "wall_climb_flip"
 length = 0.2
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -2104,6 +2038,385 @@ tracks/5/keys = {
 "values": [Vector2(-9, -75), Vector2(-9, -75)]
 }
 
+[sub_resource type="Animation" id="Animation_m071w"]
+resource_name = "wall_clamber"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [&"wall_clamber", &"wall_clamber", &"wall_clamber", &"wall_clamber", &"wall_clamber", &"wall_clamber", &"wall_clamber", &"wall_clamber", &"wall_clamber", &"wall_clamber"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, false, false, false, false, false, false, false, false, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(6, -48), Vector2(6, -48), Vector2(6, -48), Vector2(6, -48), Vector2(6, -48), Vector2(6, -54), Vector2(12, -54), Vector2(12, -42), Vector2(12, -30), Vector2(12, -18)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:shape:size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(150, 250), Vector2(150, 250), Vector2(150, 250), Vector2(150, 250), Vector2(150, 250), Vector2(150, 250), Vector2(150, 250), Vector2(150, 250), Vector2(150, 250), Vector2(150, 250)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(3, -75), Vector2(3, -75), Vector2(3, -75), Vector2(3, -75), Vector2(3, -75), Vector2(3, -75), Vector2(3, -75), Vector2(3, -75), Vector2(3, -75), Vector2(3, -75)]
+}
+
+[sub_resource type="Animation" id="Animation_4agt0"]
+resource_name = "wall_clamber_flip"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [&"wall_clamber", &"wall_clamber", &"wall_clamber", &"wall_clamber", &"wall_clamber", &"wall_clamber", &"wall_clamber", &"wall_clamber", &"wall_clamber", &"wall_clamber"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, true, true, true, true, true, true, true, true, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-6, -48), Vector2(-6, -48), Vector2(-6, -48), Vector2(-6, -48), Vector2(-6, -48), Vector2(-6, -54), Vector2(-12, -54), Vector2(-12, -42), Vector2(-12, -30), Vector2(-12, -18)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:shape:size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(150, 250), Vector2(150, 250), Vector2(150, 250), Vector2(150, 250), Vector2(150, 250), Vector2(150, 250), Vector2(150, 250), Vector2(150, 250), Vector2(150, 250), Vector2(150, 250)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-3, -75), Vector2(-3, -75), Vector2(-3, -75), Vector2(-3, -75), Vector2(-3, -75), Vector2(-3, -75), Vector2(-3, -75), Vector2(-3, -75), Vector2(-3, -75), Vector2(-3, -75)]
+}
+
+[sub_resource type="Animation" id="Animation_14hou"]
+resource_name = "wall_kick"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [&"wall_clamber", &"wall_clamber", &"wall_clamber", &"wall_clamber"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [10, 11, 12, 13]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, false, false, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-78, -6), Vector2(-78, -6), Vector2(-78, -6), Vector2(-78, -6)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-21, -57), Vector2(-21, -57), Vector2(-21, -57), Vector2(-21, -57)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:shape:size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(230, 190), Vector2(230, 190), Vector2(230, 190), Vector2(230, 190)]
+}
+
+[sub_resource type="Animation" id="Animation_c3wej"]
+resource_name = "wall_kick_flip"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [&"wall_clamber", &"wall_clamber", &"wall_clamber", &"wall_clamber"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [10, 11, 12, 13]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, true, true, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(78, -6), Vector2(78, -6), Vector2(78, -6), Vector2(78, -6)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(21, -57), Vector2(21, -57), Vector2(21, -57), Vector2(21, -57)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:shape:size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(230, 190), Vector2(230, 190), Vector2(230, 190), Vector2(230, 190)]
+}
+
+[sub_resource type="Animation" id="Animation_t3mn6"]
+resource_name = "roll_flip"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [&"roll", &"roll", &"roll", &"roll", &"roll", &"roll", &"roll", &"roll"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [3, 4, 5, 6, 7, 0, 1, 2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, true, true, true, true, true, true, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(6, -54), Vector2(6, -54), Vector2(24, -54), Vector2(24, -54), Vector2(24, -54), Vector2(36, -60), Vector2(24, -60), Vector2(12, -54)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(18, -60), Vector2(18, -60), Vector2(18, -60), Vector2(18, -60), Vector2(18, -60), Vector2(18, -60), Vector2(18, -60), Vector2(18, -60)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:shape:size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200), Vector2(220, 200)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7mnnp"]
 _data = {
 "RESET": SubResource("Animation_lxm5c"),
@@ -2122,12 +2435,16 @@ _data = {
 "pole_clamber": SubResource("Animation_1o3r8"),
 "pole_climb": SubResource("Animation_4maxr"),
 "roll": SubResource("Animation_6r32t"),
-"roll_flip": SubResource("Animation_n54kl"),
+"roll_flip": SubResource("Animation_t3mn6"),
 "run": SubResource("Animation_roait"),
 "run_flip": SubResource("Animation_o4j48"),
 "walk": SubResource("Animation_mbwvt"),
+"wall_clamber": SubResource("Animation_m071w"),
+"wall_clamber_flip": SubResource("Animation_4agt0"),
 "wall_climb": SubResource("Animation_6p4gj"),
-"wall_climb_flip": SubResource("Animation_pbymw")
+"wall_climb_flip": SubResource("Animation_pbymw"),
+"wall_kick": SubResource("Animation_14hou"),
+"wall_kick_flip": SubResource("Animation_c3wej")
 }
 
 [node name="Raccoon" type="CharacterBody2D"]
@@ -2197,3 +2514,9 @@ script = ExtResource("36_l16wd")
 
 [node name="Pole_Clamber" type="Node" parent="StateMachine"]
 script = ExtResource("62_sbxa5")
+
+[node name="Wall_Climb" type="Node" parent="StateMachine"]
+script = ExtResource("63_qsonk")
+
+[node name="Wall_Clamber" type="Node" parent="StateMachine"]
+script = ExtResource("64_x3gv7")

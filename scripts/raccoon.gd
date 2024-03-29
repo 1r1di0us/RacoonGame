@@ -7,8 +7,9 @@ const TUCK_VELOCITY = -200.0
 const HIGH_JUMP_VELOCITY_X = 150.0
 const ROLL_PUSH = 300.0 # minimum roll push velocity
 const LAUNCH_SPEED = 1200.0
+const LAUNCH_JUMP = -200.0
 const CLIMB_SPEED = 300.0
-const CLAMBER_SPEED = -120
+const CLAMBER_SPEED = -100
 
 const ACCELERATION = 500
 const MAX_SPEED = 80
@@ -28,6 +29,7 @@ var clamber_y = 0
 var climbable_walls_left_count = 0
 var climbable_walls_right_count = 0
 var platforms = 0
+var jump_off = false
 
 var prevVelY = 0 #helps freeball know whether to start rolling or not
 
@@ -52,3 +54,8 @@ func _physics_process(delta):
 		AudioManager.emit_signal("player_landed")
 	elif not is_on_floor():
 		has_landed = false
+		
+	if Input.is_action_pressed("move_down"):
+		set_collision_mask_value(5, false)
+	else:
+		set_collision_mask_value(5, true)

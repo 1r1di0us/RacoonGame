@@ -10,7 +10,7 @@ func physics_update(delta: float):
 	elif Input.is_action_just_pressed("jump") && raccoon.is_on_floor():
 		#have to multiply the velocity because otherwise its terrible
 		raccoon.locked_facing = -1
-		raccoon.velocity.y = -max(abs(raccoon.velocity.x) * 1.25, -raccoon.JUMP_VELOCITY) - raccoon.gravity * delta
+		raccoon.velocity.y = -max(abs(raccoon.velocity.x), -raccoon.JUMP_VELOCITY) - raccoon.gravity * delta
 		finished.emit("High_Jump")
 	elif abs(raccoon.velocity.x) <= STOP_THRESHOLD:
 		raccoon.locked_facing = -1

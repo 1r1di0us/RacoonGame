@@ -13,9 +13,10 @@ func physics_update(delta: float):
 		
 		if Input.is_action_just_released("jump"):
 			raccoon.velocity.x = (-raccoon.facing*2 + 1) * raccoon.LAUNCH_SPEED
-			finished.emit("Launch")
+			raccoon.velocity.y = raccoon.LAUNCH_JUMP
 			raccoon.locked_facing = raccoon.facing
 			launch_ready = 0
+			finished.emit("Launch")
 	else:
 		if (Input.is_action_pressed("move_up") && raccoon.climbables_count >= 1
 			&& raccoon.global_position.x >= raccoon.climbable_x - 32

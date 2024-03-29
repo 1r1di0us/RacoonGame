@@ -6,6 +6,10 @@ func physics_update(delta: float):
 		&& raccoon.global_position.x >= raccoon.climbable_x - 32
 		&& raccoon.global_position.x <= raccoon.climbable_x + 32):
 		finished.emit("Pole_Climb")
+	elif (Input.is_action_pressed("move_up")
+		&& (raccoon.climbable_walls_right_count > 0
+		|| raccoon.climbable_walls_left_count > 0)):
+		finished.emit("Wall_Climb")
 	elif not raccoon.is_on_floor():
 		finished.emit("Freefall")
 	elif Input.is_action_just_pressed("jump"):

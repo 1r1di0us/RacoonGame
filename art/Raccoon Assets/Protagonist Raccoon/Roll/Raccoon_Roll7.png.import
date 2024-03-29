@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ceicgyhtqk5as"
-path="res://.godot/imported/Raccoon_Roll6.png-c857b9d98f041eae51f1baf05aff557f.ctex"
+uid="uid://c41hkkkuuqwxq"
+path="res://.godot/imported/Raccoon_Roll7.png-54a613ef7aae33685060c80606701336.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll6.png"
-dest_files=["res://.godot/imported/Raccoon_Roll6.png-c857b9d98f041eae51f1baf05aff557f.ctex"]
+source_file="res://art/Raccoon Assets/Protagonist Raccoon/Roll/Raccoon_Roll7.png"
+dest_files=["res://.godot/imported/Raccoon_Roll7.png-54a613ef7aae33685060c80606701336.ctex"]
 
 [params]
 
