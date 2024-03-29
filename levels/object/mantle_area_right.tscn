@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp766v2ij5na"]
+
+[ext_resource type="Script" path="res://levels/object/mantle_area_right.gd" id="1_7ix4x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t15m3"]
+size = Vector2(8, 32)
+
+[node name="Mantle Area Right" type="Area2D"]
+position = Vector2(12, 0)
+script = ExtResource("1_7ix4x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_t15m3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
