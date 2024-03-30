@@ -2,32 +2,24 @@ extends RaccoonState
 class_name Wall_Kick
 
 func physics_update(delta: float):
-	#Idle but with a different animation
-	if (Input.is_action_pressed("move_up") && raccoon.climbables_count >= 1
-		&& raccoon.global_position.x >= raccoon.climbable_x - 32
-		&& raccoon.global_position.x <= raccoon.climbable_x + 32):
-		finished.emit("Pole_Climb")
-	elif (Input.is_action_pressed("move_up")
-		&& (raccoon.climbable_walls_right_count > 0
-		|| raccoon.climbable_walls_left_count > 0)):
-		finished.emit("Wall_Climb")
-	elif not raccoon.is_on_floor():
-		finished.emit("Freefall")
-	elif Input.is_action_just_pressed("jump"):
+	if animationPlayer.current_animation_position >= 0.6:
+		if raccoon.platforms >= 1:
+			finished.emit("Crouch")
+		else:
+			finished.emit("Idle")
+	elif Input.is_action_just_pressed("jump") && animationPlayer.current_animation_position >= 0.2:
 		finished.emit("Jump")
-	elif Input.is_action_pressed("crouch"):
+	elif Input.is_action_pressed("crouch") && animationPlayer.current_animation_position >= 0.2:
 		finished.emit("Crouch")
-	elif not raccoon.direction == 0:
+	elif not raccoon.direction == 0 && animationPlayer.current_animation_position >= 0.2:
 		if raccoon.platforms <= 0:
 			finished.emit("Crawl")
 		else:
 			finished.emit("Run")
-	elif animationPlayer.current_animation_position >= 0.4:
-		finished.emit("Idle")
-	
-	raccoon.velocity.y += raccoon.gravity * delta
-	if raccoon.velocity.x != 0:
-		raccoon.velocity.x = move_toward(raccoon.velocity.x, 0, raccoon.ACCELERATION)
+	else:
+		raccoon.velocity.y += raccoon.gravity * delta
+		if raccoon.velocity.x != 0:
+			raccoon.velocity.x = move_toward(raccoon.velocity.x, 0, raccoon.ACCELERATION)
 
 func enter(msg: Dictionary = {}):
 	if raccoon.locked_facing == 0:

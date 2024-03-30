@@ -3,12 +3,13 @@ class_name Launch
 
 func physics_update(delta: float):
 	
-	if animationPlayer.current_animation_position >= 0.3:
+	if animationPlayer.current_animation_position >= 0.5:
 		if not raccoon.is_on_floor():
 			finished.emit("Freeball")
 		else:
 			finished.emit("Roll")
-	raccoon.velocity.y += raccoon.gravity * delta
+	else:
+		raccoon.velocity.y += raccoon.gravity * delta
 
 func enter(msg: Dictionary = {}):
 	AudioManager.emit_signal("player_jumped") #Play Jump Sound
