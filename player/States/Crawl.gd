@@ -2,26 +2,33 @@ extends RaccoonState
 class_name Crawl
 
 func physics_update(delta: float):
-	if not raccoon.is_on_floor():
+	if (Input.is_action_pressed("move_up") && raccoon.climbables_count >= 1
+		&& raccoon.global_position.x >= raccoon.climbable_x - 32
+		&& raccoon.global_position.x <= raccoon.climbable_x + 32):
+		finished.emit("Pole_Climb")
+	elif not raccoon.is_on_floor() && raccoon.idle_fall == 0:
+		raccoon.cant_clamber = 0.25
+		raccoon.coyote_time = 0.1
 		finished.emit("Freefall")
 	elif Input.is_action_just_pressed("jump") && not Input.is_action_pressed("crouch"):
 		finished.emit("Jump")
-	elif not Input.is_action_pressed("crouch"):
+	#elif raccoon.is_near_rummagable != {} && Input.is_action_just_pressed("interact"):
+	#	finished.emit("Rummage")
+	elif not Input.is_action_pressed("crouch") && raccoon.platforms <= 0 && raccoon.idle_fall == 0:
 		finished.emit("Run")
 	elif raccoon.direction == 0:
 		finished.emit("Crouch")
-	
-	if raccoon.prev_facing != raccoon.facing: # we want to flip in the middle of the state
-		var temp = animationPlayer.current_animation_position
-		if raccoon.facing:
-			animationPlayer.play("crawl_flip")
-		else:
-			animationPlayer.play("crawl")
-		animationPlayer.seek(temp, true)
-	
-	raccoon.velocity.y += raccoon.gravity * delta
-	raccoon.velocity.x = move_toward(raccoon.velocity.x, raccoon.direction * raccoon.CRAWL_SPEED, raccoon.ACCELERATION)
-	pass
+	else:
+		if raccoon.prev_facing != raccoon.facing: # we want to flip in the middle of the state
+			var temp = animationPlayer.current_animation_position
+			if raccoon.facing:
+				animationPlayer.play("crawl_flip")
+			else:
+				animationPlayer.play("crawl")
+			animationPlayer.seek(temp, true)
+		
+		raccoon.velocity.y += raccoon.gravity * delta
+		raccoon.velocity.x = move_toward(raccoon.velocity.x, raccoon.direction * raccoon.CRAWL_SPEED, raccoon.ACCELERATION)
 
 func enter(msg: Dictionary = {}):
 	if raccoon.facing == 1:

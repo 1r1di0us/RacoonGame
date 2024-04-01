@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://levels/object/climbable.gd" id="1_ootk0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kpdbr"]
-size = Vector2(32, 32)
+size = Vector2(16, 32)
 
 [sub_resource type="QuadMesh" id="QuadMesh_yb706"]
 size = Vector2(32, 32)
@@ -14,10 +14,12 @@ input_pickable = false
 script = ExtResource("1_ootk0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 1)
 shape = SubResource("RectangleShape2D_kpdbr")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
 modulate = Color(0.870588, 0.619608, 0, 1)
+position = Vector2(4.76837e-07, 0)
 mesh = SubResource("QuadMesh_yb706")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

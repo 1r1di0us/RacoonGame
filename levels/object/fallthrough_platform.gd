@@ -6,19 +6,18 @@ extends StaticBody2D
 var player_on_platform : bool = false
 var playerbody : CharacterBody2D = null
 
-func _unhandled_input(event):
-	if event.is_action_pressed("crouch"):
-		if player_on_platform == true and playerbody != null:
-			playerbody.set_collision_mask_value(5, false)
-	if event.is_action_released("crouch") and playerbody != null:
-		playerbody.set_collision_mask_value(5, true)
-
 func _on_area_2d_body_entered(body):
-	player_on_platform = true
-	playerbody = body
+	if "platforms" in body:
+		var count = body.get("platforms")
+		body.set("platforms", count + 1)
+		
+	if "clamber_x" in body:
+		body.set("clamber_x", global_position.x)
+	if "clamber_y" in body:
+		body.set("clamber_y", global_position.y)
 
 
-func _on_area_2d_body_exited(body):
-	player_on_platform = false
-	playerbody.set_collision_mask_value(5, true)
-	playerbody = null
+func _on_area_2d_body_exited(body):	
+	if "platforms" in body:
+		var count = body.get("platforms")
+		body.set("platforms", count - 1)
