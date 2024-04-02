@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp05trdp81l8q"
-path="res://.godot/imported/Clock.png-099832a1282b8c95aaee950001809772.ctex"
+uid="uid://b1ltniu3au0lm"
+path="res://.godot/imported/Food_Counter.png-9d1a22c83ae5f68f0f0e18d8822cbd96.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/UI-HUD Assets/Clock/1000_ Export/Clock.png"
-dest_files=["res://.godot/imported/Clock.png-099832a1282b8c95aaee950001809772.ctex"]
+source_file="res://art/UI-HUD Assets/Food Counter/100_ Export/Food_Counter.png"
+dest_files=["res://.godot/imported/Food_Counter.png-9d1a22c83ae5f68f0f0e18d8822cbd96.ctex"]
 
 [params]
 
