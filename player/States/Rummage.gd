@@ -18,7 +18,6 @@ func physics_update(delta: float):
 				finished.emit("Idle")
 	elif timer <= delta:
 		timer = 0
-		raccoon.is_near_rummagable.food_content -= 1
 		raccoon.is_near_rummagable.rummage()
 		#change raccoon's food meter
 		if raccoon.direction != 0:
