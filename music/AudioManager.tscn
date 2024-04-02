@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://mwl5glcd7hyj"]
+[gd_scene load_steps=19 format=3 uid="uid://mwl5glcd7hyj"]
 
 [ext_resource type="Script" path="res://scripts/AudioManager.gd" id="1_7gyvn"]
 [ext_resource type="AudioStream" uid="uid://yx8x1dipwbhy" path="res://music/Bunnymajs - Split Persona.mp3" id="1_f82f8"]
@@ -15,6 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://jy526oejym35" path="res://sfx/sfx_movement_stairs3b.wav" id="13_bmj7f"]
 [ext_resource type="AudioStream" uid="uid://souj544x8oqk" path="res://sfx/sfx_sounds_pause3_in.wav" id="14_58qac"]
 [ext_resource type="AudioStream" uid="uid://bmy4u5cyv5x1v" path="res://sfx/sfx_sounds_pause5_out.wav" id="15_oq50y"]
+[ext_resource type="AudioStream" uid="uid://dxke0r4aoylsl" path="res://music/Bunnymajs - Soul of sound.mp3" id="16_ta11s"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_yme72"]
 streams_count = 3
@@ -40,7 +41,6 @@ script = ExtResource("1_7gyvn")
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_yme72")
 volume_db = -12.0
-autoplay = true
 
 [node name="HoverSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_8d4tf")
@@ -72,6 +72,7 @@ volume_db = 6.0
 
 [node name="Footsteps" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_dmtbm")
+volume_db = -9.0
 
 [node name="RollSound" type="AudioStreamPlayer" parent="."]
 
@@ -81,4 +82,13 @@ volume_db = -12.0
 
 [node name="ResumeSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_oq50y")
-volume_db = -8.0
+volume_db = -9.0
+
+[node name="MainMenuSong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_wr3cq")
+volume_db = -12.0
+autoplay = true
+
+[node name="Level1Song" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_ta11s")
+volume_db = -15.0

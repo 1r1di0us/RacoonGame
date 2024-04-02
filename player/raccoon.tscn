@@ -39,7 +39,6 @@
 [ext_resource type="Texture2D" uid="uid://doulbud35mgl2" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Clamber/Raccoon_Clamber-on-Top-Pole-Background5.png" id="18_33dky"]
 [ext_resource type="Script" path="res://player/States/Crawl.gd" id="18_jo6b5"]
 [ext_resource type="Script" path="res://player/States/Freefall.gd" id="19_0yqig"]
-[ext_resource type="AudioStream" uid="uid://ch5jov4qbe713" path="res://sfx/sfx_movement_jump20.wav" id="19_5367k"]
 [ext_resource type="Texture2D" uid="uid://dy2k3ryatxmcv" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Clamber/Raccoon_Clamber-on-Top-Pole-Background6.png" id="19_nynjn"]
 [ext_resource type="Texture2D" uid="uid://cnq1k7pt0avsq" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Clamber/Raccoon_Clamber-on-Top-Pole-Background7.png" id="20_ft2iy"]
 [ext_resource type="Script" path="res://player/States/Jump.gd" id="20_lx7k6"]
@@ -77,6 +76,7 @@
 [ext_resource type="Texture2D" uid="uid://c48rbdc1f1wlx" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Climb/Raccoon_Wall-Climb1.png" id="46_c34k6"]
 [ext_resource type="Texture2D" uid="uid://cf2q23d6mnpe4" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Climb/Raccoon_Wall-Climb2.png" id="47_2twur"]
 [ext_resource type="Script" path="res://player/States/Pole_Clamber.gd" id="62_sbxa5"]
+[ext_resource type="Script" path="res://player/AnimatedSprite2D.gd" id="63_q50kp"]
 [ext_resource type="Script" path="res://player/States/Wall_Climb.gd" id="63_qsonk"]
 [ext_resource type="Script" path="res://player/States/Wall_Clamber.gd" id="64_x3gv7"]
 [ext_resource type="Script" path="res://player/States/Splat.gd" id="79_tgt17"]
@@ -2994,6 +2994,7 @@ scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_fxkla")
 animation = &"idle"
 flip_h = true
+script = ExtResource("63_q50kp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -66)
@@ -3004,10 +3005,6 @@ shape = SubResource("RectangleShape2D_pqqmg")
 libraries = {
 "": SubResource("AnimationLibrary_7mnnp")
 }
-
-[node name="JumpSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("19_5367k")
-volume_db = -15.0
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("14_66lkj")
