@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://levels/object/climbable_wall_left.gd" id="1_eb1pc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qj0oi"]
-size = Vector2(32, 32)
+size = Vector2(8, 32)
 
 [sub_resource type="QuadMesh" id="QuadMesh_a7by3"]
 size = Vector2(32, 32)
@@ -17,6 +17,7 @@ collision_layer = 0
 script = ExtResource("1_eb1pc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-12, 0)
 shape = SubResource("RectangleShape2D_qj0oi")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
