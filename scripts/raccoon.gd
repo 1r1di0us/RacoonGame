@@ -47,7 +47,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var is_near_rummagable : Area2D = null
 
-var has_landed: bool = false
+var has_landed: bool = false # what is this for?
 
 func _ready():
 	respawn_pos = global_position
