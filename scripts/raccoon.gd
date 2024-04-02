@@ -38,15 +38,19 @@ var mantle_spot: Area2D = null
 var coyote_time = 0
 var cant_clamber = 0
 var idle_fall = 0 # for very short falls getting out of a clamber
+var respawn_pos: Vector2
 
 var prevVelY = 0 #helps freeball know whether to start rolling or not
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-var is_near_rummagable : Dictionary = {}
+var is_near_rummagable : Area2D = null
 
 var has_landed: bool = false
+
+func _ready():
+	respawn_pos = global_position
 
 func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
