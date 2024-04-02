@@ -9,6 +9,8 @@ var game_over_screen = preload("res://ui/game_over_screen.tscn")
 #flags for level completion- only saved per game instance
 var level_flags = [true, false, false]
 
+var level_score = [0,0,0]
+
 func setLevelDone(i):
 	level_flags[i-1] = true
 	current_level = i
@@ -57,3 +59,7 @@ func pause_game(type):
 func transition_to_scene(scene_path):
 	await get_tree().create_timer(0.1).timeout
 	get_tree().change_scene_to_file(scene_path)
+	
+
+func add_score(score):
+	level_score[current_level-1] += score

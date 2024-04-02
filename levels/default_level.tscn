@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c2tjcdjaltnwf"]
+[gd_scene load_steps=11 format=3 uid="uid://c2tjcdjaltnwf"]
 
 [ext_resource type="Texture2D" uid="uid://c1qwtoub75jt3" path="res://art/Landscape - Level Assets/Background/Level 1/Forest_Background_Fog.png" id="1_mjeb1"]
 [ext_resource type="PackedScene" uid="uid://c1qok2g7135af" path="res://player/raccoon.tscn" id="1_ovwk0"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bfhvkwyfs7wp5" path="res://art/Landscape - Level Assets/Background/Level 1/Forest_Background_Bushes.png" id="4_437v1"]
 [ext_resource type="PackedScene" uid="uid://puunqa1fs0ql" path="res://level_assets/out_of_bounds.tscn" id="9_8woqc"]
 [ext_resource type="PackedScene" uid="uid://bwwaiwbrrw2fx" path="res://level_assets/exit_zone.tscn" id="9_wxybk"]
+[ext_resource type="PackedScene" uid="uid://dn0px7ku88r8u" path="res://levels/object/rummage_spot.tscn" id="10_gcq0q"]
 
 [node name="DefaultLevel" type="Node2D"]
 
@@ -67,3 +68,6 @@ position = Vector2(999, 389)
 
 [node name="out_of_bounds" parent="." instance=ExtResource("9_8woqc")]
 position = Vector2(40, 393)
+
+[node name="Rummage spot" parent="." instance=ExtResource("10_gcq0q")]
+position = Vector2(494, 350)

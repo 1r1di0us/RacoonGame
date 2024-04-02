@@ -8,3 +8,4 @@ script = ExtResource("2_6u4v0")
 target_level_path = ""
 play_exit_animation = true
 play_enter_animation = true
+score_threshold = 5

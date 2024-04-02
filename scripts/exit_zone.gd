@@ -3,10 +3,12 @@ extends player_detect_zone
 @export_file("*.tscn") var target_level_path = ""
 @export() var play_exit_animation = true
 @export() var play_enter_animation = true
+@export() var score_threshold: int = 5
 
 func _on_body_entered(body):
 	if not body is Raccoon: return
 	if target_level_path.is_empty(): return
+	if GameManager.level_score[GameManager.current_level-1] != score_threshold: return
 	AudioManager.emit_signal("level_complete")
 	get_tree().paused = true
 	await(LevelTransitions.play_exit_transition(play_exit_animation))
