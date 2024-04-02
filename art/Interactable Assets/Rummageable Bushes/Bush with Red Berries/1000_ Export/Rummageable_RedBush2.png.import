@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp05trdp81l8q"
-path="res://.godot/imported/Clock.png-099832a1282b8c95aaee950001809772.ctex"
+uid="uid://fie3f76hqmcu"
+path="res://.godot/imported/Rummageable_RedBush2.png-5040cb132d0b2615b5502783f81b6e8d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/UI-HUD Assets/Clock/1000_ Export/Clock.png"
-dest_files=["res://.godot/imported/Clock.png-099832a1282b8c95aaee950001809772.ctex"]
+source_file="res://art/Interactable Assets/Rummageable Bushes/Bush with Red Berries/1000_ Export/Rummageable_RedBush2.png"
+dest_files=["res://.godot/imported/Rummageable_RedBush2.png-5040cb132d0b2615b5502783f81b6e8d.ctex"]
 
 [params]
 

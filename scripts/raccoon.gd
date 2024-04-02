@@ -53,6 +53,7 @@ func _ready():
 	respawn_pos = global_position
 
 func _physics_process(delta):
+	
 	# Get the input direction and handle the movement/deceleration.
 	direction = Input.get_axis("move_left", "move_right") # direction = -1, 0, or 1, I think
 	if direction != 0:
