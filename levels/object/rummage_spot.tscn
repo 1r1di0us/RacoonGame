@@ -13,7 +13,6 @@ scale = Vector2(0.3, 0.3)
 collision_layer = 0
 monitorable = false
 script = ExtResource("1_nlfry")
-food_content = 5
 full_sprite = ExtResource("3_lqxtd")
 empty_sprite = ExtResource("2_7knvy")
 

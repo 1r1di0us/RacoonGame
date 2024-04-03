@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var food_content : int = 0
+@export var food_content : int = 1
 @export var full_sprite : Texture2D
 @export var empty_sprite : Texture2D
 

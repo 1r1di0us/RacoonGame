@@ -18,7 +18,7 @@ func setLevelDone(i):
 func isLevelDone(i):
 	return level_flags[i-1];
 
-var current_level = 0
+var current_level = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
