@@ -47,7 +47,8 @@ func pause_game(type):
 			screen_type = pause_screen.instantiate()
 		else: #type == 1
 			screen_type = game_over_screen.instantiate()
-			#TODO send signal to Raccoon to play game over animation
+			var node = get_node("/root/Level_"+str(current_level)+"/Raccoon/AnimationPlayer")
+			node.play("death")
 		get_tree().get_root().add_child(screen_type)
 	else:
 		#game is paused, so unpause it and hide the pause screen
