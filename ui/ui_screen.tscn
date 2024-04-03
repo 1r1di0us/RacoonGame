@@ -23,8 +23,8 @@ func _ready():
 	$AnimationPlayer.play(\"pass_time\")
 	$LevelTimer.start()
 
-func _process(delta):
-	level_score = GameManager.level_score[GameManager.current_level]
+func _process(delta: float):
+	level_score = GameManager.level_score[GameManager.current_level-1]
 	$MarginContainer/VBoxContainer/HBoxContainer/Control/CollectableAmount.text = str(level_score)
 
 func _on_pause_button_pressed():
