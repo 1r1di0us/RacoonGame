@@ -12,6 +12,7 @@ signal game_paused
 signal game_resumed
 signal scene_changed
 signal footstep_walk
+signal PlayerDeadSetFalse
 
 #Initializing sound effect variables
 var hover_sound: AudioStreamPlayer
@@ -31,6 +32,7 @@ var level1_song: AudioStreamPlayer
 var songs: Array
 
 var OnStartMenu = true
+var PlayerDead = false
 
 func _ready():
 	#Declaring sound effect variables
@@ -62,6 +64,7 @@ func _ready():
 	game_resumed.connect(on_game_resumed)
 	scene_changed.connect(on_scene_changed)
 	footstep_walk.connect(on_footstep_walk)
+	PlayerDeadSetFalse.connect(on_PlayerDeadSetFalse)
 
 func _enter_tree() -> void:
 	get_tree().node_added.connect(_on_node_added)
@@ -75,7 +78,7 @@ func _on_node_added(node:Node) -> void:
 		
 		if get_tree().get_current_scene().get_name() == "LevelOneCutscene":
 			node.pressed.connect(PlayPressed)
-		elif node.name == "ResumeButton":
+		elif node.name == "PauseButton" or node.name == "ResumeButton":
 			pass
 		else:
 			node.pressed.connect(PlayPressed)
@@ -133,6 +136,7 @@ func on_scene_changed(scene_path):
 #Play event sound effects
 func on_player_died():
 	death_sound.play()
+	PlayerDead = true
 
 func on_level_complete():
 	levelcomplete_sound.play()
@@ -153,10 +157,15 @@ func on_player_highjump():
 	print()
 
 func on_game_paused():
-	pause_sound.play()
+	if PlayerDead == false:
+		pause_sound.play()
 
 func on_game_resumed():
-	resume_sound.play()
+	if PlayerDead == false:
+		resume_sound.play()
+
+func on_PlayerDeadSetFalse():
+	PlayerDead = false
 
 func on_footstep_walk():
 	footsteps.play()
@@ -171,4 +180,3 @@ func PlayPressed() -> void:
 
 func PlayPressed2() -> void:
 	select_sound_next.play()
-
