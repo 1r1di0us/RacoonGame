@@ -37,7 +37,10 @@ func physics_update(delta: float):
 			raccoon.velocity.x = move_toward(raccoon.velocity.x, 0, raccoon.ACCELERATION)
 
 func enter(msg: Dictionary = {}):
-	animationPlayer.play("rummage")
+	if raccoon.facing == 1:
+		animationPlayer.play("rummage_flip")
+	else:
+		animationPlayer.play("rummage")
 	timer = 1.5
 	
 func exit():
