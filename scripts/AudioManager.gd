@@ -29,11 +29,7 @@ var footsteps: AudioStreamPlayer
 #Creating song variables
 var mainmenu_song: AudioStreamPlayer
 var level1_song: AudioStreamPlayer
-var level1cutscene_song: AudioStreamPlayer
 var songs: Array
-var music_bus
-var current_bus
-var fadein = false
 
 var OnStartMenu = true
 var PlayerDead = false
@@ -53,12 +49,8 @@ func _ready():
 	
 	mainmenu_song = $MainMenuSong
 	level1_song = $Level1Song
-	level1cutscene_song = $Level1CutsceneSong
 	
-	songs = [mainmenu_song, level1_song, level1cutscene_song] #Array to store all songs to easily stop the currently playing track later
-	
-	music_bus = AudioServer.get_bus_index("Music")
-	current_bus = AudioServer.get_bus_index("CurrentSong")
+	songs = [mainmenu_song, level1_song] #Array to store all songs to easily stop the currently playing track later
 	
 	#Connecting signals to functions
 	player_died.connect(on_player_died)
@@ -91,74 +83,54 @@ func _on_node_added(node:Node) -> void:
 		else:
 			node.pressed.connect(PlayPressed)
 
-func _process(delta):
-	if fadein:
-		AudioServer.set_bus_volume_db(music_bus, AudioServer.get_bus_volume_db(music_bus) - 45 * delta)
-		AudioServer.set_bus_volume_db(current_bus, AudioServer.get_bus_volume_db(current_bus) + 75 * delta)
-		
-		if AudioServer.get_bus_volume_db(current_bus) >= 0:
-			var OldSong = get_current_song()
-			var NewSong = get_next_song()
-			if is_instance_valid(OldSong):
-				OldSong.stop()
-			NewSong.set_bus("Music")
-			
-			AudioServer.set_bus_volume_db(music_bus, 0)
-			AudioServer.set_bus_volume_db(current_bus, -60)
-			
-			fadein = false
-
 # Function to smoothly transition between two songs
-func transition_songs(current_song: AudioStreamPlayer, next_song: AudioStreamPlayer):
-	if fadein == true:
-		fadein = false
-		reset_songs()
-		if is_instance_valid(current_song):
-			current_song.play()
-		AudioServer.set_bus_volume_db(music_bus, 0)
+func transition_songs(current_song: AudioStreamPlayer, next_song: AudioStreamPlayer, transition_time: float):
+	var timer = 0.0
 	
-	next_song.set_bus("CurrentSong")
-	AudioServer.set_bus_volume_db(current_bus, -60)
+	while timer < transition_time:
+		# Calculate fade values
+		var current_volume = 1.0 - timer / transition_time
+		var next_volume = timer / transition_time
+		
+		# Apply volume changes to both songs
+		current_song.volume_db = current_volume * -80
+		next_song.volume_db = next_volume * -80
+		
+		# Wait for a short time before the next iteration
+		await get_tree().create_timer(0.1).timeout
+		
+		# Update timer
+		timer += 0.1
+		
+	# Stop the current song and start the next one
+	current_song.stop()
 	next_song.play()
-	
-	fadein = true
-	return
 
-#Function to get currently playing song
-func get_current_song():
+#Function to stop currently playing song
+func stop_current_song():
 	for song in songs:
-		if song.is_playing() and song.get_bus() == "Music":
-			return song
-
-#Function to check which song is playing on the CurrentBus
-func get_next_song():
-	for song in songs:
-		if song.get_bus() == "CurrentSong":
-			return song
-
-func reset_songs():
-	for song in songs:
-		song.set_bus("Music")
-		song.stop()
+		if song.is_playing():
+			song.stop()
+			break
 
 #Detect scene changes and change music accordingly
 func on_scene_changed(scene_path):
-	#If entering start screen or level select screen for the first time then stop previous music and play main menu music
 	if (scene_path == "res://ui/level_select_screen.tscn" or scene_path == "res://ui/start_screen.tscn") and OnStartMenu == false:
 		OnStartMenu = true
-		transition_songs(get_current_song(), mainmenu_song)
+		stop_current_song()
+		mainmenu_song.play()
 		return
-	#If entering start screen or level select screen not for the first time then do nothing
+		
 	elif (scene_path == "res://ui/level_select_screen.tscn" or scene_path == "res://ui/start_screen.tscn") and OnStartMenu == true:
 		#Do nothing
 		return
-	#If entering level 1 cutscene, stop current music and play level 1 cutscene music
-	elif scene_path == "res://levels/level_1_cutscene.tscn":
-		transition_songs(get_current_song(), level1cutscene_song)
-	#If entering level 1 scene, stop current music and play level 1 music
+		
 	elif scene_path == "res://levels/level_1.tscn":
-		transition_songs(get_current_song(), level1_song)
-	
+		stop_current_song()
+		level1_song.play()
+		return
+		
+	print(scene_path)
 	OnStartMenu = false
 
 #Play event sound effects

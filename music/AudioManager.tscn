@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://mwl5glcd7hyj"]
+[gd_scene load_steps=19 format=3 uid="uid://mwl5glcd7hyj"]
 
 [ext_resource type="Script" path="res://scripts/AudioManager.gd" id="1_7gyvn"]
 [ext_resource type="AudioStream" uid="uid://yx8x1dipwbhy" path="res://music/Bunnymajs - Split Persona.mp3" id="1_f82f8"]
@@ -16,7 +16,6 @@
 [ext_resource type="AudioStream" uid="uid://souj544x8oqk" path="res://sfx/sfx_sounds_pause3_in.wav" id="14_58qac"]
 [ext_resource type="AudioStream" uid="uid://bmy4u5cyv5x1v" path="res://sfx/sfx_sounds_pause5_out.wav" id="15_oq50y"]
 [ext_resource type="AudioStream" uid="uid://dxke0r4aoylsl" path="res://music/Bunnymajs - Soul of sound.mp3" id="16_ta11s"]
-[ext_resource type="AudioStream" uid="uid://ckb2end0kp2e2" path="res://music/Bunnymajs - Dreams.mp3" id="17_hifpx"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_yme72"]
 streams_count = 3
@@ -89,14 +88,7 @@ volume_db = -9.0
 stream = ExtResource("3_wr3cq")
 volume_db = -12.0
 autoplay = true
-bus = &"Music"
 
 [node name="Level1Song" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("16_ta11s")
 volume_db = -15.0
-bus = &"Music"
-
-[node name="Level1CutsceneSong" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("17_hifpx")
-volume_db = -12.0
-bus = &"Music"
