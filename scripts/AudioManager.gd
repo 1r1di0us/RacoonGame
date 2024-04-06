@@ -8,6 +8,11 @@ signal player_jumped
 signal player_tuck
 signal player_roll
 signal player_highjump
+signal player_climbingwall
+signal player_climbingpole
+signal player_rummaging
+signal player_itemcollected
+signal player_brushpast
 signal game_paused
 signal game_resumed
 signal scene_changed
@@ -25,6 +30,9 @@ var jump_sound: AudioStreamPlayer
 var pause_sound: AudioStreamPlayer
 var resume_sound: AudioStreamPlayer
 var footsteps: AudioStreamPlayer
+var rummaging_sound: AudioStreamPlayer
+var itemcollected_sound: AudioStreamPlayer
+var bush_sound: AudioStreamPlayer
 
 #Creating song variables
 var mainmenu_song: AudioStreamPlayer
@@ -50,6 +58,9 @@ func _ready():
 	pause_sound = $PauseSound
 	resume_sound = $ResumeSound
 	footsteps = $Footsteps
+	rummaging_sound = $RummagingSound
+	itemcollected_sound = $ItemCollectedSound
+	bush_sound = $BushSound
 	
 	mainmenu_song = $MainMenuSong
 	level1_song = $Level1Song
@@ -68,6 +79,9 @@ func _ready():
 	player_tuck.connect(on_player_tuck)
 	player_roll.connect(on_player_roll)
 	player_highjump.connect(on_player_highjump)
+	player_rummaging.connect(on_player_rummaging)
+	player_itemcollected.connect(on_player_itemcollected)
+	player_brushpast.connect(on_player_brushpast)
 	game_paused.connect(on_game_paused)
 	game_resumed.connect(on_game_resumed)
 	scene_changed.connect(on_scene_changed)
@@ -144,12 +158,12 @@ func reset_songs():
 #Detect scene changes and change music accordingly
 func on_scene_changed(scene_path):
 	#If entering start screen or level select screen for the first time then stop previous music and play main menu music
-	if (scene_path == "res://ui/level_select_screen.tscn" or scene_path == "res://ui/start_screen.tscn") and OnStartMenu == false:
+	if (scene_path == "res://ui/start_screen.tscn") and OnStartMenu == false:
 		OnStartMenu = true
 		transition_songs(get_current_song(), mainmenu_song)
 		return
 	#If entering start screen or level select screen not for the first time then do nothing
-	elif (scene_path == "res://ui/level_select_screen.tscn" or scene_path == "res://ui/start_screen.tscn") and OnStartMenu == true:
+	elif (scene_path == "res://ui/level_select_screen.tscn" or scene_path == "res://ui/start_screen.tscn" or scene_path == "res://ui/credits.tscn") and OnStartMenu == true:
 		#Do nothing
 		return
 	#If entering level 1 cutscene, stop current music and play level 1 cutscene music
@@ -183,6 +197,16 @@ func on_player_roll():
 
 func on_player_highjump():
 	print()
+
+func on_player_rummaging():
+	rummaging_sound.play()
+
+func on_player_itemcollected():
+	itemcollected_sound.play()
+
+func on_player_brushpast():
+	bush_sound.play()
+
 
 func on_game_paused():
 	if PlayerDead == false:
