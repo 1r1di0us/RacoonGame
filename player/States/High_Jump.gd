@@ -34,21 +34,6 @@ func physics_update(delta: float):
 			&& (raccoon.climbable_walls_right_count > 0
 			|| raccoon.climbable_walls_left_count > 0)):
 			finished.emit("Wall_Climb")
-		else:
-			if raccoon.prev_facing != raccoon.facing: # we want to flip in the middle of the state
-				var temp = animationPlayer.current_animation_position
-				if raccoon.facing:
-					animationPlayer.play("jump_flip")
-				else:
-					animationPlayer.play("jump")
-				animationPlayer.seek(temp, true)
-			
-			raccoon.velocity.y += raccoon.gravity * delta
-			raccoon.velocity.x = raccoon.direction * raccoon.HIGH_JUMP_VELOCITY_X
-			
-			if Input.is_action_just_released("jump") && raccoon.velocity.y < 0:
-				raccoon.velocity.y = 0
-				animationPlayer.seek(0.4, true)
 	else:
 		if raccoon.prev_facing != raccoon.facing: # we want to flip in the middle of the state
 			var temp = animationPlayer.current_animation_position

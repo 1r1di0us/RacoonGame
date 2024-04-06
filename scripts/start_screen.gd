@@ -9,7 +9,3 @@ func _on_exit_button_pressed():
 
 func _on_level_select_button_pressed():
 	GameManager.transition_to_scene("res://ui/level_select_screen.tscn")
-
-
-func _on_credits_button_pressed():
-	GameManager.transition_to_scene("res://ui/credits.tscn")
