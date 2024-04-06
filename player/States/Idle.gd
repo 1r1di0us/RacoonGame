@@ -18,8 +18,9 @@ func physics_update(delta: float):
 		finished.emit("Freefall")
 	elif Input.is_action_just_pressed("jump"):
 		finished.emit("Jump")
-	#elif raccoon.is_near_rummagable != {} && Input.is_action_just_pressed("interact"):
-	#	finished.emit("Rummage")
+	elif (raccoon.is_near_rummagable != null && Input.is_action_pressed("interact")
+		&& raccoon.is_near_rummagable.exhausted != true):
+		finished.emit("Rummage")
 	elif Input.is_action_pressed("crouch"):
 		finished.emit("Crouch")
 	elif not raccoon.direction == 0:

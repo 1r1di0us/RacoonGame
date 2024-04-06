@@ -1,7 +1,7 @@
 extends RaccoonState
 class_name Wall_Clamber
 
-func physics_update(delta: float):	
+func physics_update(delta: float):
 	if animationPlayer.current_animation_position >= 1.0:
 		raccoon.global_position.x += 90 * raccoon.global_scale.x * (-raccoon.locked_facing * 2 + 1) #get him on top of the wall
 		finished.emit("Wall_Kick")
