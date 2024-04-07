@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://downko5sg08rr"
+path="res://.godot/imported/grass footstep 5.mp3-8508b747b700d8e30a605c060f13eb45.mp3str"
+
+[deps]
+
+source_file="res://sfx/grass footstep 5.mp3"
+dest_files=["res://.godot/imported/grass footstep 5.mp3-8508b747b700d8e30a605c060f13eb45.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

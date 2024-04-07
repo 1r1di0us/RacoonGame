@@ -8,15 +8,17 @@ signal player_jumped
 signal player_tuck
 signal player_roll
 signal player_highjump
-signal player_climbingwall
-signal player_climbingpole
 signal player_rummaging
 signal player_itemcollected
 signal player_brushpast
 signal game_paused
 signal game_resumed
 signal scene_changed
-signal footstep_walk
+signal footstep_run
+signal footstep_crawl
+signal footstep_climbingpole
+signal footstep_climbingwall
+signal splat
 signal PlayerDeadSetFalse
 
 #Initializing sound effect variables
@@ -33,6 +35,9 @@ var footsteps: AudioStreamPlayer
 var rummaging_sound: AudioStreamPlayer
 var itemcollected_sound: AudioStreamPlayer
 var bush_sound: AudioStreamPlayer
+var climbing_pole: AudioStreamPlayer
+var climbing_wall: AudioStreamPlayer
+var splat_sound: AudioStreamPlayer
 
 #Creating song variables
 var mainmenu_song: AudioStreamPlayer
@@ -61,6 +66,9 @@ func _ready():
 	rummaging_sound = $RummagingSound
 	itemcollected_sound = $ItemCollectedSound
 	bush_sound = $BushSound
+	climbing_pole = $ClimbingPole
+	climbing_wall = $ClimbingWall
+	splat_sound = $Splat
 	
 	mainmenu_song = $MainMenuSong
 	level1_song = $Level1Song
@@ -85,7 +93,11 @@ func _ready():
 	game_paused.connect(on_game_paused)
 	game_resumed.connect(on_game_resumed)
 	scene_changed.connect(on_scene_changed)
-	footstep_walk.connect(on_footstep_walk)
+	footstep_run.connect(on_footstep_run)
+	footstep_crawl.connect(on_footstep_crawl)
+	footstep_climbingpole.connect(on_footstep_climbingpole)
+	footstep_climbingwall.connect(on_footstep_climbingwall)
+	splat.connect(on_splat)
 	PlayerDeadSetFalse.connect(on_PlayerDeadSetFalse)
 
 func _enter_tree() -> void:
@@ -207,6 +219,21 @@ func on_player_itemcollected():
 func on_player_brushpast():
 	bush_sound.play()
 
+func on_footstep_run():
+	footsteps.play()
+
+func on_footstep_crawl():
+	print()
+
+func on_footstep_climbingpole():
+	climbing_pole.play()
+
+func on_footstep_climbingwall():
+	climbing_wall.play()
+
+func on_splat():
+	splat_sound.play()
+
 
 func on_game_paused():
 	if PlayerDead == false:
@@ -218,9 +245,6 @@ func on_game_resumed():
 
 func on_PlayerDeadSetFalse():
 	PlayerDead = false
-
-func on_footstep_walk():
-	footsteps.play()
 
 
 #Play button sound functions
