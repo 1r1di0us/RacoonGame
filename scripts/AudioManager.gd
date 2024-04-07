@@ -9,6 +9,7 @@ signal player_tuck
 signal player_roll
 signal player_highjump
 signal player_rummaging
+signal player_rummagingstop
 signal player_itemcollected
 signal player_brushpast
 signal game_paused
@@ -88,6 +89,7 @@ func _ready():
 	player_roll.connect(on_player_roll)
 	player_highjump.connect(on_player_highjump)
 	player_rummaging.connect(on_player_rummaging)
+	player_rummagingstop.connect(on_player_rummagingstop)
 	player_itemcollected.connect(on_player_itemcollected)
 	player_brushpast.connect(on_player_brushpast)
 	game_paused.connect(on_game_paused)
@@ -212,6 +214,9 @@ func on_player_highjump():
 
 func on_player_rummaging():
 	rummaging_sound.play()
+
+func on_player_rummagingstop():
+	rummaging_sound.stop()
 
 func on_player_itemcollected():
 	itemcollected_sound.play()
