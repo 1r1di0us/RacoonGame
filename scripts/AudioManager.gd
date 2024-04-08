@@ -20,6 +20,7 @@ signal footstep_crawl
 signal footstep_climbingpole
 signal footstep_climbingwall
 signal splat
+signal exit_error
 signal PlayerDeadSetFalse
 
 #Initializing sound effect variables
@@ -39,6 +40,7 @@ var bush_sound: AudioStreamPlayer
 var climbing_pole: AudioStreamPlayer
 var climbing_wall: AudioStreamPlayer
 var splat_sound: AudioStreamPlayer
+var exiterror_sound: AudioStreamPlayer
 
 #Creating song variables
 var mainmenu_song: AudioStreamPlayer
@@ -70,6 +72,7 @@ func _ready():
 	climbing_pole = $ClimbingPole
 	climbing_wall = $ClimbingWall
 	splat_sound = $Splat
+	exiterror_sound = $ExitError
 	
 	mainmenu_song = $MainMenuSong
 	level1_song = $Level1Song
@@ -100,6 +103,7 @@ func _ready():
 	footstep_climbingpole.connect(on_footstep_climbingpole)
 	footstep_climbingwall.connect(on_footstep_climbingwall)
 	splat.connect(on_splat)
+	exit_error.connect(on_exit_error)
 	PlayerDeadSetFalse.connect(on_PlayerDeadSetFalse)
 
 func _enter_tree() -> void:
@@ -247,6 +251,9 @@ func on_game_paused():
 func on_game_resumed():
 	if PlayerDead == false:
 		resume_sound.play()
+
+func on_exit_error():
+	exiterror_sound.play()
 
 func on_PlayerDeadSetFalse():
 	PlayerDead = false

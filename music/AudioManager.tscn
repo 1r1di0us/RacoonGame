@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://mwl5glcd7hyj"]
+[gd_scene load_steps=33 format=3 uid="uid://mwl5glcd7hyj"]
 
 [ext_resource type="Script" path="res://scripts/AudioManager.gd" id="1_7gyvn"]
 [ext_resource type="AudioStream" uid="uid://yx8x1dipwbhy" path="res://music/Bunnymajs - Split Persona.mp3" id="1_f82f8"]
@@ -16,9 +16,9 @@
 [ext_resource type="AudioStream" uid="uid://jy526oejym35" path="res://sfx/sfx_movement_stairs3b.wav" id="13_bmj7f"]
 [ext_resource type="AudioStream" uid="uid://cgq5bolk2h0me" path="res://sfx/grass footstep 2.mp3" id="13_hehfu"]
 [ext_resource type="AudioStream" uid="uid://souj544x8oqk" path="res://sfx/sfx_sounds_pause3_in.wav" id="14_58qac"]
-[ext_resource type="AudioStream" uid="uid://bmy4u5cyv5x1v" path="res://sfx/sfx_sounds_pause5_out.wav" id="15_oq50y"]
 [ext_resource type="AudioStream" uid="uid://dxke0r4aoylsl" path="res://music/Bunnymajs - Soul of sound.mp3" id="16_ta11s"]
 [ext_resource type="AudioStream" uid="uid://downko5sg08rr" path="res://sfx/grass footstep 5.mp3" id="16_wlw2h"]
+[ext_resource type="AudioStream" uid="uid://nf4mlwovsisl" path="res://sfx/sfx_sounds_pause3_out.wav" id="17_67akk"]
 [ext_resource type="AudioStream" uid="uid://ckb2end0kp2e2" path="res://music/Bunnymajs - Dreams.mp3" id="17_hifpx"]
 [ext_resource type="AudioStream" uid="uid://6lphigoyp6ow" path="res://sfx/grass footstep 6.mp3" id="17_ir85w"]
 [ext_resource type="AudioStream" uid="uid://dfyco3sm5kbpo" path="res://sfx/sfx_sounds_interaction19.wav" id="18_42b0p"]
@@ -26,6 +26,7 @@
 [ext_resource type="AudioStream" uid="uid://fgqhuskoy4ye" path="res://sfx/Bush Rummaging SFX V1.mp3" id="20_sw3yc"]
 [ext_resource type="AudioStream" uid="uid://cavp083erq4vd" path="res://sfx/Bush Rummaging SFX V2.mp3" id="21_00abj"]
 [ext_resource type="AudioStream" uid="uid://d4hw0d0r5p4up" path="res://sfx/sfx_damage_hit3.wav" id="24_g21vc"]
+[ext_resource type="AudioStream" uid="uid://kfvpw1verobu" path="res://sfx/sfx_wpn_noammo3.wav" id="27_4coln"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_yme72"]
 streams_count = 3
@@ -103,7 +104,7 @@ volume_db = -15.0
 
 [node name="JumpLandingSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_4dyp7")
-volume_db = -7.0
+volume_db = -8.0
 pitch_scale = 0.85
 
 [node name="Footsteps" type="AudioStreamPlayer" parent="."]
@@ -117,7 +118,7 @@ stream = ExtResource("14_58qac")
 volume_db = -12.0
 
 [node name="ResumeSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("15_oq50y")
+stream = ExtResource("17_67akk")
 volume_db = -9.0
 
 [node name="MainMenuSong" type="AudioStreamPlayer" parent="."]
@@ -138,7 +139,7 @@ bus = &"Music"
 
 [node name="RummagingSound" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_mawam")
-volume_db = -15.0
+volume_db = -12.0
 
 [node name="ItemCollectedSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_42b0p")
@@ -150,12 +151,17 @@ volume_db = -5.0
 
 [node name="ClimbingPole" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_ps0ag")
-volume_db = -5.0
+volume_db = -6.0
 
 [node name="ClimbingWall" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_cpe42")
-volume_db = -5.0
+volume_db = -6.0
 
 [node name="Splat" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("24_g21vc")
 volume_db = -6.0
+
+[node name="ExitError" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("27_4coln")
+volume_db = -3.0
+pitch_scale = 0.9
