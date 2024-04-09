@@ -1,51 +1,295 @@
-[gd_scene load_steps=5 format=3 uid="uid://cv2nwb5h4c1nb"]
+[gd_scene load_steps=7 format=3 uid="uid://cv2nwb5h4c1nb"]
 
 [ext_resource type="PackedScene" uid="uid://c2tjcdjaltnwf" path="res://levels/default_level.tscn" id="1_u0jcp"]
+[ext_resource type="Texture2D" uid="uid://b3ac3qstxagau" path="res://art/Landscape - Level Assets/Level Art/Level1v2.png" id="2_lt2bl"]
 [ext_resource type="PackedScene" uid="uid://dn0px7ku88r8u" path="res://levels/object/rummage_spot.tscn" id="2_msjfv"]
 [ext_resource type="Texture2D" uid="uid://csxvjvexkft3j" path="res://art/Interactable Assets/Rummageable Bushes/Bush with Red Berries/1000_ Export/Rummageable_RedBush1.png" id="3_j2i64"]
 [ext_resource type="Texture2D" uid="uid://fie3f76hqmcu" path="res://art/Interactable Assets/Rummageable Bushes/Bush with Red Berries/1000_ Export/Rummageable_RedBush2.png" id="4_6tton"]
+[ext_resource type="PackedScene" uid="uid://c5s53m7lq3w1f" path="res://level_assets/tutorial_zone.tscn" id="5_emoee"]
 
 [node name="Level_1" instance=ExtResource("1_u0jcp")]
+metadata/_edit_vertical_guides_ = [5666.0, -264.0]
+metadata/_edit_horizontal_guides_ = [994.0]
 
 [node name="TileMap" parent="." index="1"]
-layer_0/tile_data = PackedInt32Array(393229, 1, 262144, 393230, 1, 65536, 393232, 1, 65536, 589824, 1, 65536, 589825, 1, 65536, 589826, 1, 65536, 589827, 1, 65536, 589828, 1, 65536, 589829, 1, 65536, 589830, 1, 65536, 589831, 1, 65536, 589832, 1, 65536, 589833, 1, 65536, 589834, 1, 65536, 589835, 1, 65536, 589836, 1, 65536, 524301, 1, 262144, 458765, 1, 262144, 327693, 1, 262144, 589837, 1, 65536, 524302, 1, 65536, 458766, 1, 65536, 327694, 1, 65536, 262159, 1, 65536, 262160, 1, 65536, 262161, 1, 196608, 327697, 1, 196608, 393233, 1, 196608, 458769, 1, 196608, 524305, 1, 196608, 327696, 1, 65536, 458768, 1, 65536, 524304, 1, 65536, 196625, 1, 524288, 393215, 1, 65536, 458751, 1, 65536, 524287, 1, 65536, 393239, 1, 65536, 393238, 1, 65536, 589823, 1, 65536, 262158, 1, 65536, 262157, 1, 262144, 196621, 1, 589824, 655377, 1, 65536, 655378, 1, 65536, 655379, 1, 65536, 655380, 1, 65536, 655381, 1, 65536, 458774, 1, 65536, 327701, 1, 589824, 589840, 1, 65536, 589841, 1, 196608, 655387, 1, 65536, 655388, 1, 65536, 655389, 1, 65536, 655390, 1, 65536, 655391, 1, 65536, 655392, 1, 65536, 393240, 1, 65536, 393241, 1, 65536, 393242, 1, 65536, 655405, 1, 65536, 655406, 1, 65536, 655407, 1, 65536, 524310, 1, 65536, 589846, 1, 65536, 458778, 1, 65536, 524314, 1, 65536, 589850, 1, 65536, 655394, 1, 65536, 655395, 1, 65536, 655396, 1, 65536, -131022, 1, 65536, -65486, 1, 65536, 50, 1, 65536, 65586, 1, 65536, 131122, 1, 65536, 655409, 1, 65536, 655408, 1, 65536, -131023, 1, 262144, -65487, 1, 262144, 49, 1, 262144, 65585, 1, 262144, 131121, 1, 262144, -327631, 1, 262144, -262095, 1, 262144, -196559, 1, 262144, -327630, 1, 65536, -262094, 1, 65536, -196558, 1, 65536, 33, 1, 131072, 65569, 1, 131072, 262177, 1, 131072, 327713, 1, 131072, 393249, 1, 131072, 458785, 1, 131072, 524321, 1, 131072, 589857, 1, 131072, 655393, 1, 65536, -65503, 1, 131072, 196645, 1, 65536, 262181, 1, 65536, 327717, 1, 65536, 393253, 1, 65536, 458789, 1, 65536, 524325, 1, 65536, 589861, 1, 65536, 196646, 1, 65536, 196647, 1, 65536, 196648, 1, 65536, 196649, 1, 65536, 196650, 1, 65536, 196651, 1, 65536, 262187, 1, 65536, 327723, 1, 65536, 393259, 1, 65536, 393243, 1, 196608, 458779, 1, 196608, 524315, 1, 196608, 589851, 1, 196608, 327707, 1, 524288, 131108, 1, 589824, 196652, 1, 196608, 262188, 1, 196608, 327724, 1, 196608, 393260, 1, 196608, -393167, 1, 589824, 131116, 1, 524288, 655410, 1, 65536, 655411, 1, 65536, 655412, 1, 65536, 655413, 1, 65536, 589878, 1, 65536, 524342, 1, 65536, 458806, 1, 65536, -131073, 1, 65536, -65537, 1, 65536, -1, 1, 65536, 65535, 1, 65536, 131071, 1, 65536, 196607, 1, 65536, 262143, 1, 65536, 327679, 1, 65536, -196609, 1, 65536, 393270, 1, 65536, -589791, 1, 131072, -524255, 1, 131072, -458719, 1, 131072, -327647, 1, 131072, -262111, 1, 131072, -196575, 1, 131072, 196659, 1, 65536, 131105, 1, 131072, -131039, 1, 131072, -393183, 1, 131072, 196641, 1, 131072, -131040, 1, 589824, 65595, 1, 65536, 65601, 1, 65536, 196678, 1, 65536, 64, 1, 589824, 196679, 1, 65536, 196680, 1, 65536, 196681, 1, 65536, 196682, 1, 65536, 196683, 1, 65536, 196684, 1, 65536, 65600, 1, 65536, 65599, 1, 65536, 65598, 1, 65536, 65597, 1, 65536, 65596, 1, 65536, 65594, 1, 65536, 65593, 1, 65536, 65592, 1, 65536, 65591, 1, 65536, 131137, 1, 65536, 196674, 1, 65536, 196675, 1, 65536, 196676, 1, 65536, 196677, 1, 65536, -65458, 1, 65536, -65457, 1, 65536, -65455, 1, 65536, -65483, 1, 65536, 53, 1, 65536, -327629, 1, 65536, -327628, 1, 65536, 327733, 1, 65536, 196660, 1, 65536, 262197, 1, 65536, -262092, 1, 65536, -196556, 1, 65536, -131020, 1, 65536, -65482, 1, 196608, 54, 1, 196608, -327627, 1, 196608, -262091, 1, 196608, -196555, 1, 196608, -131019, 1, 196608, 131138, 1, 196608, 65602, 1, 196608, 65590, 1, 65536, 66, 1, 524288, -131018, 1, 524288, -393163, 1, 524288, 458796, 1, 65536, 524332, 1, 65536, 589868, 1, 65536, 458797, 1, 196608, 524333, 1, 196608, 589869, 1, 196608, 393261, 1, 524288, -393155, 1, 131072, -982959, 1, 327680, -982960, 1, 327680, -982961, 1, 327680, -982962, 1, 327680, -982963, 1, 327680, -982964, 1, 327680, -982965, 1, 327680, -982966, 1, 327680, -982967, 1, 327680, -65459, 1, 65536, 77, 1, 65536, 65613, 1, 65536, 131149, 1, 65536, -720835, 1, 131072, -655299, 1, 131072, -589763, 1, 131072, -524227, 1, 131072, -458691, 1, 131072, -327619, 1, 131072, -262083, 1, 131072, -196547, 1, 131072, -131011, 1, 131072, -65475, 1, 131072, 61, 1, 131072, -458695, 1, 327680, -458694, 1, 327680, -458693, 1, 327680, -458692, 1, 327680, -458696, 1, 327680, -786353, 1, 327680, -786354, 1, 327680, -786355, 1, 327680, -786356, 1, 327680, -130996, 1, 589824, -917438, 1, 327680, -917439, 1, 327680, -917440, 1, 327680, -917441, 1, 327680, -917442, 1, 327680, -917443, 1, 327680, -917444, 1, 327680, -917445, 1, 327680, -917446, 1, 327680, -917447, 1, 327680, -917448, 1, 327680, -917449, 1, 327680, -917450, 1, 327680, -917451, 1, 327680, -917452, 1, 327680, -655298, 1, 327680, -655297, 1, 327680, -655296, 1, 327680, -655295, 1, 327680, -851907, 1, 131072, -786371, 1, 131072, -720863, 1, 327680, -655327, 1, 131072, -720862, 1, 327680, -720861, 1, 327680, -720860, 1, 327680, -720859, 1, 327680, -720858, 1, 327680, -720857, 1, 327680, -720856, 1, 327680, -720864, 1, 327680, -720865, 1, 327680, -720866, 1, 327680, -720867, 1, 327680, -720868, 1, 327680, -131038, 1, 327680, -131037, 1, 327680, -131036, 1, 327680, -131035, 1, 327680, -131034, 1, 327680, -524254, 1, 327680, -524253, 1, 327680, -524252, 1, 327680, -524251, 1, 327680, -524250, 1, 327680, -327648, 1, 327680, -327649, 1, 327680, -327650, 1, 327680, -327651, 1, 327680, -327652, 1, 327680, -327653, 1, 327680, -720855, 1, 327680, -65454, 1, 65536, -65453, 1, 65536, -65452, 1, 65536, -65451, 1, 65536, -1114026, 1, 65536, -1048490, 1, 65536, -982954, 1, 65536, -917418, 1, 65536, -851882, 1, 65536, -786346, 1, 65536, -720810, 1, 65536, -655274, 1, 65536, -589738, 1, 65536, -524202, 1, 65536, -458666, 1, 65536, -393130, 1, 65536, -327594, 1, 65536, -262058, 1, 65536, -196522, 1, 65536, -130986, 1, 65536, -1310634, 1, 65536, -1245098, 1, 65536, -1179562, 1, 65536, -1376170, 1, 65536, -982958, 1, 327680, -982957, 1, 327680, -982956, 1, 327680, -851886, 1, 131072, -786350, 1, 131072, -720814, 1, 131072, -655278, 1, 131072, -589742, 1, 131072, -524206, 1, 131072, -458670, 1, 131072, -393134, 1, 131072, -327598, 1, 131072, -262062, 1, 131072, -196526, 1, 131072, -130990, 1, 131072, -917422, 1, 131072, -65456, 1, 65536, -786352, 1, 327680, -786351, 1, 327680)
+visible = false
+modulate = Color(1, 1, 1, 0.176471)
+layer_0/tile_data = PackedInt32Array(393229, 1, 262144, 393230, 1, 65536, 393232, 1, 65536, 589824, 1, 65536, 589825, 1, 65536, 589826, 1, 65536, 589827, 1, 65536, 589828, 1, 65536, 589829, 1, 65536, 589830, 1, 65536, 589831, 1, 65536, 589832, 1, 65536, 589833, 1, 65536, 589834, 1, 65536, 589835, 1, 65536, 589836, 1, 65536, 524301, 1, 262144, 458765, 1, 262144, 327693, 1, 262144, 589837, 1, 65536, 524302, 1, 65536, 458766, 1, 65536, 327694, 1, 65536, 262159, 1, 65536, 262160, 1, 65536, 262161, 1, 196608, 327697, 1, 196608, 393233, 1, 196608, 458769, 1, 196608, 524305, 1, 196608, 327696, 1, 65536, 458768, 1, 65536, 524304, 1, 65536, 196625, 1, 524288, 393215, 1, 65536, 458751, 1, 65536, 524287, 1, 65536, 393239, 1, 65536, 393238, 1, 65536, 589823, 1, 65536, 262158, 1, 65536, 262157, 1, 262144, 196621, 1, 589824, 655377, 1, 65536, 655378, 1, 65536, 655379, 1, 65536, 655380, 1, 65536, 655381, 1, 65536, 458774, 1, 65536, 327701, 1, 589824, 589840, 1, 65536, 589841, 1, 196608, 655387, 1, 65536, 655388, 1, 65536, 655389, 1, 65536, 655390, 1, 65536, 655391, 1, 65536, 655392, 1, 65536, 393240, 1, 65536, 393241, 1, 65536, 393242, 1, 65536, 655405, 1, 65536, 655406, 1, 65536, 655407, 1, 65536, 524310, 1, 65536, 589846, 1, 65536, 458778, 1, 65536, 524314, 1, 65536, 589850, 1, 65536, 655394, 1, 65536, 655395, 1, 65536, 655396, 1, 65536, -131022, 1, 65536, -65486, 1, 65536, 50, 1, 65536, 65586, 1, 65536, 131122, 1, 65536, 655409, 1, 65536, 655408, 1, 65536, -131023, 1, 262144, -65487, 1, 262144, 49, 1, 262144, 65585, 1, 262144, 131121, 1, 262144, -327631, 1, 262144, -262095, 1, 262144, -196559, 1, 262144, -327630, 1, 65536, -262094, 1, 65536, -196558, 1, 65536, 33, 1, 131072, 65569, 1, 131072, 262177, 1, 131072, 327713, 1, 131072, 393249, 1, 131072, 458785, 1, 131072, 524321, 1, 131072, 589857, 1, 131072, 655393, 1, 65536, -65503, 1, 131072, 196645, 1, 65536, 262181, 1, 65536, 327717, 1, 65536, 393253, 1, 65536, 458789, 1, 65536, 524325, 1, 65536, 589861, 1, 65536, 196646, 1, 65536, 196647, 1, 65536, 196648, 1, 65536, 196649, 1, 65536, 196650, 1, 65536, 196651, 1, 65536, 262187, 1, 65536, 327723, 1, 65536, 393259, 1, 65536, 393243, 1, 196608, 458779, 1, 196608, 524315, 1, 196608, 589851, 1, 196608, 327707, 1, 524288, 131108, 1, 589824, 196652, 1, 196608, 262188, 1, 196608, 327724, 1, 196608, 393260, 1, 196608, -393167, 1, 589824, 131116, 1, 524288, 655410, 1, 65536, 655411, 1, 65536, 655412, 1, 65536, 655413, 1, 65536, 589878, 1, 65536, 524342, 1, 65536, 458806, 1, 65536, -131073, 1, 65536, -65537, 1, 65536, -1, 1, 65536, 65535, 1, 65536, 131071, 1, 65536, 196607, 1, 65536, 262143, 1, 65536, 327679, 1, 65536, -196609, 1, 65536, 393270, 1, 65536, -589791, 1, 131072, -524255, 1, 131072, -458719, 1, 131072, -327647, 1, 131072, -262111, 1, 131072, -196575, 1, 131072, 196659, 1, 65536, 131105, 1, 131072, -131039, 1, 131072, -393183, 1, 131072, 196641, 1, 131072, 65595, 1, 65536, 65601, 1, 65536, 196678, 1, 65536, 64, 1, 589824, 196679, 1, 65536, 196680, 1, 65536, 196681, 1, 65536, 196682, 1, 65536, 196683, 1, 65536, 196684, 1, 65536, 65600, 1, 65536, 65599, 1, 65536, 65598, 1, 65536, 65597, 1, 65536, 65596, 1, 65536, 65594, 1, 65536, 65593, 1, 65536, 65592, 1, 65536, 65591, 1, 65536, 131137, 1, 65536, 196674, 1, 65536, 196675, 1, 65536, 196676, 1, 65536, 196677, 1, 65536, -65458, 1, 65536, -65457, 1, 65536, -65455, 1, 65536, -65483, 1, 65536, 53, 1, 65536, -327629, 1, 65536, -327628, 1, 65536, 327733, 1, 65536, 196660, 1, 65536, 262197, 1, 65536, -262092, 1, 65536, -196556, 1, 65536, -131020, 1, 65536, -65482, 1, 196608, 54, 1, 196608, -327627, 1, 196608, -262091, 1, 196608, -196555, 1, 196608, -131019, 1, 196608, 131138, 1, 196608, 65602, 1, 196608, 65590, 1, 65536, 66, 1, 524288, -131018, 1, 524288, -393163, 1, 524288, 458796, 1, 65536, 524332, 1, 65536, 589868, 1, 65536, 458797, 1, 196608, 524333, 1, 196608, 589869, 1, 196608, 393261, 1, 524288, -393155, 1, 131072, -982959, 1, 327680, -982960, 1, 327680, -982961, 1, 327680, -982962, 1, 327680, -982963, 1, 327680, -982964, 1, 327680, -982965, 1, 327680, -982966, 1, 327680, -982967, 1, 327680, -65459, 1, 65536, 77, 1, 65536, 65613, 1, 65536, 131149, 1, 65536, -720835, 1, 131072, -655299, 1, 131072, -589763, 1, 131072, -524227, 1, 131072, -458691, 1, 131072, -327619, 1, 131072, -262083, 1, 131072, -196547, 1, 131072, -131011, 1, 131072, -65475, 1, 131072, 61, 1, 131072, -458695, 1, 327680, -458694, 1, 327680, -458693, 1, 327680, -458692, 1, 327680, -458696, 1, 327680, -786353, 1, 327680, -786354, 1, 327680, -786355, 1, 327680, -786356, 1, 327680, -130996, 1, 589824, -917438, 1, 327680, -917439, 1, 327680, -917440, 1, 327680, -917441, 1, 327680, -917442, 1, 327680, -917443, 1, 327680, -917444, 1, 327680, -917445, 1, 327680, -917446, 1, 327680, -917447, 1, 327680, -917448, 1, 327680, -917449, 1, 327680, -917450, 1, 327680, -917451, 1, 327680, -917452, 1, 327680, -655298, 1, 327680, -655297, 1, 327680, -655296, 1, 327680, -655295, 1, 327680, -851907, 1, 131072, -786371, 1, 131072, -720863, 1, 327680, -655327, 1, 131072, -720862, 1, 327680, -720861, 1, 327680, -720860, 1, 327680, -720859, 1, 327680, -720858, 1, 327680, -720857, 1, 327680, -720856, 1, 327680, -720864, 1, 327680, -720865, 1, 327680, -720866, 1, 327680, -720867, 1, 327680, -720868, 1, 327680, -131038, 1, 327680, -131037, 1, 327680, -131036, 1, 327680, -131035, 1, 327680, -131034, 1, 327680, -524254, 1, 327680, -524253, 1, 327680, -524252, 1, 327680, -524251, 1, 327680, -524250, 1, 327680, -327648, 1, 327680, -327649, 1, 327680, -327650, 1, 327680, -327651, 1, 327680, -327652, 1, 327680, -327653, 1, 327680, -720855, 1, 327680, -65454, 1, 65536, -65453, 1, 65536, -65452, 1, 65536, -65451, 1, 65536, -982958, 1, 327680, -982957, 1, 327680, -982956, 1, 327680, -851886, 1, 131072, -786350, 1, 131072, -720814, 1, 131072, -655278, 1, 131072, -589742, 1, 131072, -524206, 1, 131072, -458670, 1, 131072, -393134, 1, 131072, -327598, 1, 131072, -262062, 1, 131072, -196526, 1, 131072, -130990, 1, 131072, -917422, 1, 131072, -65456, 1, 65536, -786352, 1, 327680, -786351, 1, 327680, -65450, 1, 65536, -65449, 1, 65536, -65448, 1, 65536, -130984, 1, 65536, -196520, 1, 65536, -262056, 1, 65536, -327592, 1, 65536, -393128, 1, 65536, -458664, 1, 65536, -524200, 1, 65536, -589736, 1, 65536, -655272, 1, 65536, -720808, 1, 65536, -786344, 1, 65536, -851880, 1, 65536, -917416, 1, 65536, -982952, 1, 65536, -1048488, 1, 65536, -1114024, 1, 65536, -1179560, 1, 65536, -1245096, 1, 65536, -1310632, 1, 65536, -1376168, 1, 65536)
 
-[node name="Raccoon" parent="." index="2"]
-position = Vector2(231, 575)
+[node name="LevelArt" type="Sprite2D" parent="." index="2"]
+z_index = -1
+position = Vector2(2943, -467.5)
+scale = Vector2(2.91545, 2.925)
+texture = ExtResource("2_lt2bl")
+
+[node name="Raccoon" parent="." index="3"]
+position = Vector2(110, 572)
 
 [node name="Camera2D" parent="Raccoon" index="5"]
-limit_left = 0
-limit_right = 5500
+limit_left = -264
+limit_right = 5666
 
-[node name="UIScreen" parent="." index="3"]
+[node name="UIScreen" parent="." index="4"]
 level_time = 300
 
-[node name="exit_zone" parent="." index="4"]
+[node name="exit_zone" parent="." index="5"]
 position = Vector2(89, 544)
 target_level_path = "res://levels/level_2_cutscene.tscn"
 play_enter_animation = false
 score_threshold = 6
+level_instructions = "Please go and collect food for us, Echo!"
 
-[node name="out_of_bounds" parent="." index="5"]
+[node name="out_of_bounds" parent="." index="6"]
+visible = false
 position = Vector2(2903, 865)
 scale = Vector2(150, 1)
 
-[node name="Rummage spot" parent="." index="6"]
+[node name="Rummage spot" parent="." index="7"]
 position = Vector2(576, 535)
 
-[node name="Rummage spot2" parent="." index="7" instance=ExtResource("2_msjfv")]
+[node name="RummageZones" type="Node" parent="." index="8"]
+
+[node name="Rummage spot2" parent="RummageZones" index="0" instance=ExtResource("2_msjfv")]
 position = Vector2(1539, 345)
 full_sprite = ExtResource("3_j2i64")
 empty_sprite = ExtResource("4_6tton")
 
-[node name="Rummage spot3" parent="." index="8" instance=ExtResource("2_msjfv")]
+[node name="Rummage spot3" parent="RummageZones" index="1" instance=ExtResource("2_msjfv")]
 position = Vector2(2468, 153)
 
-[node name="Rummage spot4" parent="." index="9" instance=ExtResource("2_msjfv")]
+[node name="Rummage spot4" parent="RummageZones" index="2" instance=ExtResource("2_msjfv")]
 position = Vector2(3288, -360)
 
-[node name="Rummage spot5" parent="." index="10" instance=ExtResource("2_msjfv")]
+[node name="Rummage spot5" parent="RummageZones" index="3" instance=ExtResource("2_msjfv")]
 position = Vector2(3350, 601)
 
-[node name="Rummage spot6" parent="." index="11" instance=ExtResource("2_msjfv")]
+[node name="Rummage spot6" parent="RummageZones" index="4" instance=ExtResource("2_msjfv")]
 position = Vector2(5017, -103)
+
+[node name="TutorialZones" type="Node" parent="." index="9"]
+
+[node name="tutorial_zone" parent="TutorialZones" index="0" instance=ExtResource("5_emoee")]
+position = Vector2(556, 552)
+level_instructions = "E"
+animation = 0
+
+[node name="tutorial_zone2" parent="TutorialZones" index="1" instance=ExtResource("5_emoee")]
+position = Vector2(799, 551)
+level_instructions = "W"
+animation = 1
+
+[node name="tutorial_zone3" parent="TutorialZones" index="2" instance=ExtResource("5_emoee")]
+position = Vector2(1041, 229)
+level_instructions = "SPACE"
+animation = 2
+
+[node name="tutorial_zone4" parent="TutorialZones" index="3" instance=ExtResource("5_emoee")]
+position = Vector2(2081, 618)
+level_instructions = "W"
+animation = 3
+
+[node name="tutorial_zone5" parent="TutorialZones" index="4" instance=ExtResource("5_emoee")]
+position = Vector2(4169, 42)
+level_instructions = "S, HOLD SPACE, RELEASE, SPACE"
+animation = 5
+
+[node name="tutorial_zone6" parent="TutorialZones" index="5" instance=ExtResource("5_emoee")]
+position = Vector2(2572, 168)
+level_instructions = "S, HOLD SPACE, RELEASE"
+
+[connection signal="body_entered" from="TileMap/ClimbableWallRight" to="TileMap/ClimbableWallRight" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/ClimbableWallRight" to="TileMap/ClimbableWallRight" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19210" to="TileMap/@Area2D@19210" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19210" to="TileMap/@Area2D@19210" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19211" to="TileMap/@Area2D@19211" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19211" to="TileMap/@Area2D@19211" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19212" to="TileMap/@Area2D@19212" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19212" to="TileMap/@Area2D@19212" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/ClimbableWallLeft" to="TileMap/ClimbableWallLeft" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/ClimbableWallLeft" to="TileMap/ClimbableWallLeft" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19219" to="TileMap/@Area2D@19219" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19219" to="TileMap/@Area2D@19219" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19220" to="TileMap/@Area2D@19220" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19220" to="TileMap/@Area2D@19220" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19221" to="TileMap/@Area2D@19221" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19221" to="TileMap/@Area2D@19221" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19222" to="TileMap/@Area2D@19222" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19222" to="TileMap/@Area2D@19222" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/Mantle Area Left" to="TileMap/Mantle Area Left" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/Mantle Area Left" to="TileMap/Mantle Area Left" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19233" to="TileMap/@Area2D@19233" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19233" to="TileMap/@Area2D@19233" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/Mantle Area Right" to="TileMap/Mantle Area Right" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/Mantle Area Right" to="TileMap/Mantle Area Right" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19240" to="TileMap/@Area2D@19240" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19240" to="TileMap/@Area2D@19240" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19242" to="TileMap/@Area2D@19242" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19242" to="TileMap/@Area2D@19242" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19270" to="TileMap/@Area2D@19270" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19270" to="TileMap/@Area2D@19270" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19271" to="TileMap/@Area2D@19271" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19271" to="TileMap/@Area2D@19271" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19272" to="TileMap/@Area2D@19272" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19272" to="TileMap/@Area2D@19272" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19273" to="TileMap/@Area2D@19273" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19273" to="TileMap/@Area2D@19273" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19274" to="TileMap/@Area2D@19274" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19274" to="TileMap/@Area2D@19274" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19275" to="TileMap/@Area2D@19275" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19275" to="TileMap/@Area2D@19275" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19276" to="TileMap/@Area2D@19276" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19276" to="TileMap/@Area2D@19276" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19277" to="TileMap/@Area2D@19277" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19277" to="TileMap/@Area2D@19277" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/Climbable" to="TileMap/Climbable" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/Climbable" to="TileMap/Climbable" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19281" to="TileMap/@Area2D@19281" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19281" to="TileMap/@Area2D@19281" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19282" to="TileMap/@Area2D@19282" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19282" to="TileMap/@Area2D@19282" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19283" to="TileMap/@Area2D@19283" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19283" to="TileMap/@Area2D@19283" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19284" to="TileMap/@Area2D@19284" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19284" to="TileMap/@Area2D@19284" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19285" to="TileMap/@Area2D@19285" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19285" to="TileMap/@Area2D@19285" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19286" to="TileMap/@Area2D@19286" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19286" to="TileMap/@Area2D@19286" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19287" to="TileMap/@Area2D@19287" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19287" to="TileMap/@Area2D@19287" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19289" to="TileMap/@Area2D@19289" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19289" to="TileMap/@Area2D@19289" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19306" to="TileMap/@Area2D@19306" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19306" to="TileMap/@Area2D@19306" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19307" to="TileMap/@Area2D@19307" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19307" to="TileMap/@Area2D@19307" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19308" to="TileMap/@Area2D@19308" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19308" to="TileMap/@Area2D@19308" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19309" to="TileMap/@Area2D@19309" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19309" to="TileMap/@Area2D@19309" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19310" to="TileMap/@Area2D@19310" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19310" to="TileMap/@Area2D@19310" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19311" to="TileMap/@Area2D@19311" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19311" to="TileMap/@Area2D@19311" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19312" to="TileMap/@Area2D@19312" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19312" to="TileMap/@Area2D@19312" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19313" to="TileMap/@Area2D@19313" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19313" to="TileMap/@Area2D@19313" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19314" to="TileMap/@Area2D@19314" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19314" to="TileMap/@Area2D@19314" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19315" to="TileMap/@Area2D@19315" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19315" to="TileMap/@Area2D@19315" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19316" to="TileMap/@Area2D@19316" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19316" to="TileMap/@Area2D@19316" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19317" to="TileMap/@Area2D@19317" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19317" to="TileMap/@Area2D@19317" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19335" to="TileMap/@Area2D@19335" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19335" to="TileMap/@Area2D@19335" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19336" to="TileMap/@Area2D@19336" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19336" to="TileMap/@Area2D@19336" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19337" to="TileMap/@Area2D@19337" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19337" to="TileMap/@Area2D@19337" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19338" to="TileMap/@Area2D@19338" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19338" to="TileMap/@Area2D@19338" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19339" to="TileMap/@Area2D@19339" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19339" to="TileMap/@Area2D@19339" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19340" to="TileMap/@Area2D@19340" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19340" to="TileMap/@Area2D@19340" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19342" to="TileMap/@Area2D@19342" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19342" to="TileMap/@Area2D@19342" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19343" to="TileMap/@Area2D@19343" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19343" to="TileMap/@Area2D@19343" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19344" to="TileMap/@Area2D@19344" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19344" to="TileMap/@Area2D@19344" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19345" to="TileMap/@Area2D@19345" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19345" to="TileMap/@Area2D@19345" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19349" to="TileMap/@Area2D@19349" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19349" to="TileMap/@Area2D@19349" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19383" to="TileMap/@Area2D@19383" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19383" to="TileMap/@Area2D@19383" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19384" to="TileMap/@Area2D@19384" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19384" to="TileMap/@Area2D@19384" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19385" to="TileMap/@Area2D@19385" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19385" to="TileMap/@Area2D@19385" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19386" to="TileMap/@Area2D@19386" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19386" to="TileMap/@Area2D@19386" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19387" to="TileMap/@Area2D@19387" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19387" to="TileMap/@Area2D@19387" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19388" to="TileMap/@Area2D@19388" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19388" to="TileMap/@Area2D@19388" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19389" to="TileMap/@Area2D@19389" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19389" to="TileMap/@Area2D@19389" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19390" to="TileMap/@Area2D@19390" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19390" to="TileMap/@Area2D@19390" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19392" to="TileMap/@Area2D@19392" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19392" to="TileMap/@Area2D@19392" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19393" to="TileMap/@Area2D@19393" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19393" to="TileMap/@Area2D@19393" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19394" to="TileMap/@Area2D@19394" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19394" to="TileMap/@Area2D@19394" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19398" to="TileMap/@Area2D@19398" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19398" to="TileMap/@Area2D@19398" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19399" to="TileMap/@Area2D@19399" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19399" to="TileMap/@Area2D@19399" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19400" to="TileMap/@Area2D@19400" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19400" to="TileMap/@Area2D@19400" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19401" to="TileMap/@Area2D@19401" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19401" to="TileMap/@Area2D@19401" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19402" to="TileMap/@Area2D@19402" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19402" to="TileMap/@Area2D@19402" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19415" to="TileMap/@Area2D@19415" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19415" to="TileMap/@Area2D@19415" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19416" to="TileMap/@Area2D@19416" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19416" to="TileMap/@Area2D@19416" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19417" to="TileMap/@Area2D@19417" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19417" to="TileMap/@Area2D@19417" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19418" to="TileMap/@Area2D@19418" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19418" to="TileMap/@Area2D@19418" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19419" to="TileMap/@Area2D@19419" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19419" to="TileMap/@Area2D@19419" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19420" to="TileMap/@Area2D@19420" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19420" to="TileMap/@Area2D@19420" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19421" to="TileMap/@Area2D@19421" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19421" to="TileMap/@Area2D@19421" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19422" to="TileMap/@Area2D@19422" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19422" to="TileMap/@Area2D@19422" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19423" to="TileMap/@Area2D@19423" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19423" to="TileMap/@Area2D@19423" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19424" to="TileMap/@Area2D@19424" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19424" to="TileMap/@Area2D@19424" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19425" to="TileMap/@Area2D@19425" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19425" to="TileMap/@Area2D@19425" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19435" to="TileMap/@Area2D@19435" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19435" to="TileMap/@Area2D@19435" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19455" to="TileMap/@Area2D@19455" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19455" to="TileMap/@Area2D@19455" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19456" to="TileMap/@Area2D@19456" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19456" to="TileMap/@Area2D@19456" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19458" to="TileMap/@Area2D@19458" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19458" to="TileMap/@Area2D@19458" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19495" to="TileMap/@Area2D@19495" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19495" to="TileMap/@Area2D@19495" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19496" to="TileMap/@Area2D@19496" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19496" to="TileMap/@Area2D@19496" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19497" to="TileMap/@Area2D@19497" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19497" to="TileMap/@Area2D@19497" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19498" to="TileMap/@Area2D@19498" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19498" to="TileMap/@Area2D@19498" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19499" to="TileMap/@Area2D@19499" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19499" to="TileMap/@Area2D@19499" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19500" to="TileMap/@Area2D@19500" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19500" to="TileMap/@Area2D@19500" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19501" to="TileMap/@Area2D@19501" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19501" to="TileMap/@Area2D@19501" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19502" to="TileMap/@Area2D@19502" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19502" to="TileMap/@Area2D@19502" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19503" to="TileMap/@Area2D@19503" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19503" to="TileMap/@Area2D@19503" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19504" to="TileMap/@Area2D@19504" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19504" to="TileMap/@Area2D@19504" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19505" to="TileMap/@Area2D@19505" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19505" to="TileMap/@Area2D@19505" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19506" to="TileMap/@Area2D@19506" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19506" to="TileMap/@Area2D@19506" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/@Area2D@19507" to="TileMap/@Area2D@19507" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/@Area2D@19507" to="TileMap/@Area2D@19507" method="_on_body_exited"]
