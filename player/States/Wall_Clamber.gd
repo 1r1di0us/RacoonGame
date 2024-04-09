@@ -21,6 +21,7 @@ func physics_update(delta: float):
 			raccoon.velocity.x = 0
 
 func enter(msg: Dictionary = {}):
+	AudioManager.emit_signal("player_clamber")
 	if raccoon.mantle_spot != null && "mantle_direction_left" in raccoon.mantle_spot:
 		if raccoon.mantle_spot.mantle_direction_left == false:
 			animationPlayer.play("wall_clamber")

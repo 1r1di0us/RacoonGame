@@ -13,6 +13,7 @@ signal player_rummagingstop
 signal player_itemcollected
 signal player_brushpast
 signal player_launchready
+signal player_clamber
 signal game_paused
 signal game_resumed
 signal scene_changed
@@ -35,6 +36,7 @@ var jump_sound: AudioStreamPlayer
 var pause_sound: AudioStreamPlayer
 var resume_sound: AudioStreamPlayer
 var footsteps: AudioStreamPlayer
+var crawlfootsteps: AudioStreamPlayer
 var rummaging_sound: AudioStreamPlayer
 var itemcollected_sound: AudioStreamPlayer
 var bush_sound: AudioStreamPlayer
@@ -46,6 +48,7 @@ var roll_sound: AudioStreamPlayer
 var launchready_sound: AudioStreamPlayer
 var highjump_sound: AudioStreamPlayer
 var tuck_sound: AudioStreamPlayer
+var clamber_sound: AudioStreamPlayer
 
 #Creating song variables
 var mainmenu_song: AudioStreamPlayer
@@ -71,6 +74,7 @@ func _ready():
 	pause_sound = $PauseSound
 	resume_sound = $ResumeSound
 	footsteps = $Footsteps
+	crawlfootsteps = $CrawlFootsteps
 	rummaging_sound = $RummagingSound
 	itemcollected_sound = $ItemCollectedSound
 	bush_sound = $BushSound
@@ -82,7 +86,7 @@ func _ready():
 	launchready_sound = $LaunchReadySound
 	highjump_sound = $HighJumpSound
 	tuck_sound = $TuckSound
-	
+	clamber_sound = $ClamberSound
 	mainmenu_song = $MainMenuSong
 	level1_song = $Level1Song
 	level1cutscene_song = $Level1CutsceneSong
@@ -105,6 +109,7 @@ func _ready():
 	player_itemcollected.connect(on_player_itemcollected)
 	player_brushpast.connect(on_player_brushpast)
 	player_launchready.connect(on_player_launchready)
+	player_clamber.connect(on_player_clamber)
 	game_paused.connect(on_game_paused)
 	game_resumed.connect(on_game_resumed)
 	scene_changed.connect(on_scene_changed)
@@ -136,7 +141,7 @@ func _on_node_added(node:Node) -> void:
 func _process(delta):
 	if fadein:
 		AudioServer.set_bus_volume_db(music_bus, AudioServer.get_bus_volume_db(music_bus) - 60 * delta)
-		AudioServer.set_bus_volume_db(current_bus, AudioServer.get_bus_volume_db(current_bus) + 65 * delta)
+		AudioServer.set_bus_volume_db(current_bus, AudioServer.get_bus_volume_db(current_bus) + 45 * delta)
 		
 		if AudioServer.get_bus_volume_db(current_bus) >= 0:
 			var OldSong = get_current_song()
@@ -241,11 +246,14 @@ func on_player_brushpast():
 func on_player_launchready():
 	launchready_sound.play()
 
+func on_player_clamber():
+	clamber_sound.play()
+
 func on_footstep_run():
 	footsteps.play()
 
 func on_footstep_crawl():
-	print()
+	crawlfootsteps.play()
 
 func on_footstep_climbingpole():
 	climbing_pole.play()
