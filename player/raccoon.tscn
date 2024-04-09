@@ -1,4 +1,4 @@
-[gd_scene load_steps=147 format=3 uid="uid://c1qok2g7135af"]
+[gd_scene load_steps=144 format=3 uid="uid://c1qok2g7135af"]
 
 [ext_resource type="Texture2D" uid="uid://dyato5cemyy8a" path="res://art/Raccoon Assets/Protagonist Raccoon/Crawl/Draft #2/Raccoon_Crawl_Edited-Sheet.png" id="1_fgivg"]
 [ext_resource type="Script" path="res://scripts/raccoon.gd" id="1_nso0o"]
@@ -39,7 +39,6 @@
 [ext_resource type="Texture2D" uid="uid://doulbud35mgl2" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Clamber/Raccoon_Clamber-on-Top-Pole-Background5.png" id="18_33dky"]
 [ext_resource type="Script" path="res://player/States/Crawl.gd" id="18_jo6b5"]
 [ext_resource type="Script" path="res://player/States/Freefall.gd" id="19_0yqig"]
-[ext_resource type="AudioStream" uid="uid://ch5jov4qbe713" path="res://sfx/sfx_movement_jump20.wav" id="19_5367k"]
 [ext_resource type="Texture2D" uid="uid://dy2k3ryatxmcv" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Clamber/Raccoon_Clamber-on-Top-Pole-Background6.png" id="19_nynjn"]
 [ext_resource type="Texture2D" uid="uid://cnq1k7pt0avsq" path="res://art/Raccoon Assets/Protagonist Raccoon/Pole Clamber/Raccoon_Clamber-on-Top-Pole-Background7.png" id="20_ft2iy"]
 [ext_resource type="Script" path="res://player/States/Jump.gd" id="20_lx7k6"]
@@ -77,11 +76,11 @@
 [ext_resource type="Texture2D" uid="uid://c48rbdc1f1wlx" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Climb/Raccoon_Wall-Climb1.png" id="46_c34k6"]
 [ext_resource type="Texture2D" uid="uid://cf2q23d6mnpe4" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Climb/Raccoon_Wall-Climb2.png" id="47_2twur"]
 [ext_resource type="Script" path="res://player/States/Pole_Clamber.gd" id="62_sbxa5"]
+[ext_resource type="Script" path="res://player/AnimatedSprite2D.gd" id="63_q50kp"]
 [ext_resource type="Script" path="res://player/States/Wall_Climb.gd" id="63_qsonk"]
 [ext_resource type="Script" path="res://player/States/Wall_Clamber.gd" id="64_x3gv7"]
 [ext_resource type="Script" path="res://player/States/Splat.gd" id="79_tgt17"]
 [ext_resource type="Script" path="res://player/States/Wall_Kick.gd" id="80_b20db"]
-[ext_resource type="Script" path="res://player/States/Rummage.gd" id="82_71j2o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1hxyy"]
 atlas = ExtResource("1_fgivg")
@@ -911,7 +910,7 @@ tracks/5/keys = {
 "values": [Vector2(60, -48), Vector2(60, -48)]
 }
 
-[sub_resource type="Animation" id="Animation_g3g6t"]
+[sub_resource type="Animation" id="Animation_27okb"]
 resource_name = "death"
 length = 0.6
 tracks/0/type = "value"
@@ -945,10 +944,10 @@ tracks/2/path = NodePath("AnimatedSprite2D:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [Vector2(-24, -66), Vector2(0, -54), Vector2(24, -48), Vector2(36, -36), Vector2(36, -30), Vector2(36, -24)]
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -957,62 +956,34 @@ tracks/3/path = NodePath("AnimatedSprite2D:flip_h")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
 "update": 1,
-"values": [false]
+"values": []
 }
-
-[sub_resource type="Animation" id="Animation_tfxew"]
-resource_name = "death_flip"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:shape:size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
 "update": 1,
-"values": [&"death"]
+"values": []
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AnimatedSprite2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [Vector2(24, -66), Vector2(0, -54), Vector2(-24, -48), Vector2(-36, -36), Vector2(-36, -30), Vector2(-36, -24)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("AnimatedSprite2D:flip_h")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
 }
 
 [sub_resource type="Animation" id="Animation_a83cn"]
@@ -2123,7 +2094,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-18, -66), Vector2(-18, -66), Vector2(-18, -66), Vector2(-18, -66)]
+"values": [Vector2(-3, -66), Vector2(-3, -66), Vector2(-3, -66), Vector2(-3, -66)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -2147,7 +2118,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(210, 220), Vector2(210, 220), Vector2(210, 220), Vector2(210, 220)]
+"values": [Vector2(160, 220), Vector2(160, 220), Vector2(160, 220), Vector2(160, 220)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -2159,7 +2130,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-15, -66), Vector2(-15, -66), Vector2(-15, -66), Vector2(-15, -66)]
+"values": [Vector2(0, -66), Vector2(0, -66), Vector2(0, -66), Vector2(0, -66)]
 }
 
 [sub_resource type="Animation" id="Animation_eh4f5"]
@@ -3061,8 +3032,7 @@ _data = {
 "crawl_flip": SubResource("Animation_26s3c"),
 "crouch": SubResource("Animation_urdfb"),
 "crouch_flip": SubResource("Animation_652an"),
-"death": SubResource("Animation_g3g6t"),
-"death_flip": SubResource("Animation_tfxew"),
+"death": SubResource("Animation_27okb"),
 "freefall": SubResource("Animation_a83cn"),
 "freefall_flip": SubResource("Animation_gyi6w"),
 "idle": SubResource("Animation_xh578"),
@@ -3078,7 +3048,6 @@ _data = {
 "roll": SubResource("Animation_6r32t"),
 "roll_flip": SubResource("Animation_t3mn6"),
 "rummage": SubResource("Animation_311x3"),
-"rummage_flip": SubResource("Animation_eh4f5"),
 "run": SubResource("Animation_roait"),
 "run_flip": SubResource("Animation_o4j48"),
 "splat": SubResource("Animation_w2qqe"),
@@ -3102,6 +3071,7 @@ scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_fxkla")
 animation = &"idle"
 flip_h = true
+script = ExtResource("63_q50kp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -66)
@@ -3109,14 +3079,9 @@ scale = Vector2(0.6, 0.6)
 shape = SubResource("RectangleShape2D_pqqmg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-process_mode = 3
 libraries = {
 "": SubResource("AnimationLibrary_7mnnp")
 }
-
-[node name="JumpSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("19_5367k")
-volume_db = -15.0
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("14_66lkj")
@@ -3172,6 +3137,3 @@ script = ExtResource("63_qsonk")
 
 [node name="Wall_Kick" type="Node" parent="StateMachine"]
 script = ExtResource("80_b20db")
-
-[node name="Rummage" type="Node" parent="StateMachine"]
-script = ExtResource("82_71j2o")

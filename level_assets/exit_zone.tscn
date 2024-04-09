@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwwaiwbrrw2fx"]
+[gd_scene load_steps=3 format=3 uid="uid://bwwaiwbrrw2fx"]
 
 [ext_resource type="PackedScene" uid="uid://bfad8b5ndhqgm" path="res://level_assets/player_detect_zone.tscn" id="1_fnor5"]
 [ext_resource type="Script" path="res://scripts/exit_zone.gd" id="2_6u4v0"]
-[ext_resource type="Theme" uid="uid://b02a2u15epnu7" path="res://ui/ui_theme.tres" id="3_1fw0t"]
 
 [node name="exit_zone_2" instance=ExtResource("1_fnor5")]
 script = ExtResource("2_6u4v0")
