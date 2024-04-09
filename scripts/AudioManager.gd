@@ -12,6 +12,7 @@ signal player_rummaging
 signal player_rummagingstop
 signal player_itemcollected
 signal player_brushpast
+signal player_launchready
 signal game_paused
 signal game_resumed
 signal scene_changed
@@ -41,6 +42,10 @@ var climbing_pole: AudioStreamPlayer
 var climbing_wall: AudioStreamPlayer
 var splat_sound: AudioStreamPlayer
 var exiterror_sound: AudioStreamPlayer
+var roll_sound: AudioStreamPlayer
+var launchready_sound: AudioStreamPlayer
+var highjump_sound: AudioStreamPlayer
+var tuck_sound: AudioStreamPlayer
 
 #Creating song variables
 var mainmenu_song: AudioStreamPlayer
@@ -73,6 +78,10 @@ func _ready():
 	climbing_wall = $ClimbingWall
 	splat_sound = $Splat
 	exiterror_sound = $ExitError
+	roll_sound = $RollSound
+	launchready_sound = $LaunchReadySound
+	highjump_sound = $HighJumpSound
+	tuck_sound = $TuckSound
 	
 	mainmenu_song = $MainMenuSong
 	level1_song = $Level1Song
@@ -95,6 +104,7 @@ func _ready():
 	player_rummagingstop.connect(on_player_rummagingstop)
 	player_itemcollected.connect(on_player_itemcollected)
 	player_brushpast.connect(on_player_brushpast)
+	player_launchready.connect(on_player_launchready)
 	game_paused.connect(on_game_paused)
 	game_resumed.connect(on_game_resumed)
 	scene_changed.connect(on_scene_changed)
@@ -125,8 +135,8 @@ func _on_node_added(node:Node) -> void:
 
 func _process(delta):
 	if fadein:
-		AudioServer.set_bus_volume_db(music_bus, AudioServer.get_bus_volume_db(music_bus) - 45 * delta)
-		AudioServer.set_bus_volume_db(current_bus, AudioServer.get_bus_volume_db(current_bus) + 75 * delta)
+		AudioServer.set_bus_volume_db(music_bus, AudioServer.get_bus_volume_db(music_bus) - 60 * delta)
+		AudioServer.set_bus_volume_db(current_bus, AudioServer.get_bus_volume_db(current_bus) + 65 * delta)
 		
 		if AudioServer.get_bus_volume_db(current_bus) >= 0:
 			var OldSong = get_current_song()
@@ -208,13 +218,13 @@ func on_player_jumped():
 	jump_sound.play()
 
 func on_player_tuck():
-	jump_sound.play()
+	tuck_sound.play()
 
 func on_player_roll():
-	print()
+	roll_sound.play()
 
 func on_player_highjump():
-	print()
+	highjump_sound.play()
 
 func on_player_rummaging():
 	rummaging_sound.play()
@@ -227,6 +237,9 @@ func on_player_itemcollected():
 
 func on_player_brushpast():
 	bush_sound.play()
+
+func on_player_launchready():
+	launchready_sound.play()
 
 func on_footstep_run():
 	footsteps.play()

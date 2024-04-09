@@ -7,6 +7,7 @@ var footstep_frames := {
 	"crawl": [0, 2, 4],
 	"wall_climb": [0, 1],
 	"pole_climb": [1, 3],
+	"ready": [0]
 }
 
 var footstep_signals := {
@@ -15,6 +16,7 @@ var footstep_signals := {
 	"crawl": "footstep_crawl",
 	"wall_climb": "footstep_climbingwall",
 	"pole_climb": "footstep_climbingpole",
+	"ready": "player_launchready"
 }
 
 var current_animation := ""
