@@ -1,21 +1,25 @@
-[gd_scene load_steps=10 format=3 uid="uid://c2tjcdjaltnwf"]
+[gd_scene load_steps=14 format=3 uid="uid://c2tjcdjaltnwf"]
 
-[ext_resource type="Texture2D" uid="uid://c1qwtoub75jt3" path="res://art/Landscape - Level Assets/Background/Level 1/Forest_Background_Fog.png" id="1_mjeb1"]
+[ext_resource type="Texture2D" uid="uid://b236ujr2n5yn8" path="res://art/Landscape - Level Assets/Background/Level 1/Version 2 (Final)/Sky Gradient.png" id="1_njape"]
 [ext_resource type="PackedScene" uid="uid://c1qok2g7135af" path="res://player/raccoon.tscn" id="1_ovwk0"]
-[ext_resource type="Texture2D" uid="uid://b2x5lnfh4sf0e" path="res://art/Landscape - Level Assets/Background/Level 1/Forest_Background_Trees2.png" id="2_jybhy"]
+[ext_resource type="Texture2D" uid="uid://bvu7dv7r6fq0k" path="res://art/Landscape - Level Assets/Background/Level 1/Version 2 (Final)/Background Clouds.png" id="2_7knbj"]
 [ext_resource type="PackedScene" uid="uid://c5n3bedy7lusb" path="res://ui/ui_screen.tscn" id="2_uux8a"]
-[ext_resource type="PackedScene" uid="uid://q2bmtnx1jfuu" path="res://level_assets/terrain_rect.tscn" id="3_d08jn"]
-[ext_resource type="Texture2D" uid="uid://4kxf750mxj3l" path="res://art/Landscape - Level Assets/Background/Level 1/Forest_Background_Trees1.png" id="3_jklhs"]
-[ext_resource type="Texture2D" uid="uid://bfhvkwyfs7wp5" path="res://art/Landscape - Level Assets/Background/Level 1/Forest_Background_Bushes.png" id="4_437v1"]
+[ext_resource type="Texture2D" uid="uid://ct6v5ukfk42vt" path="res://art/Landscape - Level Assets/Background/Level 1/Version 2 (Final)/Foreground Clouds.png" id="3_mitx1"]
+[ext_resource type="PackedScene" uid="uid://cyflbjpcmm86l" path="res://levels/tilemaps/basic_tile_map.tscn" id="4_7tm21"]
+[ext_resource type="Texture2D" uid="uid://c3lfbxuy2qab7" path="res://art/Landscape - Level Assets/Background/Level 1/Version 2 (Final)/Birds.png" id="4_hms8h"]
+[ext_resource type="Texture2D" uid="uid://bknr5ghx07dl3" path="res://art/Landscape - Level Assets/Background/Level 1/Version 2 (Final)/Background Trees.png" id="5_cblf1"]
+[ext_resource type="Texture2D" uid="uid://b6xvqf6wjtnvg" path="res://art/Landscape - Level Assets/Background/Level 1/Version 2 (Final)/Foreground Trees.png" id="6_einy8"]
+[ext_resource type="Texture2D" uid="uid://b0maex6ktebfi" path="res://art/Landscape - Level Assets/Background/Level 1/Version 2 (Final)/Bushes.png" id="7_ec4ov"]
 [ext_resource type="PackedScene" uid="uid://puunqa1fs0ql" path="res://level_assets/out_of_bounds.tscn" id="9_8woqc"]
 [ext_resource type="PackedScene" uid="uid://bwwaiwbrrw2fx" path="res://level_assets/exit_zone.tscn" id="9_wxybk"]
+[ext_resource type="PackedScene" uid="uid://dn0px7ku88r8u" path="res://levels/object/rummage_spot.tscn" id="10_gcq0q"]
 
 [node name="DefaultLevel" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-[node name="Trees2ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.5, 1)
+[node name="SkyParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0.9)
 motion_mirroring = Vector2(1200, 0)
 
 [node name="SkySprite" type="Sprite2D" parent="ParallaxBackground/SkyParallaxLayer"]
@@ -60,23 +64,27 @@ scale = Vector2(2.5, 2.5)
 texture = ExtResource("5_cblf1")
 centered = false
 
-[node name="Trees1ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.7, 1)
+[node name="FGTreesParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.7, 0.7)
 motion_mirroring = Vector2(1200, 0)
 
-[node name="Trees1Sprite" type="Sprite2D" parent="ParallaxBackground/Trees1ParallaxLayer"]
-position = Vector2(-1, -248)
-scale = Vector2(0.25, 0.4)
-texture = ExtResource("3_jklhs")
+[node name="Trees1Sprite" type="Sprite2D" parent="ParallaxBackground/FGTreesParallaxLayer"]
+position = Vector2(0, -1800)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("6_einy8")
 centered = false
 
 [node name="BushesParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(1200, 0)
 
 [node name="BushesSprite" type="Sprite2D" parent="ParallaxBackground/BushesParallaxLayer"]
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("4_437v1")
+position = Vector2(0, -1800)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("7_ec4ov")
 centered = false
+
+[node name="TileMap" parent="." instance=ExtResource("4_7tm21")]
+layer_0/tile_data = PackedInt32Array(393217, 1, 65536, 393218, 1, 65536, 393219, 1, 65536, 393220, 1, 65536, 393221, 1, 65536, 393222, 1, 65536, 393223, 1, 65536, 393224, 1, 65536, 393225, 1, 65536, 393226, 1, 65536, 393227, 1, 65536, 393228, 1, 65536, 393229, 1, 65536, 393230, 1, 65536, 393231, 1, 65536, 393232, 1, 65536, -917489, 1, 65536, -917488, 1, 65536, -917487, 1, 65536, -917486, 1, 65536)
 
 [node name="Raccoon" parent="." instance=ExtResource("1_ovwk0")]
 position = Vector2(151, 324)
@@ -85,21 +93,13 @@ scale = Vector2(0.6, 0.6)
 [node name="Camera2D" type="Camera2D" parent="Raccoon"]
 limit_bottom = 670
 
-[node name="FogParallaxLayer" type="CanvasLayer" parent="Raccoon/Camera2D"]
-layer = -101
-
-[node name="FogSprite" type="Sprite2D" parent="Raccoon/Camera2D/FogParallaxLayer"]
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_mjeb1")
-centered = false
-
 [node name="UIScreen" parent="." instance=ExtResource("2_uux8a")]
-
-[node name="TerrainRect" parent="." instance=ExtResource("3_d08jn")]
-position = Vector2(566, 440)
 
 [node name="exit_zone" parent="." instance=ExtResource("9_wxybk")]
 position = Vector2(999, 389)
 
 [node name="out_of_bounds" parent="." instance=ExtResource("9_8woqc")]
 position = Vector2(40, 393)
+
+[node name="Rummage spot" parent="." instance=ExtResource("10_gcq0q")]
+position = Vector2(494, 350)

@@ -3,10 +3,9 @@ class_name Rummage
 
 var timer = 0
 
-func _physics_process(delta: float):
-	if timer <= delta:
+func physics_update(delta: float):
+	if not Input.is_action_pressed("interact"):
 		timer = 0
-		#print("SUCCESSFUL RUMMAGE (what do I do)")
 		if raccoon.direction != 0:
 			if Input.is_action_pressed("crouch"):
 				finished.emit("Crawl")
@@ -17,8 +16,10 @@ func _physics_process(delta: float):
 				finished.emit("Crouch")
 			else:
 				finished.emit("Idle")
-	elif not Input.is_action_pressed("interact"):
+	elif timer <= delta:
 		timer = 0
+		raccoon.is_near_rummagable.rummage()
+		#change raccoon's food meter
 		if raccoon.direction != 0:
 			if Input.is_action_pressed("crouch"):
 				finished.emit("Crawl")
@@ -36,7 +37,10 @@ func _physics_process(delta: float):
 			raccoon.velocity.x = move_toward(raccoon.velocity.x, 0, raccoon.ACCELERATION)
 
 func enter(msg: Dictionary = {}):
-	animationPlayer.play("rummage")
+	if raccoon.facing == 1:
+		animationPlayer.play("rummage_flip")
+	else:
+		animationPlayer.play("rummage")
 	timer = 1.5
 	
 func exit():

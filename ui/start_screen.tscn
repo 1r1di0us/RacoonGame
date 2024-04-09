@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bcc5cfv0o0imi"]
+[gd_scene load_steps=9 format=3 uid="uid://bcc5cfv0o0imi"]
 
 [ext_resource type="Theme" uid="uid://b02a2u15epnu7" path="res://ui/ui_theme.tres" id="1_4a4vq"]
 [ext_resource type="Script" path="res://scripts/start_screen.gd" id="1_kumlx"]
@@ -60,8 +60,13 @@ shortcut_in_tooltip = false
 text = "START"
 
 [node name="LevelSelectButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "LEVEL SELECT"
+
+[node name="CreditsButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "CREDITS"
 
 [node name="ExitButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -70,6 +75,7 @@ shortcut_in_tooltip = false
 text = "EXIT"
 
 [node name="Title" type="Label" parent="."]
+visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -82,8 +88,14 @@ theme = ExtResource("1_4a4vq")
 text = "ECHO"
 horizontal_alignment = 1
 
+[node name="TitleImage" type="Sprite2D" parent="."]
+position = Vector2(577, 109)
+scale = Vector2(0.452, 0.428)
+texture = ExtResource("3_k0epl")
+
 [connection signal="mouse_entered" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/LevelSelectButton" to="." method="_on_level_select_button_pressed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="mouse_entered" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
