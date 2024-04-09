@@ -4,6 +4,7 @@ extends CanvasLayer
 
 func _on_retry_button_pressed():
 	GameManager.pause_game(1)
+	AudioManager.emit_signal("PlayerDeadSetFalse")
 	GameManager.transition_to_scene("res://levels/level_"+str(GameManager.current_level)+".tscn")
 	queue_free()
 

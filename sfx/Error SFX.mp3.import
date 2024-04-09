@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b2u7n8aavenwa"
+path="res://.godot/imported/Error SFX.mp3-6cca889ca462be0fc4615d5041b7a3c6.mp3str"
+
+[deps]
+
+source_file="res://sfx/Error SFX.mp3"
+dest_files=["res://.godot/imported/Error SFX.mp3-6cca889ca462be0fc4615d5041b7a3c6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

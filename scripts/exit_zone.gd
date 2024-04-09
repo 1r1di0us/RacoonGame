@@ -18,6 +18,7 @@ func _on_body_entered(body):
 		$LevelInstructions.visible = true
 		$FoodRemaining.visible = true
 		$FoodRemaining.text = "Come back when you have "+str(score_threshold - GameManager.level_score[GameManager.current_level-1])+ " more!"
+		AudioManager.emit_signal("exit_error")
 		return
 	AudioManager.emit_signal("level_complete")
 	get_tree().paused = true

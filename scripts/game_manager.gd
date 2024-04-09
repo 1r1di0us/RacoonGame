@@ -64,6 +64,7 @@ func pause_game(type):
 func transition_to_scene(scene_path):
 	await get_tree().create_timer(0.1).timeout
 	get_tree().change_scene_to_file(scene_path)
+	AudioManager.emit_signal("scene_changed", scene_path)
 	
 
 func add_score(score):
