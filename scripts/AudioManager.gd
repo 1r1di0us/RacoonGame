@@ -23,6 +23,9 @@ signal footstep_climbingpole
 signal footstep_climbingwall
 signal splat
 signal exit_error
+signal interact_pressed
+signal near_rummagable_on
+signal near_rummagable_off
 signal PlayerDeadSetFalse
 
 #Initializing sound effect variables
@@ -49,6 +52,7 @@ var launchready_sound: AudioStreamPlayer
 var highjump_sound: AudioStreamPlayer
 var tuck_sound: AudioStreamPlayer
 var clamber_sound: AudioStreamPlayer
+var interactfailed_sound: AudioStreamPlayer
 
 #Creating song variables
 var mainmenu_song: AudioStreamPlayer
@@ -61,6 +65,7 @@ var fadein = false
 
 var OnStartMenu = true
 var PlayerDead = false
+var NearRummagable = false
 
 func _ready():
 	#Declaring sound effect variables
@@ -87,9 +92,12 @@ func _ready():
 	highjump_sound = $HighJumpSound
 	tuck_sound = $TuckSound
 	clamber_sound = $ClamberSound
+	interactfailed_sound = $InteractFailed
+	
 	mainmenu_song = $MainMenuSong
 	level1_song = $Level1Song
 	level1cutscene_song = $Level1CutsceneSong
+	
 	
 	songs = [mainmenu_song, level1_song, level1cutscene_song] #Array to store all songs to easily stop the currently playing track later
 	
@@ -119,6 +127,9 @@ func _ready():
 	footstep_climbingwall.connect(on_footstep_climbingwall)
 	splat.connect(on_splat)
 	exit_error.connect(on_exit_error)
+	interact_pressed.connect(on_interact_pressed)
+	near_rummagable_on.connect(_near_rummagable_on)
+	near_rummagable_off.connect(_near_rummagable_off)
 	PlayerDeadSetFalse.connect(on_PlayerDeadSetFalse)
 
 func _enter_tree() -> void:
@@ -275,6 +286,16 @@ func on_game_resumed():
 
 func on_exit_error():
 	exiterror_sound.play()
+
+func on_interact_pressed():
+	if NearRummagable == false:
+		interactfailed_sound.play()
+
+func _near_rummagable_on():
+	NearRummagable = true
+
+func _near_rummagable_off():
+	NearRummagable = false
 
 func on_PlayerDeadSetFalse():
 	PlayerDead = false

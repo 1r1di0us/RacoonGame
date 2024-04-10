@@ -16,11 +16,13 @@ func _ready():
 func _on_body_entered(body):
 	if "is_near_rummagable" in body and not exhausted:
 		body.set("is_near_rummagable", self)
+		AudioManager.emit_signal("near_rummagable_on")
 	AudioManager.emit_signal("player_brushpast")
 
 func _on_body_exited(body):
 	if "is_near_rummagable" in body:
 		body.set("is_near_rummagable", null)
+	AudioManager.emit_signal("near_rummagable_off")
 
 func rummage():
 	exhausted = true
