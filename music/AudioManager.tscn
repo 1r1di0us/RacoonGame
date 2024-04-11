@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://mwl5glcd7hyj"]
+[gd_scene load_steps=39 format=3 uid="uid://mwl5glcd7hyj"]
 
 [ext_resource type="Script" path="res://scripts/AudioManager.gd" id="1_7gyvn"]
 [ext_resource type="AudioStream" uid="uid://yx8x1dipwbhy" path="res://music/Bunnymajs - Split Persona.mp3" id="1_f82f8"]
@@ -32,6 +32,7 @@
 [ext_resource type="AudioStream" uid="uid://non7j8rek0k3" path="res://sfx/sfx_sound_neutral6.wav" id="29_agkqe"]
 [ext_resource type="AudioStream" uid="uid://b7hh7wkcj0ngj" path="res://sfx/sfx_movement_jump11_landing.wav" id="31_iu6bf"]
 [ext_resource type="AudioStream" uid="uid://kfvpw1verobu" path="res://sfx/sfx_wpn_noammo3.wav" id="32_r30ct"]
+[ext_resource type="AudioStream" uid="uid://b1vpsrce7ox4g" path="res://sfx/sfx_wpn_punch2.wav" id="33_wglk0"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_yme72"]
 streams_count = 3
@@ -197,8 +198,8 @@ volume_db = 4.0
 
 [node name="InteractFailed" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("32_r30ct")
-volume_db = -5.0
+volume_db = -6.0
 
 [node name="InteractSuccess" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("32_r30ct")
-volume_db = -5.0
+stream = ExtResource("33_wglk0")
+volume_db = -14.0

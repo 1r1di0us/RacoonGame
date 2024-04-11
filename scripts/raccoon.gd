@@ -71,7 +71,10 @@ func _physics_process(delta):
 		has_landed = false
 	
 	if Input.is_action_just_pressed("interact"):
-		AudioManager.emit_signal("interact_pressed")
+		if velocity.is_zero_approx():
+			AudioManager.emit_signal("interact_pressed", false)
+		else:
+			AudioManager.emit_signal("interact_pressed", true)
 	
 	if Input.is_action_pressed("move_down"):
 		set_collision_mask_value(5, false)

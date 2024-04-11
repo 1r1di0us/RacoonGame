@@ -29,4 +29,5 @@ func rummage():
 	$FullSprite.hide()
 	GameManager.add_score(food_content);
 	AudioManager.emit_signal("player_itemcollected")
+	AudioManager.emit_signal("near_rummagable_off")
 	print("object: rummaging")

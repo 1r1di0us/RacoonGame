@@ -53,6 +53,7 @@ var highjump_sound: AudioStreamPlayer
 var tuck_sound: AudioStreamPlayer
 var clamber_sound: AudioStreamPlayer
 var interactfailed_sound: AudioStreamPlayer
+var interactsuccess_sound: AudioStreamPlayer
 
 #Creating song variables
 var mainmenu_song: AudioStreamPlayer
@@ -93,6 +94,7 @@ func _ready():
 	tuck_sound = $TuckSound
 	clamber_sound = $ClamberSound
 	interactfailed_sound = $InteractFailed
+	interactsuccess_sound = $InteractSuccess
 	
 	mainmenu_song = $MainMenuSong
 	level1_song = $Level1Song
@@ -243,6 +245,7 @@ func on_player_highjump():
 	highjump_sound.play()
 
 func on_player_rummaging():
+	interactsuccess_sound.play()
 	rummaging_sound.play()
 
 func on_player_rummagingstop():
@@ -287,8 +290,8 @@ func on_game_resumed():
 func on_exit_error():
 	exiterror_sound.play()
 
-func on_interact_pressed():
-	if NearRummagable == false:
+func on_interact_pressed(Moving):
+	if not (NearRummagable == true and Moving == false):
 		interactfailed_sound.play()
 
 func _near_rummagable_on():
