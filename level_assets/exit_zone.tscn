@@ -10,14 +10,34 @@ target_level_path = ""
 play_exit_animation = true
 play_enter_animation = true
 score_threshold = 5
+level_instructions = "default text"
 
-[node name="FoodRemaining" type="Label" parent="." index="2"]
+[node name="ColorRect" parent="." index="1"]
 visible = false
-offset_left = -59.0
-offset_top = -121.0
-offset_right = 67.0
-offset_bottom = -52.0
+
+[node name="LevelInstructions" type="Label" parent="." index="2"]
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.0
+offset_top = -354.0
+offset_right = 503.0
+offset_bottom = -224.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = ExtResource("3_1fw0t")
+text = "default text"
+autowrap_mode = 2
+
+[node name="FoodRemaining" type="Label" parent="." index="3"]
+offset_left = -69.0
+offset_top = -205.0
+offset_right = 463.0
+offset_bottom = -1.0
 theme = ExtResource("3_1fw0t")
 text = "# left"
+autowrap_mode = 2
 
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

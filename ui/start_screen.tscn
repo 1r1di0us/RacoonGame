@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://b02a2u15epnu7" path="res://ui/ui_theme.tres" id="1_4a4vq"]
 [ext_resource type="Script" path="res://scripts/start_screen.gd" id="1_kumlx"]
-[ext_resource type="Texture2D" uid="uid://bba1qhj85b534" path="res://art/Landscape - Level Assets/Background/Level 1/Forest_Background.png" id="2_70swg"]
+[ext_resource type="Texture2D" uid="uid://bk148xa2i0vxi" path="res://art/Title and Pause Screens/titlescreentemp.jpg" id="2_jnr6t"]
 [ext_resource type="Texture2D" uid="uid://c38kyb5w1evp6" path="res://art/Title and Pause Screens/ECHO.png" id="3_k0epl"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_ot0gh"]
@@ -26,9 +26,9 @@ offset_bottom = 648.0
 color = Color(0.482353, 0.635294, 0.364706, 1)
 
 [node name="BackgroundImage" type="Sprite2D" parent="."]
-position = Vector2(608, 363)
-scale = Vector2(0.276667, 0.271852)
-texture = ExtResource("2_70swg")
+position = Vector2(633.866, 350.5)
+scale = Vector2(0.704295, 0.685833)
+texture = ExtResource("2_jnr6t")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 15

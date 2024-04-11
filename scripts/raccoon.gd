@@ -62,11 +62,9 @@ func _physics_process(delta):
 	prevVelY = velocity.y
 	move_and_slide()
 	
-	#Checking if player has landed after falling/jumping to play landing sound effect
 	if is_on_floor() and not has_landed:
 		has_landed = true
-		if prevVelY < SPLAT_THRESHOLD:
-			AudioManager.emit_signal("player_landed")
+		AudioManager.emit_signal("player_landed")
 	elif not is_on_floor():
 		has_landed = false
 	

@@ -12,10 +12,12 @@ script/source = "extends CanvasLayer
 @export var text = \"\"
 @export var level_time = 120
 
-var level_score = GameManager.level_score[GameManager.current_level]
+var level_score = 0
 
 func _ready():
 	$MarginContainer/VBoxContainer/Control/Label.text = text
+	level_score = GameManager.level_score[GameManager.current_level-1]
+	print(level_score)
 	$MarginContainer/VBoxContainer/HBoxContainer/Control/CollectableAmount.text = str(level_score)
 	
 	$LevelTimer.wait_time = level_time
@@ -79,7 +81,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5, 1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.0, 3.14159, 6.28319]
+"values": [-3.14159, 0.0, 3.14159]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fx3eu"]

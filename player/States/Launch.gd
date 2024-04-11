@@ -12,7 +12,7 @@ func physics_update(delta: float):
 		raccoon.velocity.y += raccoon.gravity * delta
 
 func enter(msg: Dictionary = {}):
-	AudioManager.emit_signal("player_roll") #Play Jump Sound
+	AudioManager.emit_signal("player_jumped") #Play Jump Sound
 	
 	if raccoon.facing == 1:
 		animationPlayer.play("launch_flip")

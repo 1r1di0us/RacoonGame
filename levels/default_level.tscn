@@ -47,7 +47,7 @@ texture = ExtResource("3_mitx1")
 
 [node name="BirdsParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.5, 0.7)
-motion_mirroring = Vector2(600, 0)
+motion_mirroring = Vector2(1200, 0)
 
 [node name="BirdsSprite" type="Sprite2D" parent="ParallaxBackground/BirdsParallaxLayer"]
 position = Vector2(600, 200)
