@@ -12,6 +12,10 @@ var level_flags = [true, false, false]
 var level_score = [0,0,0]
 
 func setLevelDone(i):
+	#want to load level i next
+	#reset score of previous level e.g level 2 next, so reset level 1 in position 0
+	level_score[i-2] = 0
+	#unlock level in level select screen
 	level_flags[i-1] = true
 	current_level = i
 

@@ -12,10 +12,12 @@ script/source = "extends CanvasLayer
 @export var text = \"\"
 @export var level_time = 120
 
-var level_score = GameManager.level_score[GameManager.current_level]
+var level_score = 0
 
 func _ready():
 	$MarginContainer/VBoxContainer/Control/Label.text = text
+	level_score = GameManager.level_score[GameManager.current_level-1]
+	print(level_score)
 	$MarginContainer/VBoxContainer/HBoxContainer/Control/CollectableAmount.text = str(level_score)
 	
 	$LevelTimer.wait_time = level_time
