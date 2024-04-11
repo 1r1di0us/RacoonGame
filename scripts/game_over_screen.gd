@@ -5,6 +5,7 @@ extends CanvasLayer
 func _on_retry_button_pressed():
 	GameManager.pause_game(1)
 	GameManager.transition_to_scene("res://levels/level_"+str(GameManager.current_level)+".tscn")
+	GameManager.level_score[GameManager.current_level-1] = 0
 	queue_free()
 
 func _on_main_menu_button_pressed():

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cx37s3en6c2qj" path="res://ui/cutscene.tscn" id="1_fde58"]
 [ext_resource type="AudioStream" uid="uid://dt7xdgila4ujj" path="res://sfx/sfx_sounds_button14.wav" id="2_h3mpa"]
-[ext_resource type="Texture2D" uid="uid://kbnv5sloa57p" path="res://art/Cutscene/Cutscene Placeholder.JPG" id="3_apokk"]
+[ext_resource type="Texture2D" uid="uid://bdch4ddhv8qmw" path="res://art/Cutscene/lv1_start_cutscene.png" id="3_uwv65"]
 
 [node name="LevelOneCutscene" instance=ExtResource("1_fde58")]
 target_level_path = "res://levels/level_1.tscn"
@@ -18,4 +18,4 @@ volume_db = -9.0
 [node name="CutsceneImage" parent="." index="4"]
 position = Vector2(495.219, 323.5)
 scale = Vector2(1.32988, 1.32988)
-texture = ExtResource("3_apokk")
+texture = ExtResource("3_uwv65")

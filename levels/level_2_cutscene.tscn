@@ -1,9 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://fkqtijma4ccs"]
+[gd_scene load_steps=3 format=3 uid="uid://fkqtijma4ccs"]
 
 [ext_resource type="PackedScene" uid="uid://cx37s3en6c2qj" path="res://ui/cutscene.tscn" id="1_b0jxv"]
+[ext_resource type="Texture2D" uid="uid://x3ouiwbm5yjv" path="res://art/Cutscene/lv1_end_cutscene.png" id="2_prjsw"]
 
 [node name="LevelTwoCutscene" instance=ExtResource("1_b0jxv")]
 target_level_path = "res://ui/credits.tscn"
 
 [node name="Label" parent="." index="2"]
-text = "Level 2 cutscene"
+visible = false
+offset_left = -213.0
+offset_top = 20.632
+offset_right = 212.0
+offset_bottom = 89.632
+text = "to be continued..."
+
+[node name="CutsceneImage" parent="." index="3"]
+position = Vector2(489.25, 323.75)
+scale = Vector2(1.31107, 1.33576)
+texture = ExtResource("2_prjsw")
