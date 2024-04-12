@@ -27,6 +27,7 @@ signal interact_pressed
 signal near_rummagable_on
 signal near_rummagable_off
 signal PlayerDeadSetFalse
+signal timer_alert
 
 #Initializing sound effect variables
 var hover_sound: AudioStreamPlayer
@@ -55,6 +56,8 @@ var clamber_sound: AudioStreamPlayer
 var interactfailed_sound: AudioStreamPlayer
 var interactsuccess_sound: AudioStreamPlayer
 var exitunlocked_sound: AudioStreamPlayer
+var timeralert_sound: AudioStreamPlayer
+var timeralerttick_sound: AudioStreamPlayer
 
 #Creating song variables
 var mainmenu_song: AudioStreamPlayer
@@ -98,6 +101,8 @@ func _ready():
 	interactfailed_sound = $InteractFailed
 	interactsuccess_sound = $InteractSuccess
 	exitunlocked_sound = $ExitUnlockedSound
+	timeralert_sound = $TimerAlertSound
+	timeralerttick_sound = $TimerAlertTickSound
 	
 	mainmenu_song = $MainMenuSong
 	level1_song = $Level1Song
@@ -136,6 +141,7 @@ func _ready():
 	near_rummagable_on.connect(_near_rummagable_on)
 	near_rummagable_off.connect(_near_rummagable_off)
 	PlayerDeadSetFalse.connect(on_PlayerDeadSetFalse)
+	timer_alert.connect(on_timer_alert)
 
 func _enter_tree() -> void:
 	get_tree().node_added.connect(_on_node_added)
@@ -310,6 +316,21 @@ func _near_rummagable_off():
 func on_PlayerDeadSetFalse():
 	PlayerDead = false
 
+func on_timer_alert(currentint):
+	if currentint < 14 and currentint >= 4:
+		$TimerTickSound.play()
+	if currentint == 29:
+		timeralert_sound.play()
+	if currentint == 14:
+		timeralert_sound.play()
+		await get_tree().create_timer(0.5).timeout
+		timeralert_sound.play()
+	if currentint == 4:
+		timeralert_sound.play()
+		await get_tree().create_timer(0.5).timeout
+		timeralert_sound.play()
+	if currentint < 4:
+		timeralerttick_sound.play()
 
 #Play button sound functions
 func PlayHover() -> void:

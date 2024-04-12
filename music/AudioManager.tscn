@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://mwl5glcd7hyj"]
+[gd_scene load_steps=46 format=3 uid="uid://mwl5glcd7hyj"]
 
 [ext_resource type="Script" path="res://scripts/AudioManager.gd" id="1_7gyvn"]
 [ext_resource type="AudioStream" uid="uid://yx8x1dipwbhy" path="res://music/Bunnymajs - Split Persona.mp3" id="1_f82f8"]
@@ -36,7 +36,10 @@
 [ext_resource type="AudioStream" uid="uid://b7hh7wkcj0ngj" path="res://sfx/sfx_movement_jump11_landing.wav" id="31_iu6bf"]
 [ext_resource type="AudioStream" uid="uid://kfvpw1verobu" path="res://sfx/sfx_wpn_noammo3.wav" id="32_r30ct"]
 [ext_resource type="AudioStream" uid="uid://b1vpsrce7ox4g" path="res://sfx/sfx_wpn_punch2.wav" id="33_wglk0"]
-[ext_resource type="AudioStream" uid="uid://i5uwsr87snsp" path="res://sfx/ui (68).wav" id="35_v2iyl"]
+[ext_resource type="AudioStream" uid="uid://cwrbmk8l1fetm" path="res://sfx/ExitUnlocked.mp3" id="37_54q10"]
+[ext_resource type="AudioStream" uid="uid://cm81ib04djjtq" path="res://sfx/sfx_alarm_loop6.wav" id="38_40b1a"]
+[ext_resource type="AudioStream" uid="uid://6qf4rou1amb6" path="res://sfx/sfx_sounds_error4.wav" id="39_nb21m"]
+[ext_resource type="AudioStream" uid="uid://bdomps4mqwdfu" path="res://sfx/button15.ogg" id="40_lanjd"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_yme72"]
 streams_count = 3
@@ -207,7 +210,7 @@ volume_db = 4.0
 
 [node name="InteractFailed" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("32_r30ct")
-volume_db = -6.0
+volume_db = -7.0
 pitch_scale = 0.95
 
 [node name="InteractSuccess" type="AudioStreamPlayer" parent="."]
@@ -215,5 +218,19 @@ stream = ExtResource("33_wglk0")
 volume_db = -14.0
 
 [node name="ExitUnlockedSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("35_v2iyl")
-volume_db = 5.0
+stream = ExtResource("37_54q10")
+volume_db = 2.0
+
+[node name="TimerAlertSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("38_40b1a")
+volume_db = -10.0
+
+[node name="TimerAlertTickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("39_nb21m")
+volume_db = -19.0
+pitch_scale = 1.26
+
+[node name="TimerTickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("40_lanjd")
+volume_db = -15.0
+pitch_scale = 1.25

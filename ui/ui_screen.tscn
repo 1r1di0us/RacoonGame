@@ -13,6 +13,7 @@ script/source = "extends CanvasLayer
 @export var level_time = 120
 
 var level_score = 0
+var currentint = 0
 
 func _ready():
 	$MarginContainer/VBoxContainer/Control/Label.text = text
@@ -28,6 +29,10 @@ func _ready():
 func _process(delta: float):
 	level_score = GameManager.level_score[GameManager.current_level-1]
 	$MarginContainer/VBoxContainer/HBoxContainer/Control/CollectableAmount.text = str(level_score)
+	
+	if int($LevelTimer.get_time_left()) <= 30 and currentint != int($LevelTimer.get_time_left()):
+		currentint = int($LevelTimer.get_time_left())
+		AudioManager.emit_signal(\"timer_alert\", currentint)
 
 func _on_pause_button_pressed():
 	GameManager.pause_game(0)
