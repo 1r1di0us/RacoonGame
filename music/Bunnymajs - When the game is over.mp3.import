@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ctu7rfa2sauyo"
+path="res://.godot/imported/Bunnymajs - When the game is over.mp3-a72260bf40b1ef873eb8a38e09ece7b2.mp3str"
+
+[deps]
+
+source_file="res://music/Bunnymajs - When the game is over.mp3"
+dest_files=["res://.godot/imported/Bunnymajs - When the game is over.mp3-a72260bf40b1ef873eb8a38e09ece7b2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

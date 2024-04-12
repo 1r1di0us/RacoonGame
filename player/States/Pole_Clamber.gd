@@ -27,6 +27,7 @@ func physics_update(delta: float):
 
 func enter(msg: Dictionary = {}):
 	animationPlayer.play("pole_clamber")
+	AudioManager.emit_signal("player_clamber")
 	raccoon.velocity.y = raccoon.CLAMBER_SPEED
 	raccoon.global_position.y = raccoon.clamber_y - 32 + 120*raccoon.scale.y
 

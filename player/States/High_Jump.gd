@@ -66,7 +66,7 @@ func physics_update(delta: float):
 			animationPlayer.seek(0.4, true)
 
 func enter(msg: Dictionary = {}):
-	AudioManager.emit_signal("player_jumped") #Play Jump Sound
+	AudioManager.emit_signal("player_highjump")
 	#y velocity determined by previous state
 	
 	if raccoon.facing == 1:

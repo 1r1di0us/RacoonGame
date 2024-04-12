@@ -17,6 +17,7 @@ func physics_update(delta: float):
 			raccoon.velocity.x = move_toward(raccoon.velocity.x, 0, raccoon.ACCELERATION)
 
 func enter(msg: Dictionary = {}):
+	AudioManager.emit_signal("splat")
 	if raccoon.facing == 0:
 		animationPlayer.play("splat")
 	else:

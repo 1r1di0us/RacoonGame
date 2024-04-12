@@ -44,7 +44,7 @@ func main_menu():
 func pause_game(type):
 	if get_tree().paused == false:
 		#game is not paused, so pause it and show the pause screen
-		
+		AudioManager.emit_signal("game_paused")
 		get_tree().paused = true
 		var screen_type
 		if (type == 0):
@@ -56,6 +56,7 @@ func pause_game(type):
 		get_tree().get_root().add_child(screen_type)
 	else:
 		#game is paused, so unpause it and hide the pause screen
+		AudioManager.emit_signal("game_resumed")
 		#$PauseScreen.hide()
 		get_tree().paused = false
 		
@@ -64,6 +65,7 @@ func pause_game(type):
 func transition_to_scene(scene_path):
 	await get_tree().create_timer(0.1).timeout
 	get_tree().change_scene_to_file(scene_path)
+	AudioManager.emit_signal("scene_changed", scene_path)
 	
 
 func add_score(score):
