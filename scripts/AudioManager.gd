@@ -54,11 +54,13 @@ var tuck_sound: AudioStreamPlayer
 var clamber_sound: AudioStreamPlayer
 var interactfailed_sound: AudioStreamPlayer
 var interactsuccess_sound: AudioStreamPlayer
+var exitunlocked_sound: AudioStreamPlayer
 
 #Creating song variables
 var mainmenu_song: AudioStreamPlayer
 var level1_song: AudioStreamPlayer
 var level1cutscene_song: AudioStreamPlayer
+var level2cutscene_song: AudioStreamPlayer
 var songs: Array
 var music_bus
 var current_bus
@@ -95,13 +97,14 @@ func _ready():
 	clamber_sound = $ClamberSound
 	interactfailed_sound = $InteractFailed
 	interactsuccess_sound = $InteractSuccess
+	exitunlocked_sound = $ExitUnlockedSound
 	
 	mainmenu_song = $MainMenuSong
 	level1_song = $Level1Song
 	level1cutscene_song = $Level1CutsceneSong
+	level2cutscene_song = $Level2CutsceneSong
 	
-	
-	songs = [mainmenu_song, level1_song, level1cutscene_song] #Array to store all songs to easily stop the currently playing track later
+	songs = [mainmenu_song, level1_song, level1cutscene_song, level2cutscene_song] #Array to store songs to easily stop the currently playing track later
 	
 	music_bus = AudioServer.get_bus_index("Music")
 	current_bus = AudioServer.get_bus_index("CurrentSong")
@@ -218,6 +221,8 @@ func on_scene_changed(scene_path):
 	#If entering level 1 scene, stop current music and play level 1 music
 	elif scene_path == "res://levels/level_1.tscn":
 		transition_songs(get_current_song(), level1_song)
+	elif scene_path == "res://levels/level_2_cutscene.tscn":
+		transition_songs(get_current_song(), level2cutscene_song)
 	
 	OnStartMenu = false
 
@@ -253,6 +258,8 @@ func on_player_rummagingstop():
 
 func on_player_itemcollected():
 	itemcollected_sound.play()
+	if GameManager.level_score[GameManager.current_level-1] == 6:
+		exitunlocked_sound.play()
 
 func on_player_brushpast():
 	bush_sound.play()
@@ -290,8 +297,8 @@ func on_game_resumed():
 func on_exit_error():
 	exiterror_sound.play()
 
-func on_interact_pressed(Moving):
-	if not (NearRummagable == true and Moving == false):
+func on_interact_pressed():
+	if NearRummagable == false:
 		interactfailed_sound.play()
 
 func _near_rummagable_on():

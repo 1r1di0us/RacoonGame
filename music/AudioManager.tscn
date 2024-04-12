@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://mwl5glcd7hyj"]
+[gd_scene load_steps=43 format=3 uid="uid://mwl5glcd7hyj"]
 
 [ext_resource type="Script" path="res://scripts/AudioManager.gd" id="1_7gyvn"]
 [ext_resource type="AudioStream" uid="uid://yx8x1dipwbhy" path="res://music/Bunnymajs - Split Persona.mp3" id="1_f82f8"]
@@ -22,7 +22,10 @@
 [ext_resource type="AudioStream" uid="uid://jgq37ypo1wd2" path="res://sfx/menu resume sfx v6.mp3" id="18_8t35k"]
 [ext_resource type="AudioStream" uid="uid://dfyco3sm5kbpo" path="res://sfx/sfx_sounds_interaction19.wav" id="18_42b0p"]
 [ext_resource type="AudioStream" uid="uid://8gigqxsmc4co" path="res://sfx/Bush Leaves Brushing SFX.mp3" id="19_gx062"]
-[ext_resource type="AudioStream" uid="uid://dnhd4t8nbuj7e" path="res://music/Bunnymajs - Dilapidated Dream (shortened intro).mp3" id="19_tedhu"]
+[ext_resource type="AudioStream" uid="uid://djcp8ddyjdut0" path="res://music/Bunnymajs - Dilapidated Dream (shortened intro v2).mp3" id="19_vd56n"]
+[ext_resource type="AudioStream" uid="uid://6a78kybegese" path="res://music/Bunnymajs - Again, but with feeling (loop v2).mp3" id="19_wh6ho"]
+[ext_resource type="AudioStream" uid="uid://d23jwxva0mn0w" path="res://music/Bunnymajs - summer nights and hearts of gold.ogg" id="20_f46ji"]
+[ext_resource type="AudioStream" uid="uid://d0qq3ph0ehknd" path="res://music/Bunnymajs - Free Falling From Space (shortenedv3).mp3" id="20_pomqu"]
 [ext_resource type="AudioStream" uid="uid://fgqhuskoy4ye" path="res://sfx/Bush Rummaging SFX V1.mp3" id="20_sw3yc"]
 [ext_resource type="AudioStream" uid="uid://cavp083erq4vd" path="res://sfx/Bush Rummaging SFX V2.mp3" id="21_00abj"]
 [ext_resource type="AudioStream" uid="uid://d4hw0d0r5p4up" path="res://sfx/sfx_damage_hit3.wav" id="24_g21vc"]
@@ -33,6 +36,7 @@
 [ext_resource type="AudioStream" uid="uid://b7hh7wkcj0ngj" path="res://sfx/sfx_movement_jump11_landing.wav" id="31_iu6bf"]
 [ext_resource type="AudioStream" uid="uid://kfvpw1verobu" path="res://sfx/sfx_wpn_noammo3.wav" id="32_r30ct"]
 [ext_resource type="AudioStream" uid="uid://b1vpsrce7ox4g" path="res://sfx/sfx_wpn_punch2.wav" id="33_wglk0"]
+[ext_resource type="AudioStream" uid="uid://i5uwsr87snsp" path="res://sfx/ui (68).wav" id="35_v2iyl"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_yme72"]
 streams_count = 3
@@ -106,11 +110,11 @@ volume_db = -17.0
 
 [node name="JumpSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_k8fqf")
-volume_db = -14.0
+volume_db = -13.5
 
 [node name="JumpLandingSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_4dyp7")
-volume_db = -8.0
+volume_db = -8.5
 pitch_scale = 0.85
 
 [node name="Footsteps" type="AudioStreamPlayer" parent="."]
@@ -132,27 +136,32 @@ volume_db = -11.0
 
 [node name="ResumeSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_8t35k")
-volume_db = -8.0
+volume_db = -9.0
 
 [node name="MainMenuSong" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_wr3cq")
+stream = ExtResource("19_wh6ho")
 volume_db = -13.0
 autoplay = true
 bus = &"Music"
 
 [node name="Level1Song" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_f82f8")
-volume_db = -9.0
+stream = ExtResource("20_f46ji")
+volume_db = -10.5
 bus = &"Music"
 
 [node name="Level1CutsceneSong" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("19_tedhu")
+stream = ExtResource("19_vd56n")
 volume_db = -12.0
+bus = &"Music"
+
+[node name="Level2CutsceneSong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_pomqu")
+volume_db = -12.5
 bus = &"Music"
 
 [node name="RummagingSound" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_mawam")
-volume_db = -11.0
+volume_db = -11.5
 pitch_scale = 1.1
 
 [node name="ItemCollectedSound" type="AudioStreamPlayer" parent="."]
@@ -185,12 +194,12 @@ volume_db = -8.0
 
 [node name="HighJumpSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("29_3ocug")
-volume_db = -13.0
+volume_db = -13.5
 pitch_scale = 1.1
 
 [node name="TuckSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("29_agkqe")
-volume_db = -11.0
+volume_db = -11.5
 
 [node name="ClamberSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("31_iu6bf")
@@ -199,7 +208,12 @@ volume_db = 4.0
 [node name="InteractFailed" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("32_r30ct")
 volume_db = -6.0
+pitch_scale = 0.95
 
 [node name="InteractSuccess" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("33_wglk0")
 volume_db = -14.0
+
+[node name="ExitUnlockedSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("35_v2iyl")
+volume_db = 5.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=147 format=3 uid="uid://c1qok2g7135af"]
+[gd_scene load_steps=148 format=3 uid="uid://c1qok2g7135af"]
 
 [ext_resource type="Texture2D" uid="uid://dyato5cemyy8a" path="res://art/Raccoon Assets/Protagonist Raccoon/Crawl/Draft #2/Raccoon_Crawl_Edited-Sheet.png" id="1_fgivg"]
 [ext_resource type="Script" path="res://scripts/raccoon.gd" id="1_nso0o"]
@@ -77,6 +77,7 @@
 [ext_resource type="Texture2D" uid="uid://c48rbdc1f1wlx" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Climb/Raccoon_Wall-Climb1.png" id="46_c34k6"]
 [ext_resource type="Texture2D" uid="uid://cf2q23d6mnpe4" path="res://art/Raccoon Assets/Protagonist Raccoon/Wall Climb/Raccoon_Wall-Climb2.png" id="47_2twur"]
 [ext_resource type="Script" path="res://player/States/Pole_Clamber.gd" id="62_sbxa5"]
+[ext_resource type="Script" path="res://scripts/AnimationSounds.gd" id="63_nvd5v"]
 [ext_resource type="Script" path="res://player/States/Wall_Climb.gd" id="63_qsonk"]
 [ext_resource type="Script" path="res://player/States/Wall_Clamber.gd" id="64_x3gv7"]
 [ext_resource type="Script" path="res://player/States/Splat.gd" id="79_tgt17"]
@@ -3102,6 +3103,7 @@ scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_fxkla")
 animation = &"idle"
 flip_h = true
+script = ExtResource("63_nvd5v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -66)

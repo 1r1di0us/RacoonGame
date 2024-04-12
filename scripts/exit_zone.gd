@@ -14,7 +14,7 @@ func _ready():
 func _on_body_entered(body):
 	if not body is Raccoon: return
 	if target_level_path.is_empty(): return
-	if GameManager.level_score[GameManager.current_level-1] != score_threshold: 
+	if GameManager.level_score[GameManager.current_level-1] < score_threshold: 
 		$LevelInstructions.visible = true
 		$FoodRemaining.visible = true
 		$FoodRemaining.text = "Come back when you have "+str(score_threshold - GameManager.level_score[GameManager.current_level-1])+ " more!"

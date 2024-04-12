@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d0qq3ph0ehknd"
+path="res://.godot/imported/Bunnymajs - Free Falling From Space (shortenedv3).mp3-c5060c200628253a7e9967b6712d388f.mp3str"
+
+[deps]
+
+source_file="res://music/Bunnymajs - Free Falling From Space (shortenedv3).mp3"
+dest_files=["res://.godot/imported/Bunnymajs - Free Falling From Space (shortenedv3).mp3-c5060c200628253a7e9967b6712d388f.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.65
+bpm=0.0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://6a78kybegese"
+path="res://.godot/imported/Bunnymajs - Again, but with feeling (loop v2).mp3-464935d3c2bd905b4a01615fab46a326.mp3str"
+
+[deps]
+
+source_file="res://music/Bunnymajs - Again, but with feeling (loop v2).mp3"
+dest_files=["res://.godot/imported/Bunnymajs - Again, but with feeling (loop v2).mp3-464935d3c2bd905b4a01615fab46a326.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=45.532
+bpm=0.0
+beat_count=0
+bar_beats=4
